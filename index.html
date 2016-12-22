@@ -1,13 +1,20 @@
 <!doctype html>
-<html class="theme-next use-motion theme-next-pisces">
-<head>
+
+
+
   
 
-<meta charset="UTF-8"/>
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta http-equiv=”Cache-Control” content=”no-transform” />
-<meta http-equiv=”Cache-Control” content=”no-siteapp” />
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -20,6 +27,48 @@
 
 
 
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -28,209 +77,221 @@
 
 
 
-
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
-
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.2"/>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.2" />
 
+<meta property="og:type" content="website">
+<meta property="og:title" content="萌面女侠">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="萌面女侠">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="萌面女侠">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
 
   <title> 萌面女侠 </title>
 </head>
 
-<body>
-<!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://static.ixirong.com/picouterie.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
-  <div class="container one-column 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?d6dffcafa9a9d38727a3868adeedd529";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
-    <div id="header" class="header">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
 
-    <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-    <script type="text/javascript">
-  function hasMobileUA () {
-    var nav = window.navigator;
-    var ua = nav.userAgent;
-    var pa = /iPad|micromessenger|iPhone|Android|Opera Mini|BlackBerry|webOS|UCWEB|UCBrowser|MQQBrowser|Blazer|PSP|IEMobile|Symbian|Mobile|samsung|htc/g;
-    return pa.test(ua);
-  }
-
-  function isDesktop () {
-    return screen.width > 991 && !hasMobileUA();
-  }
-
-  function isTablet () {
-    return screen.width < 992 && screen.width > 767 && hasMobileUA();
-  }
-
-  function isMobile () {
-    return screen.width < 767 && hasMobileUA();
-  }
-
-  function escapeSelector (selector) {
-    return selector.replace(/[!"$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, "\\$&")
-  }
-
-  function displaySidebar () {
-    setTimeout(function () {
-      $('.sidebar-toggle').trigger('click');
-    }, 800);
-  }
-
-</script>
-
-
-      <div class="header-inner">
-        <h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand">
-      <span class="logo">
-        <i class="icon-logo"></i>
-      </span>
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
       <span class="site-title">萌面女侠</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
 
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
 
-  <ul id="menu" class="menu">
-    <div class="c-search-form-div" style="display:none;">
-      
-      
-    </div>
-    <script type="text/javascript">
-      if(isDesktop() || isTablet()){        
-        $('.c-search-form-div').css("display","inline");
-      }    
-    </script>
+<nav class="site-nav">
+  
 
-    
+  
+    <ul id="menu" class="menu">
       
-      
+        
         <li class="menu-item menu-item-home">
-        <a href="/">
-          <i class="menu-item-icon icon-home"></i> <br />
-          首页
-        </a>
-      </li>
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
       
-    
-      
-      
-        <li class="menu-item menu-item-about">
-        <a href="/about">
-          <i class="menu-item-icon icon-about"></i> <br />
-          关于
-        </a>
-      </li>
-      
-    
-      
-      
-        <li class="menu-item menu-item-tags">
-        <a href="/tags">
-          <i class="menu-item-icon icon-tags"></i> <br />
-          标签
-        </a>
-      </li>
-      
-    
-      
-      
-        <li class="menu-item menu-item-categories">
-        <a href="/categories">
-          <i class="menu-item-icon icon-categories"></i> <br />
-          分类
-        </a>
-      </li>
-      
-    
-      
-      
+        
         <li class="menu-item menu-item-archives">
-        <a href="/archives">
-          <i class="menu-item-icon icon-archives"></i> <br />
-          归档
-        </a>
-      </li>
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
       
-    
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
       
+
       
-        <li class="menu-item menu-item-commonweal" style="display:none;">
-        <a href="/404.html">
-          <i class="menu-item-icon icon-commonweal"></i> <br />
-          公益404
-        </a>
-      </li>
-      
-    
+    </ul>
+  
 
-    <script type="text/javascript">
-      if(!isMobile()){
-         $('.menu-item-commonweal').css("display","");
-      }
-    </script>
+  
+</nav>
 
-  </ul>
+ </div>
+    </header>
 
-
-      </div>
-    </div>
-
-    <div id="main" class="main">
+    <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
-  <div id="posts" class="posts-expand">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
     
       
 
-  <div class="post post-type-normal ">
-    <div class="post-header">
+  
+  
 
-      
-      
-        <h1 class="post-title">
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/22/两个div一行。3个缝相等-同时，两个div不设高度等高显示。/" itemprop="url">
+                  两个div一行。3个缝相等;同时，两个div不设高度等高显示。
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-22T21:41:15+08:00" content="2016-12-22">
+              2016-12-22
+            </time>
+          </span>
+
           
+
           
             
-              <a class="post-title-link" href="/2016/12/22/两个div一行。3个缝相等-同时，两个div不设高度等高显示。/">
-                两个div一行。3个缝相等;同时，两个div不设高度等高显示。
-              </a>
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/22/两个div一行。3个缝相等-同时，两个div不设高度等高显示。/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/22/两个div一行。3个缝相等-同时，两个div不设高度等高显示。/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
-        </h1>
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2016-12-22
-        </span>
-
-        
-
+      
         
           
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h6 id="悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between-space-around。发现这两个属性不能实现这个效果。"><a href="#悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between-space-around。发现这两个属性不能实现这个效果。" class="headerlink" title="悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between/space-around。发现这两个属性不能实现这个效果。"></a>悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between/space-around。发现这两个属性不能实现这个效果。</h6><h6 id="既然两个div是block块级元素，那么display：flex-还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。-左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100-。；"><a href="#既然两个div是block块级元素，那么display：flex-还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。-左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100-。；" class="headerlink" title="既然两个div是block块级元素，那么display：flex;还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。 左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100%。；"></a>既然两个div是block块级元素，那么display：flex;还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。 左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100%。；</h6><p>&gt;<br>    <div class="container"><br>        <div class="child one" style="background:red"><br>        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint cupiditate, quo! Quibusdam quae aperiam quo aspernatur distinctio, atque deserunt, laboriosam iusto! Nihil omnis deserunt, molestiae, cupiditate aperiam ipsum iste ea?<br>        </div><br>        <div class="child two" style="background:yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iusto optio rerum facere voluptas natus asperiores officia maxime veniam quo? Qui ipsam aspernatur quam maiores natus dolorum ullam fugiat distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique fuga laboriosam alias aut eligendi nostrum, sint voluptatem nihil vitae vel dignissimos, dolorum doloremque. Ex odio, quis soluta at delectus tempore.<br>        </div><br>    </div></p>
+            <h6 id="悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between-space-around。发现这两个属性不能实现这个效果。"><a href="#悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between-space-around。发现这两个属性不能实现这个效果。" class="headerlink" title="悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between/space-around。发现这两个属性不能实现这个效果。"></a>悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between/space-around。发现这两个属性不能实现这个效果。</h6><h6 id="既然两个div是block块级元素，那么display：flex-还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。-左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100-。；"><a href="#既然两个div是block块级元素，那么display：flex-还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。-左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100-。；" class="headerlink" title="既然两个div是block块级元素，那么display：flex;还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。 左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100%。；"></a>既然两个div是block块级元素，那么display：flex;还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。 左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100%。；</h6><p>&gt;<br>    <div class="container"><br>        <div class="child one" style="background:red"><br>        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint cupiditate, quo! Quibusdam quae aperiam quo aspernatur distinctio, atque deserunt, laboriosam iusto! Nihil omnis deserunt, molestiae, cupiditate aperiam ipsum iste ea?<br>        </div><br>        <div class="child two" style="background:yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iusto optio rerum facere voluptas natus asperiores officia maxime veniam quo? Qui ipsam aspernatur quam maiores natus dolorum ullam fugiat distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique fuga laboriosam alias aut eligendi nostrum, sint voluptatem nihil vitae vel dignissimos, dolorum doloremque. Ex odio, quis soluta at delectus tempore.<br>        </div><br>    </div></p>
 <h2 id="css"><a href="#css" class="headerlink" title="css:"></a>css:</h2><blockquote>
 </blockquote>
 <pre><code>body {
@@ -259,15 +320,20 @@
     margin-right: 4%;
 }
 </code></pre>
+          
         
       
     </div>
 
-    <div class="post-footer">
+    <div>
+      
+    </div>
 
-<! -- 添加捐赠图标 -->
-    
-<! -- end 添加捐赠图标 -->
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
       
 
       
@@ -276,51 +342,84 @@
       
         <div class="post-eof"></div>
       
-    </div>
-  </div>
+    </footer>
+  </article>
 
 
     
       
 
-  <div class="post post-type-normal ">
-    <div class="post-header">
+  
+  
 
-      
-      
-        <h1 class="post-title">
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/22/单页应用前一个page的input没有失去焦点，键盘没有收下去，会导致焦点存在第二个page/" itemprop="url">
+                  Js控制iphone端的input/textarea元素失去焦点时隐藏键盘
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-22T21:41:15+08:00" content="2016-12-22">
+              2016-12-22
+            </time>
+          </span>
+
           
+
           
             
-              <a class="post-title-link" href="/2016/12/22/单页应用前一个page的input没有失去焦点，键盘没有收下去，会导致焦点存在第二个page/">
-                Js控制iphone端的input/textarea元素失去焦点时隐藏键盘
-              </a>
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/22/单页应用前一个page的input没有失去焦点，键盘没有收下去，会导致焦点存在第二个page/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/22/单页应用前一个page的input没有失去焦点，键盘没有收下去，会导致焦点存在第二个page/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
-        </h1>
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2016-12-22
-        </span>
-
-        
-
+      
         
           
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>问题描述：</p>
+            <p>问题描述：</p>
 <h2 id="单页应用前一个page的input没有失去焦点，键盘没有收下去-会导致焦点存在第二个page"><a href="#单页应用前一个page的input没有失去焦点，键盘没有收下去-会导致焦点存在第二个page" class="headerlink" title="单页应用前一个page的input没有失去焦点，键盘没有收下去,会导致焦点存在第二个page"></a>单页应用前一个page的input没有失去焦点，键盘没有收下去,会导致焦点存在第二个page</h2><p>解决方法:</p>
 <blockquote>
 <pre><code>$(&quot;#txtNewFriendSearch&quot;).on(&quot;keydown keypress keyup&quot;, function (event) {
@@ -337,25 +436,20 @@
 <li>键盘监听事件的顺序：keydown &gt; keypress &gt; keyup。具体细节：<a href="http://www.cnblogs.com/xcsn/p/3413074.html" title="键盘事件keydown、keypress、keyup随笔整理总结（摘抄）" target="_blank" rel="external">http://www.cnblogs.com/xcsn/p/3413074.html</a></li>
 </ol>
 
+          
         
       
     </div>
 
-    <div class="post-footer">
-
-<! -- 添加捐赠图标 -->
-    
-<! -- end 添加捐赠图标 -->
+    <div>
       
-        <div class="post-tags">
-          
-            <a href="/tags/keyup/"> #keyup </a>
-          
-            <a href="/tags/keydown/"> #keydown </a>
-          
-            <a href="/tags/blur/"> #blur() </a>
-          
-        </div>
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
       
 
       
@@ -364,51 +458,84 @@
       
         <div class="post-eof"></div>
       
-    </div>
-  </div>
+    </footer>
+  </article>
 
 
     
       
 
-  <div class="post post-type-normal ">
-    <div class="post-header">
+  
+  
 
-      
-      
-        <h1 class="post-title">
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/22/js判断是否在微信浏览器中打开/" itemprop="url">
+                  js判断是否在微信浏览器中打开
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-22T21:41:15+08:00" content="2016-12-22">
+              2016-12-22
+            </time>
+          </span>
+
           
+
           
             
-              <a class="post-title-link" href="/2016/12/22/js判断是否在微信浏览器中打开/">
-                js判断是否在微信浏览器中打开
-              </a>
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/22/js判断是否在微信浏览器中打开/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/22/js判断是否在微信浏览器中打开/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
-        </h1>
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2016-12-22
-        </span>
-
-        
-
+      
         
           
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>用JS来判断,无论是android 还是iphone，ipad 都可以</p>
+            <p>用JS来判断,无论是android 还是iphone，ipad 都可以</p>
 <blockquote>
 <pre><code>function is_weixn(){
     var ua = navigator.userAgent.toLowerCase();
@@ -420,15 +547,20 @@
 }
 </code></pre></blockquote>
 
+          
         
       
     </div>
 
-    <div class="post-footer">
+    <div>
+      
+    </div>
 
-<! -- 添加捐赠图标 -->
-    
-<! -- end 添加捐赠图标 -->
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
       
 
       
@@ -437,51 +569,84 @@
       
         <div class="post-eof"></div>
       
-    </div>
-  </div>
+    </footer>
+  </article>
 
 
     
       
 
-  <div class="post post-type-normal ">
-    <div class="post-header">
+  
+  
 
-      
-      
-        <h1 class="post-title">
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/04/使用css完成元素居中的7种方法/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-04T07:35:16+08:00" content="2016-10-04">
+              2016-10-04
+            </time>
+          </span>
+
           
+
           
             
-              <a class="post-title-link" href="/2016/10/04/使用css完成元素居中的7种方法/">
-                未命名
-              </a>
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/04/使用css完成元素居中的7种方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/04/使用css完成元素居中的7种方法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
-        </h1>
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2016-10-03
-        </span>
-
-        
-
+      
         
           
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="垂直居中的7种方案"><a href="#垂直居中的7种方案" class="headerlink" title="垂直居中的7种方案"></a>垂直居中的7种方案</h2><p><strong>MarkdownPad</strong> is a full-featured Markdown editor for Windows.</p>
+            <h2 id="垂直居中的7种方案"><a href="#垂直居中的7种方案" class="headerlink" title="垂直居中的7种方案"></a>垂直居中的7种方案</h2><p><strong>MarkdownPad</strong> is a full-featured Markdown editor for Windows.</p>
 <h3 id="Built-exclusively-for-Markdown"><a href="#Built-exclusively-for-Markdown" class="headerlink" title="Built exclusively for Markdown"></a>Built exclusively for Markdown</h3><p>Enjoy first-class Markdown support with easy access to  Markdown syntax and convenient keyboard shortcuts.</p>
 <p>Give them a try:</p>
 <ul>
@@ -496,15 +661,20 @@
 <h3 id="A-robust-editor-for-advanced-Markdown-users"><a href="#A-robust-editor-for-advanced-Markdown-users" class="headerlink" title="A robust editor for advanced Markdown users"></a>A robust editor for advanced Markdown users</h3><p>MarkdownPad supports multiple Markdown processing engines, including standard Markdown, Markdown Extra (with Table support) and GitHub Flavored Markdown.</p>
 <p>With a tabbed document interface, PDF export, a built-in image uploader, session management, spell check, auto-save, syntax highlighting and a built-in CSS management interface, there’s no limit to what you can do with MarkdownPad.</p>
 
+          
         
       
     </div>
 
-    <div class="post-footer">
+    <div>
+      
+    </div>
 
-<! -- 添加捐赠图标 -->
-    
-<! -- end 添加捐赠图标 -->
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
       
 
       
@@ -513,51 +683,84 @@
       
         <div class="post-eof"></div>
       
-    </div>
-  </div>
+    </footer>
+  </article>
 
 
     
       
 
-  <div class="post post-type-normal ">
-    <div class="post-header">
+  
+  
 
-      
-      
-        <h1 class="post-title">
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/25/hello-world/" itemprop="url">
+                  Hello World
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-25T12:46:29+08:00" content="2016-09-25">
+              2016-09-25
+            </time>
+          </span>
+
           
+
           
             
-              <a class="post-title-link" href="/2016/09/25/hello-world/">
-                Hello World
-              </a>
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/25/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/25/hello-world/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
-        </h1>
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2016-09-25
-        </span>
-
-        
-
+      
         
           
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
@@ -567,15 +770,20 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
+          
         
       
     </div>
 
-    <div class="post-footer">
+    <div>
+      
+    </div>
 
-<! -- 添加捐赠图标 -->
-    
-<! -- end 添加捐赠图标 -->
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
       
 
       
@@ -584,51 +792,84 @@
       
         <div class="post-eof"></div>
       
-    </div>
-  </div>
+    </footer>
+  </article>
 
 
     
       
 
-  <div class="post post-type-normal ">
-    <div class="post-header">
+  
+  
 
-      
-      
-        <h1 class="post-title">
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/21/Hexo-Github托管：搭建自己的博客/" itemprop="url">
+                  Hexo+Github托管：搭建自己的博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-21T22:13:48+08:00" content="2016-09-21">
+              2016-09-21
+            </time>
+          </span>
+
           
+
           
             
-              <a class="post-title-link" href="/2016/09/21/Hexo-Github托管：搭建自己的博客/">
-                Hexo+Github托管：搭建自己的博客
-              </a>
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/21/Hexo-Github托管：搭建自己的博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/21/Hexo-Github托管：搭建自己的博客/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
-        </h1>
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2016-09-21
-        </span>
-
-        
-
+      
         
           
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h6 id="Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github-Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。"><a href="#Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github-Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。" class="headerlink" title="Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。"></a>Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。</h6><h2 id="安装和配置Hexo及Github"><a href="#安装和配置Hexo及Github" class="headerlink" title="安装和配置Hexo及Github"></a>安装和配置Hexo及Github</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>安装Hexo前，需要安装以下：</p>
+            <h6 id="Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github-Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。"><a href="#Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github-Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。" class="headerlink" title="Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。"></a>Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。</h6><h2 id="安装和配置Hexo及Github"><a href="#安装和配置Hexo及Github" class="headerlink" title="安装和配置Hexo及Github"></a>安装和配置Hexo及Github</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>安装Hexo前，需要安装以下：</p>
 <ul>
 <li>Node.js</li>
 <li>Git</li>
@@ -701,25 +942,20 @@
 <p><strong>注：</strong>  (1) 其中<code>MyGithub</code>替换成你的Github账户; (2) 注意在yml文件中，<code>:</code>后面都是要带空格的。</p>
 <p>此时，通过访问<code>http://MyGithub.github.io</code>可以看到默认的Hexo首页面（与之前本地测试时一样）。</p>
 
+          
         
       
     </div>
 
-    <div class="post-footer">
-
-<! -- 添加捐赠图标 -->
-    
-<! -- end 添加捐赠图标 -->
+    <div>
       
-        <div class="post-tags">
-          
-            <a href="/tags/github/"> #github </a>
-          
-            <a href="/tags/hexo/"> #hexo </a>
-          
-            <a href="/tags/blog/"> #blog </a>
-          
-        </div>
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
       
 
       
@@ -728,24 +964,25 @@
       
         <div class="post-eof"></div>
       
-    </div>
-  </div>
+    </footer>
+  </article>
 
 
     
-  </div>
+  </section>
 
   
 
 
+          </div>
           
 
+
           
+
         </div>
-      </div>
-
-
-      
+        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -755,18 +992,22 @@
     </div>
   </div>
 
-  <div id="sidebar" class="sidebar">
+  <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
       
 
-      <div class="site-overview">
-        <div class="site-author motion-element">
-          <img class="site-author-image" src="/xirong.jpg" alt="Shen Jennie" />
-          <p class="site-author-name">Shen Jennie</p>
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Shen Jennie" />
+          <p class="site-author-name" itemprop="name">Shen Jennie</p>
+          <p class="site-description motion-element" itemprop="description"></p>
         </div>
-        <p class="site-description motion-element"></p>
-        <div class="site-state motion-element">
+        <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">6</span>
@@ -774,304 +1015,178 @@
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">分类</span>
-              </a>
-          </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">6</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
         </div>
 
         
-
         
 
         
         
 
-     
-        
-        
-      </div>
+      </section>
 
       
-    </div>
-
-  </div>
-
 
     </div>
+  </aside>
 
-    <div id="footer" class="footer">
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">
+        <div class="copyright" >
   
-  &copy; &nbsp; 
-  2016
-  
-  <span class="author"> Shen Jennie</span>
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shen Jennie</span>
 </div>
 
 <div class="powered-by">
-  <div style="float:left;margin-top:7px;margin-right:10px;">
-  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254711542'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254711542%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-  </div>
-   鲁ICP备15013969号
-</div>
-<div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a> 
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Clone theme 
-  <a class="theme-link" href="https://github.com/xirong/hexo-theme-next" rel="external nofollow">
-    NexT
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
   </a>
 </div>
 
+        
 
-
-
-
+        
       </div>
-    </div>
+    </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
-  <!-- <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script> -->
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
 
   
   
 
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
   <script type="text/javascript">
-    $(document).ready(function() {
-      $('.content img').each(function () {
-        var $image = $(this);
-        var $imageWrapLink = $image.parent('a');
-
-        if ($imageWrapLink.size() < 1) {
-          $imageWrapLink = $image.wrap('<a href="' + this.getAttribute('src') + '"></a>').parent('a');
-        }
-        $imageWrapLink.addClass('fancybox');
-      });
-    });
-    $('.fancybox').fancybox({
-      helpers: {
-        overlay: {
-          locked: false
-        }
-      }
-    });
-  </script>
-
-
-  <!-- <script type="text/javascript">
-  function hasMobileUA () {
-    var nav = window.navigator;
-    var ua = nav.userAgent;
-    var pa = /iPad|micromessenger|iPhone|Android|Opera Mini|BlackBerry|webOS|UCWEB|UCBrowser|MQQBrowser|Blazer|PSP|IEMobile|Symbian|Mobile|samsung|htc/g;
-    return pa.test(ua);
-  }
-
-  function isDesktop () {
-    return screen.width > 991 && !hasMobileUA();
-  }
-
-  function isTablet () {
-    return screen.width < 992 && screen.width > 767 && hasMobileUA();
-  }
-
-  function isMobile () {
-    return screen.width < 767 && hasMobileUA();
-  }
-
-  function escapeSelector (selector) {
-    return selector.replace(/[!"$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, "\\$&")
-  }
-
-  function displaySidebar () {
-    setTimeout(function () {
-      $('.sidebar-toggle').trigger('click');
-    }, 800);
-  }
-
-</script>
- -->
-  
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" id="motion.global">
-  $(document).ready(function () {
-    var body = $('body');
-
-    var isSidebarVisible = false;
-    var sidebarToggle = $('.sidebar-toggle');
-    var sidebarToggleLine1st = $('.sidebar-toggle-line-first')
-    var sidebarToggleLine2nd = $('.sidebar-toggle-line-middle');
-    var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
-    var sidebar = $('.sidebar');
-
-    var SIDEBAR_WIDTH = '320px';
-    var SIDEBAR_DISPLAY_DURATION = 300;
-
-    var sidebarToogleLineStatusInit = {width: '100%', opacity: 1, left: 0, rotateZ: 0, top: 0};
-
-    var sidebarToggleLine1stStatusInit = sidebarToogleLineStatusInit;
-    var sidebarToggleLine1stStatusArrow = {width: '50%', rotateZ: '-45deg', top: '2px'};
-    var sidebarToogleLine1stStatusClose = {width: '100%', rotateZ: '-45deg', top: '5px'};
-
-    var sidebarToggleLine2ndStatusInit = sidebarToogleLineStatusInit;
-    var sidebarToggleLine2ndStatusArrow = {width: '90%'};
-    var sidebarToogleLine2ndStatusClose = {opacity: 0};
-
-    var sidebarToggleLine3rdStatusInit = sidebarToogleLineStatusInit;
-    var sidebarToggleLine3rdStatusArrow = {width: '50%', rotateZ: '45deg', top: '-2px'};
-    var sidebarToogleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
-
-    LogoAndMenuMotion();
-    sidebarToggleMotion();
-    postsListMotion();
-    backToTopMotion();    
-
-    $(document)
-      .on('sidebar.isShowing', function () {
-        isDesktop() && body.velocity(
-          {paddingRight: SIDEBAR_WIDTH},
-          SIDEBAR_DISPLAY_DURATION
-        );
-        sidebarContentMotion();
-      })
-      .on('sidebar.isHiding', function () {});
-
-//search animate
-$(function(){
-   $('#ts-search-input').focus(function() {  //设置获得焦点时的方法，让文本框变长
-    $(this).animate({width: "150"}, 300 );  
-    $(this).val(''); //用于清空内容，可选操作
-   });
- 
-   $('#ts-search-input').blur(function() {  //设置失去焦点时的方法，让文本框变短
-    $(this).animate({width: "70"}, 300 );
-   });
-});
-
-    function LogoAndMenuMotion() {
-      $.Velocity.RunSequence([
-        { e: $('.brand'), p: { opacity: 1 }, o: { duration: 100 } },
-        { e: $('.logo'), p: { opacity: 1, top: 0 }, o: { duration: 50} },
-        
-        { e: $('.site-title'), p: { opacity: 1, top: 0 }, o: { duration: 200 } }
-      ]);
-      $('.menu-item').velocity('transition.slideDownIn', {display: null});
-    }
-
-
-    function backToTopMotion () {
-      var b2top = $('.back-to-top');
-      b2top.on('click', function () {
-        body.velocity('scroll');
-      });
-    }
-
-    function sidebarShowMotion () {
-
-      sidebarToggleLine1st.velocity(sidebarToogleLine1stStatusClose);
-      sidebarToggleLine2nd.velocity(sidebarToogleLine2ndStatusClose);
-      sidebarToggleLine3rd.velocity(sidebarToogleLine3rdStatusClose);
-
-      sidebar.velocity({width: SIDEBAR_WIDTH}, {
-        display: 'block',
-        duration: SIDEBAR_DISPLAY_DURATION,
-        complete: function () {
-          sidebar.addClass('sidebar-active');
-          sidebar.trigger('sidebar.didShow');
-        }
-      });
-      sidebar.trigger('sidebar.isShowing');
-    }
-
-    function sidebarHideMotion () {
-      isDesktop() && body.velocity({paddingRight: 0});
-      sidebar.velocity('reverse');
-
-      sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusInit);
-      sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusInit);
-      sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit);
-
-      sidebar.removeClass('sidebar-active');
-      sidebar.trigger('sidebar.isHiding');
-    };
-
-    function sidebarContentMotion () {
-      $('.sidebar .motion-element').velocity(
-        'transition.slideRightIn',
-        {stagger: 50, drag: true}
-      );
-    }
-
-    function postsListMotion () {
-      var postMotionOptions = window.postMotionOptions || {stagger: 300, drag: true};
-      $('.post').velocity('transition.slideDownIn', postMotionOptions);
-    }
-
-    function sidebarToggleMotion () {
-      sidebarToggle.on('click', function () {
-        isSidebarVisible ? sidebarHideMotion() : sidebarShowMotion();
-        isSidebarVisible = !isSidebarVisible;
-      });
-
-      sidebarToggle.hover(function () {
-        if (isSidebarVisible) {return}
-        sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusArrow);
-        sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusArrow);
-        sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusArrow);
-      }, function () {
-        if (isSidebarVisible) {return}
-        sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusInit);
-        sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
-        sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
-      });
-    }
-  });
-
-</script>
-
-
-
-
-
-  
-
-   <script type="text/javascript">
-    var HEXO_SIDEBAR_CONFIGURATION = 'post';
-    $(document).ready(function () {
-      if (HEXO_SIDEBAR_CONFIGURATION === 'always') {
-        displaySidebar();
-      }
-    });
+    var duoshuoQuery = {short_name:"cutemonkeyfamily"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
   </script>
 
   
+    
+  
+
+
+
+
 
   
   
   
 
+  
 
   
-  
-  
+
 </body>
 </html>
