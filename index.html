@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="theme-next use-motion theme-next-mist">
+<html class="theme-next use-motion theme-next-pisces">
 <head>
   
 
@@ -114,6 +114,16 @@
     
       
       
+        <li class="menu-item menu-item-home">
+        <a href="/">
+          <i class="menu-item-icon icon-home"></i> <br />
+          首页
+        </a>
+      </li>
+      
+    
+      
+      
         <li class="menu-item menu-item-about">
         <a href="/about">
           <i class="menu-item-icon icon-about"></i> <br />
@@ -180,6 +190,333 @@
         <div id="content" class="content">
           
   <div id="posts" class="posts-expand">
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2016/12/22/两个div一行。3个缝相等-同时，两个div不设高度等高显示。/">
+                两个div一行。3个缝相等;同时，两个div不设高度等高显示。
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2016-12-22
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h6 id="悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between-space-around。发现这两个属性不能实现这个效果。"><a href="#悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between-space-around。发现这两个属性不能实现这个效果。" class="headerlink" title="悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between/space-around。发现这两个属性不能实现这个效果。"></a>悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between/space-around。发现这两个属性不能实现这个效果。</h6><h6 id="既然两个div是block块级元素，那么display：flex-还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。-左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100-。；"><a href="#既然两个div是block块级元素，那么display：flex-还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。-左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100-。；" class="headerlink" title="既然两个div是block块级元素，那么display：flex;还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。 左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100%。；"></a>既然两个div是block块级元素，那么display：flex;还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。 左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100%。；</h6><p>&gt;<br>    <div class="container"><br>        <div class="child one" style="background:red"><br>        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint cupiditate, quo! Quibusdam quae aperiam quo aspernatur distinctio, atque deserunt, laboriosam iusto! Nihil omnis deserunt, molestiae, cupiditate aperiam ipsum iste ea?<br>        </div><br>        <div class="child two" style="background:yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iusto optio rerum facere voluptas natus asperiores officia maxime veniam quo? Qui ipsam aspernatur quam maiores natus dolorum ullam fugiat distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique fuga laboriosam alias aut eligendi nostrum, sint voluptatem nihil vitae vel dignissimos, dolorum doloremque. Ex odio, quis soluta at delectus tempore.<br>        </div><br>    </div></p>
+<h2 id="css"><a href="#css" class="headerlink" title="css:"></a>css:</h2><blockquote>
+</blockquote>
+<pre><code>body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+    background-color: blue;
+}
+
+.child {
+    width: 44%;
+}
+
+.one {
+    margin-left: 4%;
+    margin-right: 2%;
+}
+
+.two {
+    margin-left: 2%;
+    margin-right: 4%;
+}
+</code></pre>
+        
+      
+    </div>
+
+    <div class="post-footer">
+
+<! -- 添加捐赠图标 -->
+    
+<! -- end 添加捐赠图标 -->
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2016/12/22/单页应用前一个page的input没有失去焦点，键盘没有收下去，会导致焦点存在第二个page/">
+                Js控制iphone端的input/textarea元素失去焦点时隐藏键盘
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2016-12-22
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>问题描述：</p>
+<h2 id="单页应用前一个page的input没有失去焦点，键盘没有收下去-会导致焦点存在第二个page"><a href="#单页应用前一个page的input没有失去焦点，键盘没有收下去-会导致焦点存在第二个page" class="headerlink" title="单页应用前一个page的input没有失去焦点，键盘没有收下去,会导致焦点存在第二个page"></a>单页应用前一个page的input没有失去焦点，键盘没有收下去,会导致焦点存在第二个page</h2><p>解决方法:</p>
+<blockquote>
+<pre><code>$(&quot;#txtNewFriendSearch&quot;).on(&quot;keydown keypress keyup&quot;, function (event) {
+    $(&quot;#txtTelSearch&quot;).html($(&quot;#txtNewFriendSearch&quot;).val());
+    if (event.keyCode == 13) {
+        findJgoUser();
+        $(this).blur();//失去焦点
+    }
+});
+</code></pre></blockquote>
+<h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><ol>
+<li>只写keyup，会导致“删除”的时候，$(“#txtTelSearch”).html($(“#txtNewFriendSearch”).val());这个value不是实时的。</li>
+<li>只写keydown，会导致input输入的时候，$(“#txtTelSearch”)显示获取到的$(“#txtNewFriendSearch”).val()少个一个数字，删除的时候少一个数字。</li>
+<li>键盘监听事件的顺序：keydown &gt; keypress &gt; keyup。具体细节：<a href="http://www.cnblogs.com/xcsn/p/3413074.html" title="键盘事件keydown、keypress、keyup随笔整理总结（摘抄）" target="_blank" rel="external">http://www.cnblogs.com/xcsn/p/3413074.html</a></li>
+</ol>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+
+<! -- 添加捐赠图标 -->
+    
+<! -- end 添加捐赠图标 -->
+      
+        <div class="post-tags">
+          
+            <a href="/tags/keyup/"> #keyup </a>
+          
+            <a href="/tags/keydown/"> #keydown </a>
+          
+            <a href="/tags/blur/"> #blur() </a>
+          
+        </div>
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2016/12/22/js判断是否在微信浏览器中打开/">
+                js判断是否在微信浏览器中打开
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2016-12-22
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>用JS来判断,无论是android 还是iphone，ipad 都可以</p>
+<blockquote>
+<pre><code>function is_weixn(){
+    var ua = navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i)==&quot;micromessenger&quot;) {
+        return true;
+    } else {
+        return false;
+    }
+}
+</code></pre></blockquote>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+
+<! -- 添加捐赠图标 -->
+    
+<! -- end 添加捐赠图标 -->
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2016/10/04/使用css完成元素居中的7种方法/">
+                未命名
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2016-10-03
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="垂直居中的7种方案"><a href="#垂直居中的7种方案" class="headerlink" title="垂直居中的7种方案"></a>垂直居中的7种方案</h2><p><strong>MarkdownPad</strong> is a full-featured Markdown editor for Windows.</p>
+<h3 id="Built-exclusively-for-Markdown"><a href="#Built-exclusively-for-Markdown" class="headerlink" title="Built exclusively for Markdown"></a>Built exclusively for Markdown</h3><p>Enjoy first-class Markdown support with easy access to  Markdown syntax and convenient keyboard shortcuts.</p>
+<p>Give them a try:</p>
+<ul>
+<li><strong>Bold</strong> (<code>Ctrl+B</code>) and <em>Italic</em> (<code>Ctrl+I</code>)</li>
+<li>Quotes (<code>Ctrl+Q</code>)</li>
+<li>Code blocks (<code>Ctrl+K</code>)</li>
+<li>Headings 1, 2, 3 (<code>Ctrl+1</code>, <code>Ctrl+2</code>, <code>Ctrl+3</code>)</li>
+<li>Lists (<code>Ctrl+U</code> and <code>Ctrl+Shift+O</code>)</li>
+</ul>
+<h3 id="See-your-changes-instantly-with-LivePreview"><a href="#See-your-changes-instantly-with-LivePreview" class="headerlink" title="See your changes instantly with LivePreview"></a>See your changes instantly with LivePreview</h3><p>Don’t guess if your <a href="http://markdownpad.com" target="_blank" rel="external">hyperlink syntax</a> is correct; LivePreview will show you exactly what your document looks like every time you press a key.</p>
+<h3 id="Make-it-your-own"><a href="#Make-it-your-own" class="headerlink" title="Make it your own"></a>Make it your own</h3><p>Fonts, color schemes, layouts and stylesheets are all 100% customizable so you can turn MarkdownPad into your perfect editor.</p>
+<h3 id="A-robust-editor-for-advanced-Markdown-users"><a href="#A-robust-editor-for-advanced-Markdown-users" class="headerlink" title="A robust editor for advanced Markdown users"></a>A robust editor for advanced Markdown users</h3><p>MarkdownPad supports multiple Markdown processing engines, including standard Markdown, Markdown Extra (with Table support) and GitHub Flavored Markdown.</p>
+<p>With a tabbed document interface, PDF export, a built-in image uploader, session management, spell check, auto-save, syntax highlighting and a built-in CSS management interface, there’s no limit to what you can do with MarkdownPad.</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+
+<! -- 添加捐赠图标 -->
+    
+<! -- end 添加捐赠图标 -->
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
     
       
 
@@ -432,7 +769,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -446,7 +783,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -635,9 +972,6 @@ $(function(){
         { e: $('.brand'), p: { opacity: 1 }, o: { duration: 100 } },
         { e: $('.logo'), p: { opacity: 1, top: 0 }, o: { duration: 50} },
         
-        { e: $('.logo-line-before i'), p: { translateX: "100%" }, o: { duration: 500, sequenceQueue: false } },
-        { e: $('.logo-line-after i'), p: { translateX: "-100%" }, o: { duration: 500, sequenceQueue: false } },
-        
         { e: $('.site-title'), p: { opacity: 1, top: 0 }, o: { duration: 200 } }
       ]);
       $('.menu-item').velocity('transition.slideDownIn', {display: null});
@@ -721,7 +1055,7 @@ $(function(){
   
 
    <script type="text/javascript">
-    var HEXO_SIDEBAR_CONFIGURATION = 'hide';
+    var HEXO_SIDEBAR_CONFIGURATION = 'post';
     $(document).ready(function () {
       if (HEXO_SIDEBAR_CONFIGURATION === 'always') {
         displaySidebar();
@@ -734,10 +1068,6 @@ $(function(){
   
   
   
-
-  
-
-
 
 
   
