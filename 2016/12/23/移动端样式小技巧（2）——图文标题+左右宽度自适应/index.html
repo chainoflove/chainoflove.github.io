@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="萌面女侠">
 <meta property="og:description" content="一些常见的布局例如图+文案的，有多种方式可以去写，比如padding-left+background或者position+padding-left或者before伪元素。前两种方法都可以把图片做到绝对的垂直居中，但是它们都是相对整行的容器进行定位的，由于line-height兼容问题的坑，图片实际上不一定会和文字对齐。如果有图文对齐的需求的话，个人建议才用before伪元素来布局，before可">
 <meta property="og:image" content="http://oetrez9vl.bkt.clouddn.com/image/mobile-skills/%E5%9B%BE%E6%96%87%E6%A0%87%E9%A2%98+%E5%B7%A6%E5%8F%B3%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94.png">
-<meta property="og:updated_time" content="2016-12-23T07:15:48.000Z">
+<meta property="og:updated_time" content="2016-12-23T13:21:48.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端样式小技巧（2）——图文标题+左右宽度自适应">
 <meta name="twitter:description" content="一些常见的布局例如图+文案的，有多种方式可以去写，比如padding-left+background或者position+padding-left或者before伪元素。前两种方法都可以把图片做到绝对的垂直居中，但是它们都是相对整行的容器进行定位的，由于line-height兼容问题的坑，图片实际上不一定会和文字对齐。如果有图文对齐的需求的话，个人建议才用before伪元素来布局，before可">
@@ -292,10 +292,8 @@
       
         <blockquote>
 <p>一些常见的布局例如图+文案的，有多种方式可以去写，比如padding-left+background或者position+padding-left或者before伪元素。<br>前两种方法都可以把图片做到绝对的垂直居中，但是它们都是相对整行的容器进行定位的，由于line-height兼容问题的坑，图片实际上不一定会和文字对齐。如果有图文对齐的需求的话，个人建议才用before伪元素来布局，before可以相对文案来定位。 </p>
-<p>######<br>借鉴原作者的写法，发现了另外一个小技巧：利用伪类before和after生成的图片我们很难去让他们与文字一起垂直居中（文字垂直居中相信大家都知道：line-height===height。这里我利用background-size: contain;<br>/<em>这里把背景图片尺寸设置成contain，不需要考虑图片拉伸的问题</em>/；<br>height: 44px;等于容器的高度；随后vertical-align: top or bottom都没关系了，因为图片的容器已经和外面的容器在一条线上了。</p>
-<p>###### </p>
 </blockquote>
-<p>######</p>
+<p>借鉴原作者的写法，发现了另外一个小技巧：利用伪类before和after生成的图片我们很难去让他们与文字一起垂直居中（文字垂直居中相信大家都知道：line-height===height。这里我利用background-size: contain;<br>/<em>这里把背景图片尺寸设置成contain，不需要考虑图片拉伸的问题</em>/；<br>height: 44px;等于容器的高度；随后vertical-align: top or bottom都没关系了，因为图片的容器已经和外面的容器在一条线上了。</p>
 <p><img src="http://oetrez9vl.bkt.clouddn.com/image/mobile-skills/%E5%9B%BE%E6%96%87%E6%A0%87%E9%A2%98+%E5%B7%A6%E5%8F%B3%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94.png" alt="角标的实现"></p>
 <h6 id="html："><a href="#html：" class="headerlink" title="html："></a>html：</h6><pre><code>&lt;ul&gt;
     &lt;li class=&quot;ent-li&quot;&gt;
@@ -405,16 +403,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/23/移动端样式小技巧（1）——角标的实现/" rel="next" title="移动端样式小技巧—（1技巧（1）——角角标的实现">
-                <i class="fa fa-chevron-left"></i> 移动端样式小技巧—（1技巧（1）——角角标的实现
+              <a href="/2016/12/22/两个div一行。3个缝相等-同时，两个div不设高度等高显示。/" rel="next" title="两个div一行。3个缝相等;同时，两个div不设高度等高显示。">
+                <i class="fa fa-chevron-left"></i> 两个div一行。3个缝相等;同时，两个div不设高度等高显示。
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/23/移动端样式小技巧（3）——n宫格布局排列/" rel="prev" title="移动端样式小技巧（3）——n宫格布局排列">
-                移动端样式小技巧（3）——n宫格布局排列 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/23/移动端样式小技巧（1）——角标的实现/" rel="prev" title="移动端样式小技巧（1）——角标的实现">
+                移动端样式小技巧（1）——角标的实现 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -506,7 +504,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

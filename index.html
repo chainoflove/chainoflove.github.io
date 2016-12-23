@@ -1020,199 +1020,8 @@ $(&quot;.area-item&quot;).on(&quot;click&quot;, function(e) {
             
               
                 
-                <a class="post-title-link" href="/2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应/" itemprop="url">
-                  移动端样式小技巧（2）——图文标题+左右宽度自适应
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-23T13:13:05+08:00" content="2016-12-23">
-              2016-12-23
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>一些常见的布局例如图+文案的，有多种方式可以去写，比如padding-left+background或者position+padding-left或者before伪元素。<br>前两种方法都可以把图片做到绝对的垂直居中，但是它们都是相对整行的容器进行定位的，由于line-height兼容问题的坑，图片实际上不一定会和文字对齐。如果有图文对齐的需求的话，个人建议才用before伪元素来布局，before可以相对文案来定位。 </p>
-<p>######<br>借鉴原作者的写法，发现了另外一个小技巧：利用伪类before和after生成的图片我们很难去让他们与文字一起垂直居中（文字垂直居中相信大家都知道：line-height===height。这里我利用background-size: contain;<br>/<em>这里把背景图片尺寸设置成contain，不需要考虑图片拉伸的问题</em>/；<br>height: 44px;等于容器的高度；随后vertical-align: top or bottom都没关系了，因为图片的容器已经和外面的容器在一条线上了。</p>
-<p>###### </p>
-</blockquote>
-<p>######</p>
-<p><img src="http://oetrez9vl.bkt.clouddn.com/image/mobile-skills/%E5%9B%BE%E6%96%87%E6%A0%87%E9%A2%98+%E5%B7%A6%E5%8F%B3%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94.png" alt="角标的实现"></p>
-<h6 id="html："><a href="#html：" class="headerlink" title="html："></a>html：</h6><pre><code>&lt;ul&gt;
-    &lt;li class=&quot;ent-li&quot;&gt;
-      &lt;p class=&quot;left&quot;&gt;热门线路sdgdgs水电费广东省分公司的山东干发的&lt;/p&gt;
-      &lt;div class=&quot;right&quot;&gt;100000000009999999999999999999999999999999999999988&lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;ent-li&quot;&gt;
-      &lt;p class=&quot;left&quot;&gt;热门线路sdgdgs水电费广东省分公司的山东干发的&lt;/p&gt;
-      &lt;div class=&quot;right&quot;&gt;100000000009999999999999999999999999999999999999988&lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;ent-li&quot;&gt;
-      &lt;p class=&quot;left&quot;&gt;热门线路sdgdgs水电费广东省分公司的山东干发的&lt;/p&gt;
-      &lt;div class=&quot;right&quot;&gt;100000000009999999999999999999999999999999999999988&lt;/div&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-</code></pre><h6 id="css："><a href="#css：" class="headerlink" title="css："></a>css：</h6><pre><code>body,
-  p,
-  ul,
-  li {
-    margin: 0;
-    padding: 0;
-  }
-
-  ul,
-  li {
-    list-style: none;
-  }
-  /* 图文标题 */
-
-  li+li {
-    border-top: 1px solid #999;
-  }
-
-  p.left {
-    flex: 1;
-    text-align: left;
-    height: 44px;
-    line-height: 44px;
-    font-size: 16px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  p.left::before {
-    content: &apos;&apos;;
-    display: inline-block;
-    background: url(&quot;img/icon.png&quot;) center center no-repeat;
-    background-size: contain;
-    /*这里把背景图片尺寸设置成contain，不需要考虑图片拉伸的问题*/
-    width: 28px;
-    height: 44px;
-    vertical-align: top;
-    /*or vertical-align: bottom; 这里因为height和容器的height设成了一致的，所以vertical-align：top或者bottom都无所谓了。*/
-    margin-right: 5px;
-  }
-  /* 左右宽度自适应 */
-
-  .ent-li {
-    margin: 0 45px;
-    height: 44px;
-    display: flex;
-  }
-
-  .ent-li::after {
-    content: &apos;&apos;;
-    background: url(&apos;img/arrow.png&apos;) center center no-repeat;
-    background-size: contain;
-    width: 22px;
-    height: 44px;
-  }
-
-  .right {
-    flex: 1;
-    text-align: right;
-    line-height: 44px;
-    font-size: 12px;
-    color: #999;
-    padding-left: 10px;
-  }
-</code></pre><blockquote>
-<p>图中的布局实际上是分左右两块的，依照ui的需求，文案是要左对齐，数字是要右对齐的。你可能最先想到的是把右侧的数字定位或者浮动到那，左侧的容器加上个margin-right或者padding-right。这样可以实现，但是两侧的文案有极端情况出现。</p>
-<p>#####<br>flex:1;的作用是让这部分的宽度width在外部容器固定的情况下，随意变形，让另外一边的宽度随里面的内容的增大，通俗点将，就是我这边去适应另外一边，那边我不管你怎么变，你变宽我就瘦一点，你瘦了我就可以放我的东西了。</p>
-<p>#####<br>看你看中那一边了，如果数字重要，就让文案去自适应，数字有多长就多长，像这边例子的写法；如果注重文案，就让数字去自适应，文案应该也不能太长了，不然数字就没了。。。。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/12/23/移动端样式小技巧（1）——角标的实现/" itemprop="url">
-                  移动端样式小技巧—（1技巧（1）——角角标的实现
+                  移动端样式小技巧（1）——角标的实现
                 </a>
               
             
@@ -1387,7 +1196,7 @@ $(&quot;.area-item&quot;).on(&quot;click&quot;, function(e) {
             
               
                 
-                <a class="post-title-link" href="/2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应 - 副本/" itemprop="url">
+                <a class="post-title-link" href="/2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应/" itemprop="url">
                   移动端样式小技巧（2）——图文标题+左右宽度自适应
                 </a>
               
@@ -1412,8 +1221,8 @@ $(&quot;.area-item&quot;).on(&quot;click&quot;, function(e) {
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应 - 副本/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应 - 副本/" itemprop="commentsCount"></span>
+                <a href="/2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1440,10 +1249,8 @@ $(&quot;.area-item&quot;).on(&quot;click&quot;, function(e) {
           
             <blockquote>
 <p>一些常见的布局例如图+文案的，有多种方式可以去写，比如padding-left+background或者position+padding-left或者before伪元素。<br>前两种方法都可以把图片做到绝对的垂直居中，但是它们都是相对整行的容器进行定位的，由于line-height兼容问题的坑，图片实际上不一定会和文字对齐。如果有图文对齐的需求的话，个人建议才用before伪元素来布局，before可以相对文案来定位。 </p>
-<p>######<br>借鉴原作者的写法，发现了另外一个小技巧：利用伪类before和after生成的图片我们很难去让他们与文字一起垂直居中（文字垂直居中相信大家都知道：line-height===height。这里我利用background-size: contain;<br>/<em>这里把背景图片尺寸设置成contain，不需要考虑图片拉伸的问题</em>/；<br>height: 44px;等于容器的高度；随后vertical-align: top or bottom都没关系了，因为图片的容器已经和外面的容器在一条线上了。</p>
-<p>###### </p>
 </blockquote>
-<p>######</p>
+<p>借鉴原作者的写法，发现了另外一个小技巧：利用伪类before和after生成的图片我们很难去让他们与文字一起垂直居中（文字垂直居中相信大家都知道：line-height===height。这里我利用background-size: contain;<br>/<em>这里把背景图片尺寸设置成contain，不需要考虑图片拉伸的问题</em>/；<br>height: 44px;等于容器的高度；随后vertical-align: top or bottom都没关系了，因为图片的容器已经和外面的容器在一条线上了。</p>
 <p><img src="http://oetrez9vl.bkt.clouddn.com/image/mobile-skills/%E5%9B%BE%E6%96%87%E6%A0%87%E9%A2%98+%E5%B7%A6%E5%8F%B3%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94.png" alt="角标的实现"></p>
 <h6 id="html："><a href="#html：" class="headerlink" title="html："></a>html：</h6><pre><code>&lt;ul&gt;
     &lt;li class=&quot;ent-li&quot;&gt;
@@ -2147,13 +1954,181 @@ $(&quot;.area-item&quot;).on(&quot;click&quot;, function(e) {
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/21/Hexo-Github托管：搭建自己的博客/" itemprop="url">
+                  Hexo+Github托管：搭建自己的博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-21T22:13:48+08:00" content="2016-09-21">
+              2016-09-21
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/21/Hexo-Github托管：搭建自己的博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/21/Hexo-Github托管：搭建自己的博客/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h6 id="Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github-Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。"><a href="#Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github-Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。" class="headerlink" title="Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。"></a>Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github Page可以免费创建一个静态网站。下面将介绍如何使用Hexo和Github，在win10环境下搭建一个静态的博客。</h6><h2 id="安装和配置Hexo及Github"><a href="#安装和配置Hexo及Github" class="headerlink" title="安装和配置Hexo及Github"></a>安装和配置Hexo及Github</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>安装Hexo前，需要安装以下：</p>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+</ul>
+<p>如果已经安装完成以上程序，打开Git-bash或者cmd，输入<br>  <code>npm install -g hexo-cli</code> 即可完成Hexo的安装。</p>
+<h3 id="使用Hexo进行本地建站"><a href="#使用Hexo进行本地建站" class="headerlink" title="使用Hexo进行本地建站"></a>使用Hexo进行本地建站</h3><p>选择一个本地的文件夹，如</p>
+<blockquote>
+<p>D:\hexo。</p>
+</blockquote>
+<p>输入</p>
+<blockquote>
+<p><code>hexo init D:\hexo</code></p>
+<p><code>cd D:\hexo</code></p>
+<p><code>npm install</code></p>
+</blockquote>
+<p>如果hexo安装成功，则在D:\hexo文件夹下的文件目录为</p>
+<p>.</p>
+<p>├── _config.yml // 网站的配置信息，你可以在此配置大部分的参数。</p>
+<p>├── package.json </p>
+<p>├── scaffolds // 模板文件夹。当你新建文章时，Hexo会根据scaffold来建立文件。</p>
+<p>├── source // 存放用户资源的地方</p>
+<p>|               ├── _drafts</p>
+<p>|               └── _posts</p>
+<p>└── themes // 存放网站的主题。Hexo会根据主题来生成静态页面。</p>
+<p>详细文件或文件夹的具体含义见 Hexo官方文档之建站<a href="https://hexo.io/zh-cn/docs/setup.html" title="Hexo官方文档之建站" target="_blank" rel="external">https://hexo.io/zh-cn/docs/setup.html</a></p>
+<p>为了测试本地建站是否成功，输入</p>
+<blockquote>
+<p><code>hexo s</code></p>
+</blockquote>
+<p>如果显示如下</p>
+<p><img src="http://a1.qpic.cn/psb?/V13v2cLJ3Cl3Pa/JsA2SMUlkea4Yo4zES26fE22gPggNujshE00.rCl.wI!/b/dHEBAAAAAAAA&amp;bo=5QEhAAAAAAADB.c!&amp;rf=viewer_4" alt="hexo s 本地建站成功"></p>
+<p>则说明本地建站成功，访问本地地址可以看到Hexo默认主题的效果。</p>
+<p>至此，Hexo的安装和本地建站完成，如需更加深入全面地了解Hexo，可访问Hexo官方文档。</p>
+<h2 id="创建Github账号"><a href="#创建Github账号" class="headerlink" title="创建Github账号"></a>创建Github账号</h2><p>如果已经注册Github，可跳过此步骤。否则，访问Github官网进行注册，下面假设你注册Github账号名为MyGithub。</p>
+<h3 id="创建与账号同名的Repository"><a href="#创建与账号同名的Repository" class="headerlink" title="创建与账号同名的Repository"></a>创建与账号同名的Repository</h3><p>注册并登陆Github官网成功后，点击页面右上角的<br><code>+</code>，选择 <code>New repository</code>。</p>
+<p>在<code>Repository name</code>中填写<code>你的Github账号名.github.io</code>，这里是<code>MyGithub.github.io</code>。<code>Description</code>中填写对此repository的描述信息(可选，但建议填写，如<code>Personal website</code>)。</p>
+<p>点击<code>Create repository</code>，完成创建。</p>
+<h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><p>(1) 生成SSH</p>
+<p>检查是否已经有SSH Key，打开Git Bash，输入</p>
+<blockquote>
+<p><code>cd ~/.ssh</code></p>
+</blockquote>
+<p>如果没有这个目录，则生成一个新的SSH，输入</p>
+<blockquote>
+<p><code>ssh-keygen -t rsa -C &quot;your e-mail&quot;</code></p>
+</blockquote>
+<p>其中，your e-mail是你注册Github时用到的邮箱。</p>
+<p>然后接下来几步都直接按回车键，最后生成如下（<strong>这里要特别注意：在哪个路径下，输入哪个命令</strong>）</p>
+<p><img src="http://a2.qpic.cn/psb?/V13v2cLJ3Cl3Pa/7zh84erUq6yxzrSYDl8NQVJG2sdB649yYbPl4MFwvPY!/b/dAkBAAAAAAAA&amp;bo=eAPfAngD3wIDCSw!&amp;rf=viewer_4" alt="warning text1" title="需要注意的路径"></p>
+<p>(2) 复制公钥内容到Github账户信息中</p>
+<p>打开<code>~/.ssh/id_rsa.pub</code>文件，复制里面的内容；</p>
+<p>打开Github官网，登陆后进入到个人设置(<code>点击头像-&gt;setting</code>)，点击右侧的<code>SSH Keys</code>，点击<code>Add SSH key</code>；填写title之后，将之前复制的内容粘贴到Key框中，最后点击<code>Add key</code>即可。</p>
+<p>(3) 测试SSH是否配置成功</p>
+<p>输入</p>
+<blockquote>
+<p><code>ssh -T git@github.com</code></p>
+</blockquote>
+<p>如果显示以下，则说明ssh配置成功。</p>
+<blockquote>
+<p>Hi username! You’ve successfully authenticated, but GitHub does not<br>provide shell access.</p>
+</blockquote>
+<p><img src="http://r.photo.store.qq.com/psb?/V13v2cLJ3Cl3Pa/Hge.Jaloqv9ZmQdrBbM*73LkoBp81BH*VsWxPNsAJzQ!/r/dAkBAAAAAAAA" alt="warning text1" title="需要注意的路径"></p>
+<p>将网站发布到Github的同名repository中</p>
+<p>打开<code>D:\Hexo</code>文件夹中的<code>_config.yml</code>文件，找到如下位置，填写</p>
+<blockquote>
+<p>deploy:</p>
+<p>type: git</p>
+<p>repository: git@github.com:MyGithub/MyGithub.github.io,master</p>
+</blockquote>
+<p><strong>注：</strong>  (1) 其中<code>MyGithub</code>替换成你的Github账户; (2) 注意在yml文件中，<code>:</code>后面都是要带空格的。</p>
+<p>此时，通过访问<code>http://MyGithub.github.io</code>可以看到默认的Hexo首页面（与之前本地测试时一样）。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 
 
           </div>
@@ -2192,7 +2167,7 @@ $(&quot;.area-item&quot;).on(&quot;click&quot;, function(e) {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
