@@ -84,31 +84,31 @@
 
 
 
-<meta name="description" content="function getArguments(){  
+<meta name="description" content="得到 URL 中的 query 参数
+function getArguments(){  
     var args={};  
     var query=window.location.search.substring(1);  
     var pairs=query.split(&amp;quot;&amp;amp;&amp;quot;);  
-    for(var i=0;i&amp;lt;pairs.length;i++){  
-        var">
+    for(var i=0;i&amp;lt;pairs.length">
 <meta property="og:type" content="article">
-<meta property="og:title" content="得到 URL 中的 query 参数">
+<meta property="og:title" content="得到 URL 中的path 和 query 参数">
 <meta property="og:url" content="http://yoursite.com/2017/01/10/得到URL中的query参数/index.html">
 <meta property="og:site_name" content="萌面女侠">
-<meta property="og:description" content="function getArguments(){  
+<meta property="og:description" content="得到 URL 中的 query 参数
+function getArguments(){  
     var args={};  
     var query=window.location.search.substring(1);  
     var pairs=query.split(&amp;quot;&amp;amp;&amp;quot;);  
-    for(var i=0;i&amp;lt;pairs.length;i++){  
-        var">
-<meta property="og:updated_time" content="2017-01-10T06:18:06.000Z">
+    for(var i=0;i&amp;lt;pairs.length">
+<meta property="og:updated_time" content="2017-01-18T04:51:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="得到 URL 中的 query 参数">
-<meta name="twitter:description" content="function getArguments(){  
+<meta name="twitter:title" content="得到 URL 中的path 和 query 参数">
+<meta name="twitter:description" content="得到 URL 中的 query 参数
+function getArguments(){  
     var args={};  
     var query=window.location.search.substring(1);  
     var pairs=query.split(&amp;quot;&amp;amp;&amp;quot;);  
-    for(var i=0;i&amp;lt;pairs.length;i++){  
-        var">
+    for(var i=0;i&amp;lt;pairs.length">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title> 得到 URL 中的 query 参数 | 萌面女侠 </title>
+  <title> 得到 URL 中的path 和 query 参数 | 萌面女侠 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -294,7 +294,7 @@
             
             
               
-                得到 URL 中的 query 参数
+                得到 URL 中的path 和 query 参数
               
             
           </h1>
@@ -328,7 +328,7 @@
 
           
           
-             <span id="/2017/01/10/得到URL中的query参数/" class="leancloud_visitors" data-flag-title="得到 URL 中的 query 参数">
+             <span id="/2017/01/10/得到URL中的query参数/" class="leancloud_visitors" data-flag-title="得到 URL 中的path 和 query 参数">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -350,7 +350,9 @@
       
 
       
-        <pre><code>function getArguments(){  
+        <ol>
+<li><p>得到 URL 中的 query 参数</p>
+<pre><code>function getArguments(){  
     var args={};  
     var query=window.location.search.substring(1);  
     var pairs=query.split(&quot;&amp;&quot;);  
@@ -362,8 +364,15 @@
         args[argname]=value;  
     }  
     return args;  
-}  
-</code></pre>
+} 
+</code></pre></li>
+<li><p>获取url中path的goods的id</p>
+<pre><code>var path = window.location.pathname;
+var value = path.replace(/[^0-9]/ig, &quot;&quot;);
+</code></pre></li>
+<li></li>
+</ol>
+
       
     </div>
 
@@ -395,6 +404,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/01/18/关于select-option选中/" rel="prev" title="关于select,option选中">
+                关于select,option选中 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -409,7 +422,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2017/01/10/得到URL中的query参数/"
-     data-title="得到 URL 中的 query 参数"
+     data-title="得到 URL 中的path 和 query 参数"
      data-content=""
      data-url="http://yoursite.com/2017/01/10/得到URL中的query参数/">
   <div class="ds-share-inline">
@@ -442,7 +455,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/01/10/得到URL中的query参数/"
-           data-title="得到 URL 中的 query 参数" data-url="http://yoursite.com/2017/01/10/得到URL中的query参数/">
+           data-title="得到 URL 中的path 和 query 参数" data-url="http://yoursite.com/2017/01/10/得到URL中的query参数/">
       </div>
     
   </div>
@@ -487,7 +500,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

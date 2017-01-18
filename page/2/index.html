@@ -278,6 +278,400 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/22/两个div一行。3个缝相等-同时，两个div不设高度等高显示。/" itemprop="url">
+                  两个div一行。3个缝相等;同时，两个div不设高度等高显示。
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-22T21:41:15+08:00" content="2016-12-22">
+              2016-12-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/22/两个div一行。3个缝相等-同时，两个div不设高度等高显示。/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/22/两个div一行。3个缝相等-同时，两个div不设高度等高显示。/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/22/两个div一行。3个缝相等-同时，两个div不设高度等高显示。/" class="leancloud_visitors" data-flag-title="两个div一行。3个缝相等;同时，两个div不设高度等高显示。">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>######<br>悟空第一次问我这个问题的时候，首相想到的是用弹性盒子模型。使用了justify-content：space-between/space-around。发现这两个属性不能实现这个效果。 </p>
+<p>#####</p>
+<p>######<br>既然两个div是block块级元素，那么display：flex;还是可以使用的，（因为如果用inline-block，中间会有一条缝，根据不同浏览器渲染出不同效果）。由此，想到了栅格布局，其实就是利用百分比。 左边第一个div的margin-left是margin-right的两倍；右边第二个div的margin-right是margin-left的两倍；这个四个加起来再加上两个div的宽度，应该正好等于100%。</p>
+<p>######<br>index.html:</p>
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;child one&quot; style=&quot;background:red&quot;&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint cupiditate, quo! Quibusdam quae aperiam quo aspernatur distinctio, atque deserunt, laboriosam iusto! Nihil omnis deserunt, molestiae, cupiditate aperiam ipsum iste ea?
+    &lt;/div&gt;
+    &lt;div class=&quot;child two&quot; style=&quot;background:yellow&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iusto optio rerum facere voluptas natus asperiores officia maxime veniam quo? Qui ipsam aspernatur quam maiores natus dolorum ullam fugiat distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique fuga laboriosam alias aut eligendi nostrum, sint voluptatem nihil vitae vel dignissimos, dolorum doloremque. Ex odio, quis soluta at delectus tempore.
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><hr>
+<p>css:</p>
+<blockquote>
+</blockquote>
+<pre><code>body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+    background-color: blue;
+}
+
+.child {
+    width: 44%;
+}
+
+.one {
+    margin-left: 4%;
+    margin-right: 2%;
+}
+
+.two {
+    margin-left: 2%;
+    margin-right: 4%;
+}
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/22/单页应用前一个page的input没有失去焦点，键盘没有收下去，会导致焦点存在第二个page/" itemprop="url">
+                  Js控制iphone端的input/textarea元素失去焦点时隐藏键盘
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-22T21:41:15+08:00" content="2016-12-22">
+              2016-12-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/22/单页应用前一个page的input没有失去焦点，键盘没有收下去，会导致焦点存在第二个page/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/22/单页应用前一个page的input没有失去焦点，键盘没有收下去，会导致焦点存在第二个page/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/22/单页应用前一个page的input没有失去焦点，键盘没有收下去，会导致焦点存在第二个page/" class="leancloud_visitors" data-flag-title="Js控制iphone端的input/textarea元素失去焦点时隐藏键盘">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>问题描述：</p>
+<h2 id="单页应用前一个page的input没有失去焦点，键盘没有收下去-会导致焦点存在第二个page"><a href="#单页应用前一个page的input没有失去焦点，键盘没有收下去-会导致焦点存在第二个page" class="headerlink" title="单页应用前一个page的input没有失去焦点，键盘没有收下去,会导致焦点存在第二个page"></a>单页应用前一个page的input没有失去焦点，键盘没有收下去,会导致焦点存在第二个page</h2><p>解决方法:</p>
+<blockquote>
+<pre><code>$(&quot;#txtNewFriendSearch&quot;).on(&quot;keydown keypress keyup&quot;, function (event) {
+    $(&quot;#txtTelSearch&quot;).html($(&quot;#txtNewFriendSearch&quot;).val());
+    if (event.keyCode == 13) {
+        findJgoUser();
+        $(this).blur();//失去焦点
+    }
+});
+</code></pre></blockquote>
+<h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><ol>
+<li>只写keyup，会导致“删除”的时候，$(“#txtTelSearch”).html($(“#txtNewFriendSearch”).val());这个value不是实时的。</li>
+<li>只写keydown，会导致input输入的时候，$(“#txtTelSearch”)显示获取到的$(“#txtNewFriendSearch”).val()少个一个数字，删除的时候少一个数字。</li>
+<li>键盘监听事件的顺序：keydown &gt; keypress &gt; keyup。具体细节：<a href="http://www.cnblogs.com/xcsn/p/3413074.html" title="键盘事件keydown、keypress、keyup随笔整理总结（摘抄）" target="_blank" rel="external">http://www.cnblogs.com/xcsn/p/3413074.html</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/22/js判断是否在微信浏览器中打开/" itemprop="url">
+                  js判断是否在微信浏览器中打开
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-22T21:41:15+08:00" content="2016-12-22">
+              2016-12-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/22/js判断是否在微信浏览器中打开/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/22/js判断是否在微信浏览器中打开/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/22/js判断是否在微信浏览器中打开/" class="leancloud_visitors" data-flag-title="js判断是否在微信浏览器中打开">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>用JS来判断,无论是android 还是iphone，ipad 都可以</p>
+<blockquote>
+<pre><code>function is_weixn(){
+    var ua = navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i)==&quot;micromessenger&quot;) {
+        return true;
+    } else {
+        return false;
+    }
+}
+</code></pre></blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/25/hello-world/" itemprop="url">
                   Hello World
                 </a>
@@ -601,7 +995,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
