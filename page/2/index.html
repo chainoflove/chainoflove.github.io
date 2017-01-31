@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -84,19 +84,22 @@
 
 
 
+<meta name="description" content="网上引来颜如玉，键下筑起黄金屋。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="萌面女侠">
+<meta property="og:title" content="悟空家的萌猴子">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
-<meta property="og:site_name" content="萌面女侠">
+<meta property="og:site_name" content="悟空家的萌猴子">
+<meta property="og:description" content="网上引来颜如玉，键下筑起黄金屋。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="萌面女侠">
+<meta name="twitter:title" content="悟空家的萌猴子">
+<meta name="twitter:description" content="网上引来颜如玉，键下筑起黄金屋。">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -107,7 +110,7 @@
   };
 </script>
 
-  <title> 萌面女侠 </title>
+  <title> 悟空家的萌猴子 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -165,11 +168,11 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">萌面女侠</span>
+      <span class="site-title">悟空家的萌猴子</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">半个苹果引起的真爱！</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -256,6 +259,653 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/23/移动端样式小技巧（3）——n宫格布局排列/" itemprop="url">
+                  移动端样式小技巧（3）——n宫格布局排列
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-23T15:18:05+08:00" content="2016-12-23">
+              2016-12-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/23/移动端样式小技巧（3）——n宫格布局排列/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/23/移动端样式小技巧（3）——n宫格布局排列/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/23/移动端样式小技巧（3）——n宫格布局排列/" class="leancloud_visitors" data-flag-title="移动端样式小技巧（3）——n宫格布局排列">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>众所周知，元素有3种基本显示框类型，block块级，inline-block行内块级，inline行内。<br>inline-block是一种特殊存在，可以设置宽高也可以使元素在一行排列。</p>
+<p>这两种布局都可以用float:left来写，但是浮动完了还需要清楚浮动。所以可以直接把元素设置成inline-block同样可以自动排列</p>
+</blockquote>
+<p>注意，写的时候一定要把文字固定高度，因为不固定的话，两种方法的布局都会出现形变。</p>
+<p>借鉴原作者的写法，我有两种写法：</p>
+<p>第一种：  </p>
+<p>设置每个col-25的宽度为25%，并设置他们为行内块元素，这会引起换行（因为每个行内元素外面会有间隙，所以会因为一行排满而换行），这就需要在外面的容器设置font-size: 0;</p>
+<p><img src="http://oetrez9vl.bkt.clouddn.com/image/mobile-skills/n%E5%AE%AB%E6%A0%BC%EF%BC%880%EF%BC%89.png" alt="n宫格（0）.png"></p>
+<h6 id="html："><a href="#html：" class="headerlink" title="html："></a>html：</h6><pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-25&quot;&gt;
+        &lt;img src=&quot;img/1.png&quot; alt=&quot;&quot; class=&quot;pic&quot;&gt;
+        &lt;p class=&quot;word&quot;&gt;跟团游&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-25&quot;&gt;
+        &lt;img src=&quot;img/2.png&quot; alt=&quot;&quot; class=&quot;pic&quot;&gt;
+        &lt;p class=&quot;word&quot;&gt;自由行&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-25&quot;&gt;
+        &lt;img src=&quot;img/3.png&quot; alt=&quot;&quot; class=&quot;pic&quot;&gt;
+        &lt;p class=&quot;word&quot;&gt;邮轮&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-25&quot;&gt;
+        &lt;img src=&quot;img/4.png&quot; alt=&quot;&quot; class=&quot;pic&quot;&gt;
+        &lt;p class=&quot;word&quot;&gt;主题游&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-25&quot;&gt;
+        &lt;img src=&quot;img/5.png&quot; alt=&quot;&quot; class=&quot;pic&quot;&gt;
+        &lt;p class=&quot;word&quot;&gt;签证&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-25&quot;&gt;
+        &lt;img src=&quot;img/6.png&quot; alt=&quot;&quot; class=&quot;pic&quot;&gt;
+        &lt;p class=&quot;word&quot;&gt;WIFI&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-25&quot;&gt;
+        &lt;img src=&quot;img/7.png&quot; alt=&quot;&quot; class=&quot;pic&quot;&gt;
+        &lt;p class=&quot;word&quot;&gt;预售&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-25&quot;&gt;
+        &lt;img src=&quot;img/8.png&quot; alt=&quot;&quot; class=&quot;pic&quot;&gt;
+        &lt;p class=&quot;word&quot;&gt;同程专线&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code></pre><h6 id="css："><a href="#css：" class="headerlink" title="css："></a>css：</h6><pre><code>body,
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    background: #ccc;
+  }
+
+  .container {
+    background: #fff;
+  }
+
+  .row {
+    /*1.去除子元素，因为设置行内块级inline-block产生的间隙*/
+    font-size: 0;
+  }
+
+  .row + .row {
+    margin-top: 5px;
+  }
+
+  .col-25 {
+    /* 2.设置行内块级 */
+    display: inline-block;
+    /* 3.设置宽度为1/4 */
+    width: 25%;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
+  .pic {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .word {
+    padding: 5px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    /*4.设置元素超出隐藏*/
+    text-overflow: ellipsis;
+    /*5.设置超出样式为省略号*/
+    -webkit-line-clamp: 1;
+    /*6.设置2行应用省略*/
+    white-space: nowrap;
+  }
+</code></pre><hr>
+<p>第二种：  </p>
+<p>html结构和第一种相同，下图可以看出，这两种写法效果是相同的。<br>它比第一种写法方便，利用弹性盒子，和box-sizing: border-box;里面图片自适应设备屏幕。</p>
+<p><img src="http://oetrez9vl.bkt.clouddn.com/image/mobile-skills/n%E5%AE%AB%E6%A0%BC%EF%BC%881%EF%BC%89.png" alt="n宫格（1）.png"></p>
+<h6 id="css：-1"><a href="#css：-1" class="headerlink" title="css："></a>css：</h6><pre><code>body,
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    background: #ccc;
+  }
+
+  .container {
+    background: #fff;
+  }
+
+  .row {
+    /*1.使用弹性盒子布局，无需font-size:0;无需将子元素宽度设置width: 25%;*/
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .row + .row {
+    margin-top: 5px;
+  }
+
+  .col-25 {
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
+  .pic {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .word {
+    padding: 5px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    /*2.设置元素超出隐藏*/
+    text-overflow: ellipsis;
+    /*3.设置超出样式为省略号*/
+    -webkit-line-clamp: 1;
+    /*4.设置2行应用省略*/
+    white-space: nowrap;
+  }
+</code></pre><p>但这个方法因为没有把图片的宽度定下来，所以极端屏幕下（屏幕足够小），布局会有问题,如下图所示：<br><img src="http://oetrez9vl.bkt.clouddn.com/image/mobile-skills/n%E5%AE%AB%E6%A0%BC%EF%BC%882%EF%BC%89.png" alt="n宫格（1）.png"></p>
+<p>所以我个人推荐，还是使用第一种方法来写布局和样式。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/23/移动端样式小技巧（1）——角标的实现/" itemprop="url">
+                  移动端样式小技巧（1）——角标的实现
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-23T13:13:05+08:00" content="2016-12-23">
+              2016-12-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/23/移动端样式小技巧（1）——角标的实现/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/23/移动端样式小技巧（1）——角标的实现/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/23/移动端样式小技巧（1）——角标的实现/" class="leancloud_visitors" data-flag-title="移动端样式小技巧（1）——角标的实现">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h6 id="参考了http-mp-weixin-qq-com-s-CFUn73w3s6Uc8fATZYJE-A-所写的角标的实现，以下是我自己的写法同样能够达到效果。图一是-top-container未加overflow-hidden-的样子；图二是最终效果图。"><a href="#参考了http-mp-weixin-qq-com-s-CFUn73w3s6Uc8fATZYJE-A-所写的角标的实现，以下是我自己的写法同样能够达到效果。图一是-top-container未加overflow-hidden-的样子；图二是最终效果图。" class="headerlink" title="参考了http://mp.weixin.qq.com/s/CFUn73w3s6Uc8fATZYJE_A 所写的角标的实现，以下是我自己的写法同样能够达到效果。图一是.top-container未加overflow: hidden;的样子；图二是最终效果图。"></a>参考了<a href="http://mp.weixin.qq.com/s/CFUn73w3s6Uc8fATZYJE_A" target="_blank" rel="external">http://mp.weixin.qq.com/s/CFUn73w3s6Uc8fATZYJE_A</a> 所写的角标的实现，以下是我自己的写法同样能够达到效果。图一是.top-container未加overflow: hidden;的样子；图二是最终效果图。</h6><p><img src="http://oetrez9vl.bkt.clouddn.com/image/mobile-skills/%E8%A7%92%E6%A0%87%E5%AE%9E%E7%8E%B0%EF%BC%880%EF%BC%89.png" alt="角标的实现0"><br><img src="http://oetrez9vl.bkt.clouddn.com/image/mobile-skills/%E8%A7%92%E6%A0%87%E5%AE%9E%E7%8E%B0.png" alt="角标的实现"></p>
+<h6 id="html："><a href="#html：" class="headerlink" title="html："></a>html：</h6><pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;p class=&quot;top-container&quot;&gt;
+      &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
+      &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;p class=&quot;bottom-word&quot;&gt;
+      上海出发世纪东方卡就是看到雷锋
+    &lt;/p&gt;
+&lt;/div&gt;
+</code></pre><h6 id="css："><a href="#css：" class="headerlink" title="css："></a>css：</h6><pre><code>body,
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+  }
+
+  .pic {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .top-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    height: 20px;
+    /*font-size: 0;原本是为了解决间隙问题；因为有了display: flex;这个就不需要了；*/
+    overflow: hidden;
+  }
+
+  .top-word {
+    height: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+    overflow: hidden;
+    background-color: #ff0;
+    font-size: 10px;
+    text-align: center;
+    -webkit-line-clamp: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .triangle {
+    display: inline-block;
+    /* 控制宽高为0，用border宽度撑出一个三角形 */
+    width: 0;
+    height: 0;
+    border-left: 8px solid #ff0;
+    border-top: 20px solid #ff0;
+    border-right: 8px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+
+  .bottom-word {
+    overflow: hidden;
+    width: 100%;
+    font-size: 10px;
+    background-color: #999;
+    padding: 10px 0;
+    text-align: center;
+    -webkit-line-clamp: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应/" itemprop="url">
+                  移动端样式小技巧（2）——图文标题+左右宽度自适应
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-23T13:13:05+08:00" content="2016-12-23">
+              2016-12-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/23/移动端样式小技巧（2）——图文标题+左右宽度自适应/" class="leancloud_visitors" data-flag-title="移动端样式小技巧（2）——图文标题+左右宽度自适应">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>一些常见的布局例如图+文案的，有多种方式可以去写，比如padding-left+background或者position+padding-left或者before伪元素。<br>前两种方法都可以把图片做到绝对的垂直居中，但是它们都是相对整行的容器进行定位的，由于line-height兼容问题的坑，图片实际上不一定会和文字对齐。如果有图文对齐的需求的话，个人建议才用before伪元素来布局，before可以相对文案来定位。 </p>
+</blockquote>
+<p>借鉴原作者的写法，发现了另外一个小技巧：利用伪类before和after生成的图片我们很难去让他们与文字一起垂直居中（文字垂直居中相信大家都知道：line-height===height。这里我利用background-size: contain;<br>/<em>这里把背景图片尺寸设置成contain，不需要考虑图片拉伸的问题</em>/；<br>height: 44px;等于容器的高度；随后vertical-align: top or bottom都没关系了，因为图片的容器已经和外面的容器在一条线上了。</p>
+<p><img src="http://oetrez9vl.bkt.clouddn.com/image/mobile-skills/%E5%9B%BE%E6%96%87%E6%A0%87%E9%A2%98+%E5%B7%A6%E5%8F%B3%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94.png" alt="角标的实现"></p>
+<h6 id="html："><a href="#html：" class="headerlink" title="html："></a>html：</h6><pre><code>&lt;ul&gt;
+    &lt;li class=&quot;ent-li&quot;&gt;
+      &lt;p class=&quot;left&quot;&gt;热门线路sdgdgs水电费广东省分公司的山东干发的&lt;/p&gt;
+      &lt;div class=&quot;right&quot;&gt;100000000009999999999999999999999999999999999999988&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;ent-li&quot;&gt;
+      &lt;p class=&quot;left&quot;&gt;热门线路sdgdgs水电费广东省分公司的山东干发的&lt;/p&gt;
+      &lt;div class=&quot;right&quot;&gt;100000000009999999999999999999999999999999999999988&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;ent-li&quot;&gt;
+      &lt;p class=&quot;left&quot;&gt;热门线路sdgdgs水电费广东省分公司的山东干发的&lt;/p&gt;
+      &lt;div class=&quot;right&quot;&gt;100000000009999999999999999999999999999999999999988&lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre><h6 id="css："><a href="#css：" class="headerlink" title="css："></a>css：</h6><pre><code>body,
+  p,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul,
+  li {
+    list-style: none;
+  }
+  /* 图文标题 */
+
+  li+li {
+    border-top: 1px solid #999;
+  }
+
+  p.left {
+    flex: 1;
+    text-align: left;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  p.left::before {
+    content: &apos;&apos;;
+    display: inline-block;
+    background: url(&quot;img/icon.png&quot;) center center no-repeat;
+    background-size: contain;
+    /*这里把背景图片尺寸设置成contain，不需要考虑图片拉伸的问题*/
+    width: 28px;
+    height: 44px;
+    vertical-align: top;
+    /*or vertical-align: bottom; 这里因为height和容器的height设成了一致的，所以vertical-align：top或者bottom都无所谓了。*/
+    margin-right: 5px;
+  }
+  /* 左右宽度自适应 */
+
+  .ent-li {
+    margin: 0 45px;
+    height: 44px;
+    display: flex;
+  }
+
+  .ent-li::after {
+    content: &apos;&apos;;
+    background: url(&apos;img/arrow.png&apos;) center center no-repeat;
+    background-size: contain;
+    width: 22px;
+    height: 44px;
+  }
+
+  .right {
+    flex: 1;
+    text-align: right;
+    line-height: 44px;
+    font-size: 12px;
+    color: #999;
+    padding-left: 10px;
+  }
+</code></pre><blockquote>
+<p>图中的布局实际上是分左右两块的，依照ui的需求，文案是要左对齐，数字是要右对齐的。你可能最先想到的是把右侧的数字定位或者浮动到那，左侧的容器加上个margin-right或者padding-right。这样可以实现，但是两侧的文案有极端情况出现。</p>
+<p>#####<br>flex:1;的作用是让这部分的宽度width在外部容器固定的情况下，随意变形，让另外一边的宽度随里面的内容的增大，通俗点将，就是我这边去适应另外一边，那边我不管你怎么变，你变宽我就瘦一点，你瘦了我就可以放我的东西了。</p>
+<p>#####<br>看你看中那一边了，如果数字重要，就让文案去自适应，数字有多长就多长，像这边例子的写法；如果注重文案，就让数字去自适应，文案应该也不能太长了，不然数字就没了。。。。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -990,12 +1640,12 @@
                src="/images/avatar.jpeg"
                alt="Shen Jennie" />
           <p class="site-author-name" itemprop="name">Shen Jennie</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+          <p class="site-description motion-element" itemprop="description">网上引来颜如玉，键下筑起黄金屋。</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1056,7 +1706,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
@@ -1121,13 +1771,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
-
-
 
   
 
