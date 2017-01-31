@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -99,7 +99,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -162,7 +162,7 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
+      <div class="header-inner"><div class="site-meta custom-logo">
   
 
   <div class="custom-logo-site-title">
@@ -341,23 +341,19 @@
       
         
           
-            <p>功能实现TODO：</p>
-<ol>
-<li>点击sidebar下方的关闭按钮（x），sidebar向左方滑出屏幕，关闭按钮向右方滑动，同时旋转为（+）。</li>
-<li>点击加号（+），sidebar向右滑动，加号（+）向左滑动，并旋转为（x）。</li>
-<li>点击sidebar上方的菜单栏，相应的内容栏（从左向右）滑动。</li>
-<li>如果有已经打开的内容栏，则已打开的内容栏关闭，新点击的相应的内容栏从下往上滑动。</li>
-<li>打开的内容栏的右上方有关闭按钮（&lt;），点击后内容栏从右向左滑动并关闭。</li>
-<li>完整性约束。如果已经有打开的内容栏，点击sidebar下方的关闭按钮，则sidebar关闭，已经打开的内容栏也应该关闭。</li>
-</ol>
-<p>案例实现步骤：</p>
-<ol>
-<li>实现HTML文档结构</li>
-<li>编写JavaScript代码，添加相应的事件、函数和逻辑</li>
-<li>在每个事件函数中添加动画效果</li>
-</ol>
+          功能实现TODO：
 
-          
+点击sidebar下方的关闭按钮（x），sidebar向左方滑出屏幕，关闭按钮向右方滑动，同时旋转为（+）。
+点击加号（+），sidebar向右滑动，加号（+）向左滑动，并旋转为（x）。
+点击sidebar上方的菜单栏，相应的内容栏（从左向右）滑动。
+如果有已经打开的内容栏，则
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/27/侧边栏信息展示效果/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -465,35 +461,23 @@
       
         
           
-            <p>关键词：</p>
-<ul>
-<li>微软开发</li>
-<li>JavaScript的超集</li>
-<li>遵循ES6</li>
-</ul>
-<p>angular2框架（谷歌开发）是由TypeScript编写的。</p>
-<p>所以，TypeScript有这两家公司所支持，有可能成为前端脚本语言发展主流方向。</p>
-<h2 id="安装TypeScript开发环境"><a href="#安装TypeScript开发环境" class="headerlink" title="安装TypeScript开发环境"></a>安装TypeScript开发环境</h2><blockquote>
-<p>几个sublime text3 开发TypeScript的插件<br> 1、T3S ，下载地址：<a href="https://github.com/Railk/T3S" target="_blank" rel="external">https://github.com/Railk/T3S</a>  不推荐使用，官网有说明，会有新版本出来，我配置半天也没实现自动编译，有配置成功的可以告诉我一声。</p>
-<p>2、ArcticTypescript ,地址：<a href="https://github.com/Phaiax/ArcticTypescript" target="_blank" rel="external">https://github.com/Phaiax/ArcticTypescript</a> ，</p>
-<p>安装方法：打开sublime text3 ,Ctrl+Shift+p， 调出package control 窗口，输入install package ,回车 ，然后输入ArcticTypescript 即可。</p>
-<p>编译依赖node.js，由于本人没有安装，所以没有使用这个，但也进行了配置，比较繁琐，官网有说明，需要配置：tsconfig.json 和 .sublimets（或project_name.sublime-project）</p>
-<p>3、Better TypeScript ,地址：<a href="https://packagecontrol.io/packages/Better%20TypeScript" target="_blank" rel="external">https://packagecontrol.io/packages/Better%20TypeScript</a></p>
-<p>安装方法：打开sublime text3 ,Ctrl+Shift+p， 调出package control 窗口，输入install package ,回车 ，然后输入Better TypeScript 即可。</p>
-<p>推荐使用这个，安装配置都很简单，无需安装node.js，安装完成后，在xx.ts文件上点右键，选择Better typeScript—&gt;compile file,即可生成js文件。</p>
-</blockquote>
-<p>1.安装Package Control<br><a href="https://packagecontrol.io/installation#s" target="_blank" rel="external">https://packagecontrol.io/installation#s</a>…</p>
-<p>2.快捷键Ctrl + P<br>输入 TypeScript</p>
-<p>3.快捷键Ctrl + P<br>输入 TypescriptCompletion 安装自动完成插件</p>
-<p>4.快捷键Ctrl + P<br>安装插件ArcticTypescript<a href="https://github.com/Phaiax/ArcticTypescript" title="ArcticTypescript" target="_blank" rel="external">https://github.com/Phaiax/ArcticTypescript</a></p>
-<p>选择AMD，Ctrl+B编译</p>
-<h2 id="表达式和循环"><a href="#表达式和循环" class="headerlink" title="表达式和循环"></a>表达式和循环</h2><ul>
-<li>箭头表达式：</li>
-<li>用来声明匿名函数，消除传统的匿名函数的this指针问题</li>
-<li>forEach(), for in 和 for of</li>
-</ul>
+          关键词：
 
-          
+微软开发
+JavaScript的超集
+遵循ES6
+
+angular2框架（谷歌开发）是由TypeScript编写的。
+所以，TypeScript有这两家公司所支持，有可能成为前端脚本语言发展主流方向。
+安装TypeScript开发环境
+几个sublime text3 开发TypeScri
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/25/TypeScript入门/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -601,626 +585,18 @@
       
         
           
-            <h3 id="课前准备"><a href="#课前准备" class="headerlink" title="课前准备"></a>课前准备</h3><p>sass的基础知识<br>Koala软件：<a href="http://koala-app.com/index-zh.html" title="koala官网" target="_blank" rel="external">http://koala-app.com/index-zh.html</a></p>
-<p>输出方式：expanded展开</p>
-<p>考拉编译时遇到中文报错：</p>
-<p>在安装目录下</p>
-<pre><code>D:\Program Files (x86)\Koala\rubygems\gems\sass-3.4.9\lib\sass\engine.rb
-</code></pre><p>在所有的require下面添加下面这句话，并保存：</p>
-<pre><code>Encoding.default_external = Encoding.find(&apos;utf-8&apos;)
-</code></pre><p>欧耶，koala不报错了！</p>
-<p>RequireJS常用方法</p>
-<ol>
-<li>requirejs.config</li>
-<li>requirejs</li>
-<li>define</li>
-</ol>
-<p>main.js</p>
-<pre><code>//这个方法是用来定义别名的：
-requirejs.config({
-  paths: {
-    jquery: &apos;jquery-1.11.3.min&apos;
-  }
-});
+          课前准备sass的基础知识Koala软件：http://koala-app.com/index-zh.html
+输出方式：expanded展开
+考拉编译时遇到中文报错：
+在安装目录下
+D:\Program Files (x86)\Koala\rubygems\gems\sass-3.4.9\lib\
+          ...
 
-requirejs([&apos;jquery&apos;, &apos;validate&apos;], function($, validate) {
-  console.log(validate.isEqual(&apos;jenny&apos;, &apos;jenny&apos;));
-})
-</code></pre><h3 id="案例实现方式"><a href="#案例实现方式" class="headerlink" title="案例实现方式"></a>案例实现方式</h3><ol>
-<li>使用背景图片的方式</li>
-<li>使用图标字体的方式</li>
-<li>利用before和after伪类的方式</li>
-</ol>
-<p>公共mixin(不会被编译)</p>
-<p>_mixin.scss</p>
-<pre><code>@mixin transition($transition) {
-  -webkit-transition: $transition;
-  -moz-transition: $transition;
-  -ms-transition: $transition;
-  -o-transition: $transition;
-  transition: $transition;
-}
-
-@mixin transform-origin($origin) {
-  -webkit-transform-origin: $origin;
-  -moz-transform-origin: $origin;
-  -ms-transform-origin: $origin;
-  -o-transform-origin: $origin;
-  transform-origin: $origin;
-}
-
-@mixin scale($scale) {
-  -webkit-transform: scale($scale);
-  -moz-transform: scale($scale);
-  -ms-transform: scale($scale);
-  -o-transform: scale($scale);
-  transform: scale($scale);
-}
-
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  filter: alpha(opacity=$opacity * 100);
-}
-</code></pre><p>_toolbar.scss</p>
-<pre><code>@mixin toolbar-item($pos, $hoverPos) {
-  background-position: 0 $pos;
-  &amp;:hover {
-    background-position: 0 $hoverPos;
-  }
-}
-</code></pre><h4 id="1-使用背景图片的方式"><a href="#1-使用背景图片的方式" class="headerlink" title="1. 使用背景图片的方式"></a>1. 使用背景图片的方式</h4><p>优缺点及兼容性</p>
-<ol>
-<li>HTML结构简单</li>
-<li>兼容性良好，可以兼容到IE6</li>
-<li>使用了大量图片，对性能有一定的影响，并且不利于修改</li>
-</ol>
-<p>css样式整理-优化-分离和引入<br>将写好的css样式相同的部分进行整理：<br>通过@mixin</p>
-<p>index.scss</p>
-<pre><code>@import &quot;mixin&quot;;
-@import &quot;toolbar&quot;;
-$toolbar-size: 52px;
-// 1. 使用背景图片的方式
-
-.toolbar {
-  position: fixed;
-  left: 50%;
-  bottom: 5px;
-  margin-left: -$toolbar-size / 2;
-}
-
-.toolbar-item {
-  position: relative;
-  display: block;
-  width: $toolbar-size;
-  height: $toolbar-size;
-  background-image: url(../img/toolbar.png);
-  background-repeat: no-repeat;
-  margin-top: 1px;
-  @include transition(background-position 1s);
-  &amp;:hover {
-    .toolbar-layer {
-      @include opacity(1);
-      @include scale(1);
-    }
-  }
-}
-
-.toolbar-item-weixin {
-  @include toolbar-item(-798px, -860px);
-  .toolbar-layer {
-    height: 212px;
-    background-position: 0 0;
-  }
-}
-
-.toolbar-item-feedback {
-  @include toolbar-item(-426px, -488px);
-}
-
-.toolbar-item-app {
-  @include toolbar-item(-550px, -612px);
-  .toolbar-layer {
-    height: 194px;
-    background-position: 0 -222px;
-  }
-}
-
-.toolbar-item-top {
-  @include toolbar-item(-674px, -736px);
-}
-
-.toolbar-layer {
-  position: absolute;
-  right: $toolbar-size - 6;
-  bottom: -10px;
-  width: 172px;
-  background-image: url(../img/toolbar.png);
-  background-repeat: no-repeat;
-  @include opacity(0);
-  @include transform-origin(90% 90%);
-  @include scale(0.01);
-  @include transition(all 1s);
-}
-
-// 1. 使用背景图片的方式
-</code></pre><h4 id="2-使用图标字体的方式"><a href="#2-使用图标字体的方式" class="headerlink" title="2. 使用图标字体的方式"></a>2. 使用图标字体的方式</h4><p>优缺点及兼容性</p>
-<ol>
-<li>避免了图片的使用，节约了性能，并且修改方便</li>
-<li>HTML结构稍显复杂</li>
-<li>不兼容IE6和IE7</li>
-</ol>
-<p>index.scss</p>
-<pre><code>@import &quot;mixin&quot;;
-@import &quot;toolbar&quot;;
-@import &quot;iconfont&quot;;
-$toolbar-size: 52px;
-// 2. 使用图标字体的方式
-
-.toolbar-item,
-.toolbar-btn,
-.toolbar-icon,
-.toolbar-text {
-  width: $toolbar-size;
-  height: $toolbar-size;
-}
-
-.toolbar-icon,
-.toolbar-text {
-  position: absolute;
-  left: 0;
-  color: #fff;
-  text-align: center;
-  @include transition(top 1s);
-}
-
-.toolbar {
-  position: fixed;
-  left: 50%;
-  bottom: 5px;
-  margin-left: -$toolbar-size / 2;
-}
-
-.toolbar-item {
-  position: relative;
-  display: block;
-  margin-top: 1px;
-  &amp;:hover {
-    .toolbar-icon {
-      top: -$toolbar-size;
-    }
-    .toolbar-text {
-      top: 0;
-    }
-    .toolbar-layer {
-      @include opacity(1);
-      @include scale(1);
-    }
-  }
-}
-
-.toolbar-btn {
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-}
-
-.toolbar-icon {
-  top: 0;
-  background-color: #d0d6d9;
-  font-size: 30px;
-  line-height: $toolbar-size;
-}
-
-.toolbar-text {
-  top: $toolbar-size;
-  background-color: #98a1a6;
-  padding-top: 12px;
-  font-size: 12px;
-  line-height: 1.2;
-}
-
-.toolbar-layer {
-  position: absolute;
-  right: $toolbar-size - 6;
-  bottom: -10px;
-  width: 172px;
-  background-image: url(../img/toolbar_img.png);
-  background-repeat: no-repeat;
-  @include opacity(0);
-  @include transform-origin(90% 90%);
-  @include scale(0.01);
-  @include transition(all 1s);
-}
-
-.toolbar-layer-weixin {
-  height: 212px;
-  background-position: 0 0;
-}
-
-.toolbar-layer-app {
-  height: 194px;
-  background-position: 0 -222px;
-}
-
-// 2. 使用图标字体的方式
-</code></pre><h4 id="3-利用before和after伪类的方式"><a href="#3-利用before和after伪类的方式" class="headerlink" title="3. 利用before和after伪类的方式"></a>3. 利用before和after伪类的方式</h4><p>优缺点及兼容性</p>
-<ol>
-<li>避免了图片的使用，节约了性能，并且修改方便</li>
-<li>HTML结构简单，但css稍显复杂</li>
-<li>不兼容IE6和IE7</li>
-</ol>
-<p>这里要将下载下来的字体文件重新保存一份scss文件，否则koala会报错。</p>
-<p>iconfont.scss</p>
-<pre><code>@font-face {
-  font-family: &quot;iconfont&quot;;
-  src: url(&apos;font/iconfont.eot?t=1485250077902&apos;);
-  /* IE9*/
-  /* IE6-IE8 */
-  /* chrome, firefox */
-  /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  src: url(&apos;font/iconfont.eot?t=1485250077902#iefix&apos;) format(&apos;embedded-opentype&apos;), url(&apos;font/iconfont.woff?t=1485250077902&apos;) format(&apos;woff&apos;), url(&apos;font/iconfont.ttf?t=1485250077902&apos;) format(&apos;truetype&apos;), url(&apos;font/iconfont.svg?t=1485250077902#iconfont&apos;) format(&apos;svg&apos;);
-  /*
- iOS 4.1- */
-}
-
-.iconfont {
-  font-family: &quot;iconfont&quot; !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-weixin:before {
-  content: &quot;\e603&quot;;
-}
-
-.icon-xiaoxi:before {
-  content: &quot;\e613&quot;;
-}
-
-.icon-top:before {
-  content: &quot;\e688&quot;;
-}
-
-.icon-app1:before {
-  content: &quot;\e602&quot;;
-}
-
-body {
-  font-family: &apos;微软雅黑&apos;;
-}
-</code></pre><p>index.scss</p>
-<pre><code>@import &quot;mixin&quot;;
-@import &quot;toolbar&quot;;
-@import &quot;iconfont&quot;;
-$toolbar-size: 52px;
-// 3. 利用before和after伪类的方式
-.toolbar {
-  position: fixed;
-  left: 50%;
-  bottom: 5px;
-  margin-left: -$toolbar-size / 2;
-}
-
-.toolbar-item {
-  position: relative;
-  display: block;
-  width: $toolbar-size;
-  height: $toolbar-size;
-  margin-top: 1px;
-  &amp;:hover {
-    .toolbar-btn {
-      &amp;:before {
-        top: -$toolbar-size;
-      }
-      &amp;:after {
-        top: 0;
-      }
-    }
-    &amp;:after {
-      @include opacity(1);
-      @include scale(1);
-    }
-  }
-  &amp;:after {
-    content: &apos;&apos;;
-    position: absolute;
-    right: $toolbar-size - 6;
-    bottom: -10px;
-    width: 172px;
-    background-image: url(../img/toolbar_img.png);
-    background-repeat: no-repeat;
-    @include opacity(0);
-    @include transform-origin(90% 90%);
-    @include scale(0.01);
-    @include transition(all 1s);
-  }
-}
-
-.toolbar-btn {
-  &amp;,
-  &amp;:before,
-  &amp;:after {
-    width: $toolbar-size;
-    height: $toolbar-size;
-    position: absolute;
-    left: 0;
-  }
-  &amp;:before,
-  &amp;:after {
-    content: &apos;&apos;;
-    color: #fff;
-    text-align: center;
-    @include transition(top 1s);
-  }
-  top: 0;
-  overflow: hidden;
-  @extend .iconfont;
-  &amp;:before {
-    //icon
-    top: 0;
-    background-color: #d0d6d9;
-    font-size: 30px;
-    line-height: $toolbar-size;
-  }
-  &amp;:after {
-    //text
-    top: $toolbar-size;
-    background-color: #98a1a6;
-    font-size: 12px;
-    line-height: 1.2;
-    padding-top: 12px;
-    white-space: pre-wrap; //content内文字换行
-  }
-}
-
-.toolbar-item-weixin {
-  &amp;:after {
-    content: &apos;&apos;;
-    height: 212px;
-    background-position: 0 0;
-  }
-  .toolbar-btn {
-    /* &amp;:before {
-      content: &quot;\e603&quot;;
-    } */
-    @extend .icon-weixin;
-    &amp;:after {
-      content: &apos;公众\A账号&apos;;
-    }
-  }
-}
-
-.toolbar-item-feedback {
-  .toolbar-btn {
-    /* &amp;:before {
-      content: &quot;\e613&quot;;
-    } */
-    @extend .icon-xiaoxi;
-    &amp;:after {
-      content: &apos;意见\A反馈&apos;;
-    }
-  }
-}
-
-.toolbar-item-app {
-  .toolbar-btn {
-    /* &amp;:before {
-      content: &quot;\e602&quot;;
-    } */
-    @extend .icon-top;
-    &amp;:after {
-      content: &apos;APP\A下载&apos;;
-    }
-  }
-  &amp;:after {
-    content: &apos;&apos;;
-    height: 194px;
-    background-position: 0 -222px;
-  }
-}
-
-.toolbar-item-top {
-  .toolbar-btn {
-    /* &amp;:before {
-      content: &quot;\e688&quot;;
-    } */
-    @extend .icon-top;
-    &amp;:after {
-      content: &apos;返回\A顶部&apos;;
-    }
-  }
-}
-
-// 3. 利用before和after伪类的方式
-</code></pre><h3 id="JS实现返回顶部按钮功能"><a href="#JS实现返回顶部按钮功能" class="headerlink" title="JS实现返回顶部按钮功能"></a>JS实现返回顶部按钮功能</h3><p>1.基本功能实现</p>
-<p>main.js</p>
-<pre><code>requirejs.config({
-  paths: {
-    jquery: &apos;jquery-1.11.3.min&apos;
-  }
-});
-
-requirejs([&apos;jquery&apos;], function($) {
-  checkPosition($(window).height());
-
-  //$(&apos;#backTop&apos;).on(&apos;click&apos;, move);//缓慢运动到达顶部
-  $(&apos;#backTop&apos;).on(&apos;click&apos;, go); //没有动画过程，直接到达顶部
-  $(window).on(&apos;scroll&apos;, function() {
-    checkPosition($(window).height());
-  });
-
-  function move() {
-    $(&apos;html, body&apos;).animation({
-      &apos;scrollTop&apos;: 0
-    }, 800);
-  }
-
-  function go() {
-    $(&apos;html, body&apos;).scrollTop(0);
-  }
-
-  function checkPosition(pos) {
-    if ($(window).scrollTop() &gt; pos) {
-      console.log(&apos;fadeIn&apos;)
-      $(&apos;#backTop&apos;).fadeIn();
-
-    } else {
-      console.log(&apos;fadeOut&apos;)
-      $(&apos;#backTop&apos;).fadeOut();
-    }
-  }
-});
-</code></pre><p>2.将功能抽象成模块</p>
-<p>scrollTo.js</p>
-<pre><code>define([&apos;jquery&apos;], function($) {
-  function ScrollTo(opts) {
-    this.opts = $.extend({}, ScrollTo.DEFAULTS, opts);
-    this.$el = $(&apos;html,body&apos;);
-  }
-  ScrollTo.prototype.move = function() {
-    console.log(this);
-    var opts = this.opts,
-      dest = opts.dest;
-    if ($(window).scrollTop() != dest &amp;&amp; !this.$el.is(&apos;:animated&apos;)) {
-      this.$el.animate({
-        scrollTop: dest
-      }, opts.speed);
-    }
-
-  };
-  ScrollTo.prototype.go = function() {
-    var dest = this.opts.dest;
-    if ($(window).scrollTop() != dest) {
-      this.$el.scrollTop(dest);
-    }
-
-  };
-  ScrollTo.DEFAULTS = {
-    dest: 0,
-    speed: 800
-  }
-  return {
-    ScrollTo: ScrollTo
-  }
-});
-</code></pre><p>main.js</p>
-<pre><code>requirejs([&apos;jquery&apos;, &apos;scrollTo&apos;], function($, scrollto) {
-  // var scroll = new scrollto.ScrollTo({});
-  var scroll = new scrollto.ScrollTo({
-    dest: 50,
-    speed: 2000
-  });
-  checkPosition($(window).height());
-
-  $(&apos;#backTop&apos;).on(&apos;click&apos;, $.proxy(scroll.move, scroll)); //缓慢运动到达顶部
-  //$(&apos;#backTop&apos;).on(&apos;click&apos;, scroll.go); //没有动画过程，直接到达顶部
-  $(window).on(&apos;scroll&apos;, function() {
-    checkPosition($(window).height());
-  });
-
-  function checkPosition(pos) {
-    if ($(window).scrollTop() &gt; pos) {
-      $(&apos;#backTop&apos;).fadeIn();
-
-    } else {
-      $(&apos;#backTop&apos;).fadeOut();
-    }
-  }
-});
-</code></pre><p>3.封闭成工具条模块</p>
-<p>backtop.js</p>
-<pre><code>define([&apos;jquery&apos;, &apos;scrollto&apos;], function($, scrollto) {
-  function BackTop(el, opts) {
-    this.opts = $.extend({}, BackTop.DEFAULTS, opts);
-    this.$el = $(el);
-    this.scroll = new scrollto.ScrollTo({
-      dest: 0,
-      speed: this.opts.speed
-    });
-
-    if (this.opts.mode == &apos;move&apos;) {
-      this.$el.on(&apos;click&apos;, $.proxy(this._move, this));
-    } else {
-      this.$el.on(&apos;click&apos;, $.proxy(this._go, this));
-    }
-
-    $(window).on(&apos;scroll&apos;, $.proxy(this._checkPosition, this));
-  }
-  BackTop.prototype._move = function() {
-    this.scroll.move();
-  };
-  BackTop.prototype._go = function() {
-    this.scroll.go();
-  };
-  BackTop.prototype._checkPosition = function() {
-    var $el = this.$el;
-    if ($(window).scrollTop() &gt; this.opts.pos) {
-      $el.fadeIn();
-    } else {
-      $el.fadeOut();
-    }
-  };
-  BackTop.DEFAULTS = {
-      mode: &apos;move&apos;,
-      pos: $(window).height(),
-      speed: 800
-    }
-    // 插件的写法
-  $.fn.extend({
-    backtop: function() {
-
-      return this.each(function() {
-        new BackTop(this, opts);
-      });
-    }
-  })
-
-  return {
-    BackTop: BackTop
-  }
-});
-</code></pre><p>main.js</p>
-<pre><code>requirejs([&apos;jquery&apos;, &apos;backtop&apos;], function($, backtop) {
-  new backtop.BackTop($(&apos;#backTop&apos;), {
-    mode: &apos;move&apos;,
-    pos: 100,
-    speed: 2000
-  });
-});
-</code></pre><p>4.模块注册成jQuery插件</p>
-<p>main.js</p>
-<pre><code>requirejs([&apos;jquery&apos;, &apos;backtop&apos;], function($, backtop) {
-  $(&apos;#backTop&apos;).BackTop({
-    mode: &apos;move&apos;,
-    pos: 100,
-    speed: 2000
-  });
-});
-</code></pre><p>backtop.js</p>
-<pre><code>……
-BackTop.DEFAULTS = {
-      mode: &apos;move&apos;,
-      pos: $(window).height(),
-      speed: 800
-    }
-    // 插件的写法
-  $.fn.extend({
-    backtop: function() {
-
-      return this.each(function() {
-        new BackTop(this, opts);
-      });
-    }
-  })
-
-  return {
-    BackTop: BackTop
-  }
-</code></pre>
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/24/侧栏工具条开发/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1328,34 +704,18 @@ BackTop.DEFAULTS = {
       
         
           
-            <pre><code>&lt;!DOCTYPE html&gt;
+          &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head runat=&quot;server&quot;&gt;
         &lt;title&gt;test&lt;/title&gt;
-        &lt;script src=&quot;jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-        &lt;script type=&quot;text/javascript&quot;&gt;
-            $(document).ready(function() {
-                $(&quot;.radioItem&quot;).change(function() {
-                    var $selectedvalue = $(&quot;input[name=&apos;rl$tt&apos;]:checked&quot;).val();
-                    // alert($selectedvalue);
-                    if ($selectedvalue == 1) {
-                        alert(&apos;1&apos;);
-                    } else {
-                        alert(&apos;2&apos;);
-                    }
-                });
-            });
-        &lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;input id=&quot;rl_1&quot; class=&quot;radioItem&quot; checked=&quot;checked&quot; name=&quot;rl$tt&quot; type=&quot;radio&quot; value=&quot;1&quot; /&gt;
-        &lt;label&gt;1&lt;/label&gt;
-        &lt;input id=&quot;rl_2&quot; class=&quot;radioItem&quot; name=&quot;rl$tt&quot; type=&quot;radio&quot; value=&quot;2&quot; /&gt;
-        &lt;label&gt;2&lt;/label&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-          
+        &lt;script src=&quot;jque
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/18/怎样使用jQuery触发Select，Radio的change-onchange事件/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1463,13 +823,18 @@ BackTop.DEFAULTS = {
       
         
           
-            <pre><code>/*-webkit-box-align: center;
+          /*-webkit-box-align: center;
 -ms-flex-align: center;
 -webkit-align-items: center;
 align-items: center;*/
-</code></pre><p>这个属性会让他孩子的div里面的justify-content排版出现问题，这个属性让它的孩子都继承了，而且不能重新加属性排版布局。</p>
+这个属性会让他孩子的div里面的justify-content排版出现问题，这个属性让它的
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/18/flex属性的继承问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1577,36 +942,15 @@ align-items: center;*/
       
         
           
-            <p>默认要将东京选中（不能在option标签中加selected的方法）</p>
-<pre><code>&lt;a href=&quot;#&quot; class=&quot;item-link smart-select&quot; data-searchbar=&quot;false&quot; data-searchbar-placeholder=&quot;请选择收货城市&quot;&gt;
-    &lt;select name=&quot;收货城市&quot; id=&quot;DeliverCity&quot;&gt;
-        &lt;option value=&apos;爱知县&apos;&gt;爱知县&lt;/option&gt;
-        &lt;option value=&apos;北海道&apos;&gt;北海道&lt;/option&gt;
-        &lt;option value=&apos;兵库县&apos;&gt;兵库县&lt;/option&gt;
-        &lt;option value=&apos;冲绳&apos;&gt;冲绳&lt;/option&gt;
-        &lt;option value=&apos;大阪&apos;&gt;大阪&lt;/option&gt;
-        &lt;option value=&apos;东京&apos;&gt;东京&lt;/option&gt;
-        &lt;option value=&apos;福冈&apos;&gt;福冈&lt;/option&gt;
-        &lt;option value=&apos;和歌山县&apos;&gt;和歌山县&lt;/option&gt;
-        &lt;option value=&apos;京都&apos;&gt;京都&lt;/option&gt;
-        &lt;option value=&apos;静冈&apos;&gt;静冈&lt;/option&gt;
-        &lt;option value=&apos;奈良&apos;&gt;奈良&lt;/option&gt;
-        &lt;option value=&apos;岐阜县&apos;&gt;岐阜县&lt;/option&gt;
-        &lt;option value=&apos;千叶县&apos;&gt;千叶县&lt;/option&gt;
-        &lt;option value=&apos;山梨县&apos;&gt;山梨县&lt;/option&gt;
-        &lt;option value=&apos;神奈川&apos;&gt;神奈川&lt;/option&gt;
-    &lt;/select&gt;
-    &lt;div class=&quot;item-content&quot;&gt;
-        &lt;div class=&quot;item-inner&quot;&gt;
-            &lt;div class=&quot;item-title&quot;&gt;收货城市&lt;/div&gt;
-            &lt;div class=&quot;item-after&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/a&gt;
-//$(&quot;#DeliverCity&quot;).find(&quot;option[value=&apos;东京&apos;]&quot;).attr(&quot;selected&quot;, true);这个语句不执行，改成下面就好了
-$(&apos;#DeliverCity&apos;)[0].options[5].selected = true;
-</code></pre>
-          
+          默认要将东京选中（不能在option标签中加selected的方法）
+&lt;a href=&quot;#&quot; class=&quot;item-link smart-select&quot; data-searchbar=&quot;false&quot; data-searchbar-p
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/18/关于select-option选中/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1714,30 +1058,19 @@ $(&apos;#DeliverCity&apos;)[0].options[5].selected = true;
       
         
           
-            <ol>
-<li><p>得到 URL 中的 query 参数</p>
-<pre><code>function getArguments(){  
+          
+得到 URL 中的 query 参数
+function getArguments(){  
     var args={};  
     var query=window.location.search.substring(1);  
-    var pairs=query.split(&quot;&amp;&quot;);  
-    for(var i=0;i&lt;pairs.length;i++){  
-        var pos=pairs[i].indexOf(&apos;=&apos;);  
-        if(pos==-1) continue;  
-        var argname=pairs[i].substring(0,pos);  
-        var value=decodeURIComponent(pairs[i].substring(pos+1));  
-        args[argname]=value;  
-    }  
-    return args;  
-} 
-</code></pre></li>
-<li><p>获取url中path的goods的id</p>
-<pre><code>var path = window.location.pathname;
-var value = path.replace(/[^0-9]/ig, &quot;&quot;);
-</code></pre></li>
-<li></li>
-</ol>
+    var pairs=query.split(&quot
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/10/得到URL中的query参数/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1845,282 +1178,16 @@ var value = path.replace(/[^0-9]/ig, &quot;&quot;);
       
         
           
-            <h2 id="webpack和gulp，grunt的比较"><a href="#webpack和gulp，grunt的比较" class="headerlink" title="webpack和gulp，grunt的比较"></a>webpack和gulp，grunt的比较</h2><h2 id="安装webpack"><a href="#安装webpack" class="headerlink" title="安装webpack"></a>安装webpack</h2><p>因为webpack是一个基于node的项目，所以先装好node和npm。</p>
-<pre><code>npm install -g webpack
-</code></pre><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>把有依赖关系的各种文件打包成一系列的静态资源。——module bundler。<br>简单点说，webpack就是一个配置文件，所有的魔力都是在这一个文件中发生的。这个配置文件主要分为三大块：</p>
-<ul>
-<li>entry入口文件：让webpack用哪个文件作为项目的入口</li>
-<li>output出口：让webpack把处理完成的文件放在哪里</li>
-<li>module模块：要用什么不同的模块来处理各种类型的文件</li>
-</ul>
-<h2 id="建立项目"><a href="#建立项目" class="headerlink" title="建立项目"></a>建立项目</h2><pre><code>F:\&gt;mkdir webpack-demo        //建一个文件夹
+          webpack和gulp，grunt的比较安装webpack因为webpack是一个基于node的项目，所以先装好node和npm。
+npm install -g webpack
+目的把有依赖关系的各种文件打包成一系列的静态资源。——module bundler。简单点说，webpack就是一个配置
+          ...
 
-F:\&gt;cd webpack-demo        //进入文件夹
-
-F:\webpack-demo&gt;npm init    
-This utility will walk you through creating a package.json file.
-It only covers the most common items, and tries to guess sensible defaults.
-
-See `npm help json` for definitive documentation on these fields
-and exactly what they do.
-
-Use `npm install &lt;pkg&gt; --save` afterwards to install a package and
-save it as a dependency in the package.json file.
-
-Press ^C at any time to quit.
-name: (webpack-demo)
-version: (1.0.0)
-description: a wbpack demo created by shen jennie
-entry point: (index.js)
-test command:
-git repository:
-keywords: webpack
-author: shen jennie
-license: (ISC)
-About to write to F:\webpack-demo\package.json:
-
-{
-  &quot;name&quot;: &quot;webpack-demo&quot;,
-  &quot;version&quot;: &quot;1.0.0&quot;,
-  &quot;description&quot;: &quot;a wbpack demo created by shen jennie&quot;,
-  &quot;main&quot;: &quot;index.js&quot;,
-  &quot;scripts&quot;: {
-    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
-  },
-  &quot;keywords&quot;: [
-    &quot;webpack&quot;
-  ],
-  &quot;author&quot;: &quot;shen jennie&quot;,
-  &quot;license&quot;: &quot;ISC&quot;
-}
-
-
-Is this ok? (yes) yes
-
-F:\webpack-demo&gt;
-</code></pre><p>如果你使用git管理你的这个项目的话，建议你新建一个.gitignore文件，不要让git提交一些node依赖的模块， 你也可以参考github的例子 <a href="https://github.com/github/gitignore/blob/master/Node.gitignore" title="https://github.com/github/gitignore/blob/master/Node.gitignore" target="_blank" rel="external">https://github.com/github/gitignore/blob/master/Node.gitignore</a></p>
-<p>我们这里就简单一点</p>
-<pre><code>node_modules
-</code></pre><h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p>现在项目里面就有一个package.json， 我们多加一点东西，慢慢丰富它的内容。</p>
-<ul>
-<li>/app<ul>
-<li>index.js</li>
-<li>sub.js</li>
-</ul>
-</li>
-<li>package.json</li>
-<li>webpack.config.js</li>
-</ul>
-<p>添加了两个js文件，添加了最重要的webpack的配置文件，我们还是从非常简单的hello world开始玩起，webpack原生直接支持AMD和CommonJS两种格式，如果你想使用ES6的风格，这点以后再提。</p>
-<h4 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h4><h5 id="sub-js"><a href="#sub-js" class="headerlink" title="sub.js"></a>sub.js</h5><pre><code>// 我们这里使用CommonJS的风格
-function generateText() {
-  var element = document.createElement(&apos;h2&apos;);
-  element.innerHTML = &quot;Hello h2 world&quot;;
-  return element;
-}
-
-module.exports = generateText;
-</code></pre><h5 id="index-js"><a href="#index-js" class="headerlink" title="index.js"></a>index.js</h5><pre><code>var sub = require(&quot;./sub&quot;);
-var app = document.createElement(&apos;div&apos;);
-app.innerHTML = &apos;&lt;h1&gt;Hello World&lt;/h1&gt;&apos;;
-app.appendChild(sub());
-document.body.appendChild(app);
-</code></pre><h4 id="配置Webpack"><a href="#配置Webpack" class="headerlink" title="配置Webpack"></a>配置Webpack</h4><p>现在开始配置webpack，目标是把这两个js文件合并成一个文件. 我们可以自己在build文件夹里面手动建一个index.html文件夹，然后再把合并以后的js引用在里面，但是这样有些麻烦，所以我们这里安装一个plugin，可以自动快速的帮我们生成HTML。</p>
-<pre><code>npm install html-webpack-plugin --save-dev
-</code></pre><p>好 有了这个插件 开始写config文件</p>
-<pre><code>var path = require(&apos;path&apos;);
-var HtmlwebpackPlugin = require(&apos;html-webpack-plugin&apos;);
-// 定义了一些文件夹的路径
-var ROOT_PATH = path.resolve(__dirname);
-var APP_PATH = path.resolve(ROOT_PATH, &apos;app&apos;);
-var BUILD_PATH = path.resolve(ROOT_PATH, &apos;build&apos;);
-
-module.exports = {
-  // 项目的文件夹 可以直接用文件夹名称    默认会找index.js  也可以确定是哪个文件名字
-  entry: APP_PATH,
-  // 输出的文件名，合并以后的js会命名为bundle.js
-  output: {
-    path: BUILD_PATH,
-    filename: &apos;bundle.js&apos;
-  },
-  // 添加我们的插件，会自动生成一个html文件
-  plugins: [
-    new HtmlwebpackPlugin({
-      title: &apos;Hello world app&apos;
-    })
-  ]
-};
-</code></pre><p>然后在项目根目录运行</p>
-<pre><code>webpack
-</code></pre><p>终端显示一堆信息，然后告诉你成功了。</p>
-<p>你可以使用webpack –help看看一些运行的时候可选的参数</p>
-<p>你会发现多出来一个build文件夹，直接点开里面的html文件，你会发现我们可爱的“hello world”已经插入到页面了。我们的任务完成了，成功生成html，合并js，html引入了js，js被执行了。</p>
-<h4 id="配置webpack-dev-server"><a href="#配置webpack-dev-server" class="headerlink" title="配置webpack-dev-server"></a>配置webpack-dev-server</h4><p>上面任务虽然完成了，但是我们要不断运行程序然后查看页面，所以最好新建一个开发服务器，可以serve我们pack以后的代码，并且当代码更新的时候自动刷新浏览器。</p>
-<p>安装webpack-dev-server</p>
-<pre><code>npm install webpack-dev-server --save-dev
-</code></pre><p>安装完毕后 在config中添加配置</p>
-<pre><code>module.exports = {
-  ....
-  devServer: {
-    historyApiFallback: true,
-    hot: true,
-    inline: true,
-    progress: true,
-  },
-  ...
-}
-</code></pre><p>然后再package.json里面配置一下运行的命令,npm支持自定义一些命令</p>
-<pre><code>...
-&quot;scripts&quot;: {
-  &quot;start&quot;: &quot;webpack-dev-server --hot --inline&quot;
-},
-...
-</code></pre><p>好了，万事具备了，在项目根目录下输入npm start,一堆花花绿绿的信息后server已经起来了，在浏览器里面输入<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a> 发现伟大的hello world出现了，在js里面随便修改一些输出然后保存, boom!浏览器自动刷新，新的结果出现了。</p>
-<blockquote>
-<p>拓展阅读 如果你的服务器端使用的是express框架，你还可以直接安装express的middleware，webpack配合express，很好用。</p>
-<pre><code>npm install webpack-dev-middleware --save-dev
-</code></pre></blockquote>
-<h4 id="添加CSS样式"><a href="#添加CSS样式" class="headerlink" title="添加CSS样式"></a>添加CSS样式</h4><p>现在来添加一些样式，webpack使用loader的方式来处理各种各样的资源，比如说样式文件，我们需要两种loader，css-loader 和 style－loader，css-loader会遍历css文件，找到所有的url(…)并且处理。style-loader会把所有的样式插入到你页面的一个style tag中。</p>
-<p>安装我们的loader</p>
-<pre><code>npm install css-loader style-loader --save-dev
-
-devServer: {
-    historyApiFallback: true,
-    hot: true,
-    inline: true,
-    progress: true,
-  },
-  ...
-  module: {
-    loaders: [
-      {
-        test: /\.css$/,
-        loaders: [&apos;style&apos;, &apos;css&apos;],
-        include: APP_PATH
-      }
-    ]
-  },
-  ...
-  plugins: [
-    new HtmlwebpackPlugin({
-      title: &apos;Hello World app&apos;
-    })
-  ]
-</code></pre><p>看loaders的书写方式，test里面包含一个正则，包含需要匹配的文件，loaders是一个数组，包含要处理这些程序的loaders，这里我们用了css和style，注意loaders的处理顺序是从右到左的，这里就是先运行css-loader然后是style-loader.</p>
-<p>新建一个样式文件 main.css</p>
-<pre><code>h1 {
-    color: red;
-}
-</code></pre><p>记得在入口文件index.js中引用</p>
-<pre><code>require(&apos;./main.css&apos;);
-</code></pre><p>然后发现标题变成红色的了，webpack的理念是基于项目处理的，把对应的文件格式给对应的loader处理，然后你就不用管了，它会决定怎么压缩，编译。</p>
-<p>重新启动</p>
-<pre><code>npm start
-</code></pre><p>那现在想使用一些有爱的css预编译程序，来点sass吧。 你可能已经想到了，再来个loader就行啦，确实是这样简单。</p>
-<pre><code>npm install sass-loader --save-dev
-</code></pre><p>稍微修改一下config，删掉我们先前添加的css规则，加上下面的loader</p>
-<pre><code>{
-    test: /\.scss$/,
-    loaders: [&apos;style&apos;, &apos;css&apos;, &apos;sass&apos;],
-    include: APP_PATH
-},
-</code></pre><blockquote>
-<p>UNMET PEER DEPENDENCY node-sass@^3.4.2 || ^4.0.0</p>
-<p>报错：缺少依赖模块</p>
-<p>npm install node-sass –save-dev<br>会出现很多ERR,重新执行npm install node-sass –save-dev,第二次就成功了！</p>
-</blockquote>
-<p>添加两个sass文件，variables.scss和main.scss<br>在index.js中引用<br>    require(‘./main.scss’);<br>然后发现标题如愿变红，相当简单吧。</p>
-<h4 id="处理图片和其他静态文件"><a href="#处理图片和其他静态文件" class="headerlink" title="处理图片和其他静态文件"></a>处理图片和其他静态文件</h4><p>这个和其他一样，也许你也已经会玩了。安装loader，处理文件。诸如图片，字体等等，不过有个神奇的地方它可以根据你的需求将一些图片自动转成base64编码的，为你减轻很多的网络请求。</p>
-<p>安装url-loader</p>
-<pre><code>npm install url-loader --save-dev
-</code></pre><blockquote>
-<p>+– UNMET PEER DEPENDENCY file-loader@*</p>
-<p>报了这个错，按照提示安装</p>
-<p>npm install file-loader –save-dev</p>
-</blockquote>
-<p>配置config文件</p>
-<pre><code>module: {
-  loaders: [{
-    test: /\.scss$/,
-    loaders: [&apos;style&apos;, &apos;css&apos;, &apos;sass&apos;],
-    include: APP_PATH
-  }, {
-    test: /\.(png|jpg)$/,
-    loader: &apos;url?limit=40000&apos;
-  }]
-}
-</code></pre><p>注意后面那个limit的参数，当你图片大小小于这个限制的时候，会自动启用base64编码图片。</p>
-<p>下面举个栗子。</p>
-<p>新建一个imgs文件夹，往里面添加一张照片。在scss文件中添加如下的东西。</p>
-<pre><code>@import &apos;./variables.scss&apos;;
-h1 {
-  color: $red;
-  background: url(&apos;./imgs/5.jpg&apos;);
-}
-
-h2 {
-  background: url(&apos;./imgs/avatar.jpg&apos;);
-}
-</code></pre><p>npm start, 然后查看图片的url，发现神奇。</p>
-<p><img src="http://oetrez9vl.bkt.clouddn.com/image/webpack-demowebpack-demo-02.png" alt=""><br><img src="http://oetrez9vl.bkt.clouddn.com/image/webpack-demowebpack-demo-01.png" alt=""></p>
-<h4 id="添加第三方库"><a href="#添加第三方库" class="headerlink" title="添加第三方库"></a>添加第三方库</h4><p>有的时候还想来点jquery，moment，undersocre之类的库，webpack可以非常容易的做到这一点，有谣言说Bower即将停止开发了, 作者推荐都使用npm来管理依赖。那么我们现在安装在我们的app中添加jquery和moment的支持。</p>
-<pre><code>npm install jquery moment --save-dev
-</code></pre><p>在js中引用</p>
-<pre><code>// 添加第三方库
-var $ = require(&apos;jquery&apos;);
-var moment = require(&apos;moment&apos;);
-var div = document.createElement(&apos;div&apos;);
-div.innerHTML = &apos;&lt;h1&gt;Hello World! it&lt;/h1&gt;&apos;;
-$(&apos;body&apos;).append(div);
-$(&apos;body&apos;).append(&apos;&lt;p&gt;look at me! now is &apos; + moment().format() + &apos;&lt;/p&gt;&apos;);
-</code></pre><p>npm start, 然后查看<a href="http://localhost:8080/。" target="_blank" rel="external">http://localhost:8080/。</a><br>看看浏览器，成功！ jquery和moment现在都起作用了！</p>
-<h4 id="添加ES6的支持"><a href="#添加ES6的支持" class="headerlink" title="添加ES6的支持"></a>添加ES6的支持</h4><p>如果现在你的项目还没有对ES6的语法支持，那就有点没有逼格了，其实大家都知道这个也很简单，因为我们有伟大的Babel</p>
-<p>首先 装各种loader</p>
-<pre><code>npm install babel-loader babel-preset-es2015 --save-dev
-</code></pre><p>配置我们的config文件</p>
-<pre><code>...
-      {
-        test: /\.jsx?$/,
-        loader: &apos;babel&apos;,
-        include: APP_PATH,
-        query: {
-          presets: [&apos;es2015&apos;]
-        }
-      },
-...
-</code></pre><p>es2015这个参数是babel的plugin，可以支持各种最新的es6的特性，具体的情况看这个链接。 <a href="http://babeljs.io/docs/plugins/preset-es2015/" title="Babel es2015 plugin" target="_blank" rel="external">Babel es2015 plugin</a></p>
-<p>现在我们可以改掉CommonJS风格的文件了。</p>
-<p>sub.js</p>
-<pre><code>export default function() {
-  var element = document.createElement(&apos;h2&apos;);
-  element.innerHTML = &quot;Hello h2 world hahahahha&quot;;
-  return element;
-}
-</code></pre><p>index.js</p>
-<pre><code>import &apos;./main.scss&apos;;
-import generateText from &apos;./sub&apos;;
-import $ from &apos;jquery&apos;;
-import moment from &apos;moment&apos;;
-
-let app = document.createElement(&apos;div&apos;);
-const myPromise = Promise.resolve(42);
-myPromise.then((number) =&gt; {
-  $(&apos;body&apos;).append(&apos;&lt;p&gt;promise result is &apos; + number + &apos; now is &apos; + moment().format() + &apos;&lt;/p&gt;&apos;)
-});
-app.innerHTML = &apos;&lt;h1&gt;Hello World it&lt;/h1&gt;&apos;;
-document.body.appendChild(app);
-app.appendChild(generateText());
-</code></pre><blockquote>
-<p>报错了：<br>+– UNMET PEER DEPENDENCY babel-core@^6.0.0</p>
-<p>npm install babel-core –save-dev</p>
-</blockquote>
-<p>我们上面测试了import, export，const，let，promise等一系列es6的特性。</p>
-<p>最后完美的输出界面。<br><img src="http://oetrez9vl.bkt.clouddn.com/image/webpack-demowebpack-demo-03.png" alt=""></p>
-<blockquote>
-<p>原作者：张轩<br>链接：<a href="https://zhuanlan.zhihu.com/p/20367175" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/20367175</a><br>来源：知乎<br>本文只是为了学习，记录自己实践的流程。外加上自己遇到的一些问题的解决方法。</p>
-</blockquote>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/05/webpack学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -2228,126 +1295,21 @@ app.appendChild(generateText());
       
         
           
-            <p>1、触发返回键的时候，获取当前页面内容</p>
-<pre><code>myApp.getCurrentView()
-</code></pre><p>获取当前页面名字：</p>
-<pre><code>myApp.getCurrentView().activePage.name
-</code></pre><p>2、关闭所以弹出层</p>
-<pre><code>myApp.hidePreloader();
-</code></pre><p>3、JS代码执行返回</p>
-<pre><code>mainView.router.back();
-</code></pre><p>4、自定义触发事件时弹出页面</p>
-<pre><code>mainView.router.loadPage(&apos;demo.html&apos;);
-</code></pre><p>5、获取上一个页面通过url传递过来的参数<br>比如：demo.html?id=1234&amp;key=3454</p>
-<pre><code>myApp.onPageInit(&apos;movie-detail&apos;, function(e) {
-    var page = e.query;
-    myApp.alert(page.id);
-    myApp.alert(page.key);
-});
-</code></pre><p>6、判断是iOS还是Android设备</p>
-<pre><code>//app.js
-// Initialize your app
-var myApp = new Framework7();
+          1、触发返回键的时候，获取当前页面内容
+myApp.getCurrentView()
+获取当前页面名字：
+myApp.getCurrentView().activePage.name
+2、关闭所以弹出层
+myApp.hidePreloader();
+3、JS代码执行返回
+mainView.route
+          ...
 
-// Export selectors engine
-var $$ = Dom7;
-
-// Determine theme depending on device
-var isAndroid = Framework7.prototype.device.android === true;
-var isIos = Framework7.prototype.device.ios === true;
-
-// Set Template7 global devices flags
-/*Template7.global = {
-    android: isAndroid,
-    ios: isIos
-};*/
-// Change Through navbar layout to Fixed
-/*if (isAndroid) {
-    // Change class
-    $$(&apos;.view.navbar-through&apos;).removeClass(&apos;navbar-through&apos;).addClass(&apos;navbar-fixed&apos;);
-    // And move Navbar into Page
-    $$(&apos;.view .navbar&apos;).prependTo(&apos;.view.page&apos;);
-}*/
-</code></pre><p>或者可以用UA拿设备</p>
-<pre><code>var ua = navigator.userAgent.toLowerCase();
-var isIos, isAndroid;
-if (/iphone|ipad|ipod/.test(ua)) {
-    isIos = true;
-} else if (/android/.test(ua)) {
-    isAndroid = true;
-}
-var myApp = new Framework7({
-    material: isAndroid ? true : false,
-    materialRipple: false,
-    imagesLazyLoadPlaceholder: &quot;/Images/placeholder.jpg&quot;,
-     imagesLazyLoadSequential: true,
-    imagesLazyLoadThreshold: 50,
-    smartSelectBackOnSelect: true
-});
-var $$ = Dom7;
-// Add view
-var mainView = myApp.addView(&apos;.view-main&apos;, {});
-// Add CSS Styles
-if (isAndroid) {
-    $$(&apos;head&apos;).prepend(&apos;&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/F7/css/framework7.material.min.css&quot;&gt;&apos;);
-    $$(&apos;head&apos;).append(&apos;&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/sjn/less/my-app.material.css&quot;&gt;&apos;);
-} else {
-    $$(&apos;head&apos;).prepend(&apos;&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/F7/css/framework7.ios.min.css&quot;&gt;&apos;);
-    $$(&apos;head&apos;).append(&apos;&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/sjn/less/my-app.material.css&quot;&gt;&apos;);
-}
-</code></pre><p>7、把选中的添加到数组前面，没选中的排下面<br>因为创建一个对象和数组的方式，消耗内存，所以用jquery的prepend和append直接插入目标节点。</p>
-<pre><code>$.ajax({
-    type: &quot;GET&quot;,
-    cache: false,
-    url: url,
-    data: param,
-    dataType: &quot;html&quot;,
-    success: function (res) {
-        hotel_list = eval(&quot;(&quot; + res + &quot;)&quot;);
-        if (hotel_list.length == 0) return;
-        var item_template = $(&quot;#Template_HotelItem&quot;);
-        //var selected;
-        //var noSelected=[];
-        //var arrHotel = [];
-
-        $.each(hotel_list, function (i, item) {
-            var newitem = item_template.clone(true);
-            newitem.removeAttr(&quot;id&quot;);
-            newitem.removeAttr(&quot;style&quot;);
-            newitem.find(&quot;.hotel_id&quot;).text(item.hotelid);
-            newitem.find(&quot;.hotel_name&quot;).text(item.namechs);
-            newitem.find(&quot;.hotel_name_pinyin&quot;).text(item.namechs);
-            newitem.find(&quot;.hotel_postcode&quot;).text(item.postcode);
-            newitem.find(&quot;.hotel_address&quot;).text(item.addresschs);
-            newitem.find(&quot;input[name=&apos;RdHotel&apos;]&quot;).val(i + 1);
-            if (sessionStorage.userHotleId &amp;&amp; sessionStorage.userHotleId == item.hotelid.toString()) {
-                newitem.find(&quot;.RdHotel&quot;).attr(&quot;checked&quot;, &quot;checked&quot;);
-                //selected = newitem;
-                //arrHotel.unshift(newitem);
-                $(&quot;#HotelList&quot;).prepend(newitem);
-            }
-            else {
-                //arrHotel.push(newitem);
-                $(&quot;#HotelList&quot;).append(newitem);
-            }
-        });
-
-        //if (selected)
-        //{
-        //    $(&quot;#HotelList&quot;).append(selected);
-        //}
-        //$.each(arrHotel, function (i, item) {
-        //    $(&quot;#HotelList&quot;).append(item);
-        //});
-
-        myApp.hideIndicator();
-    },
-    error: function (xhr, ajaxOptions, thrownError) {
-        myApp.hideIndicator();
-    }
-});
-</code></pre>
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/04/Framework7开发笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -2455,454 +1417,22 @@ if (isAndroid) {
       
         
           
-            <blockquote>
-<p>模拟滚动也是在项目中遇到的常见布局。布局要求弹层出来后，弹层中的内容可以滚动，弹层背后的列表不能随弹层滚动而滚动。并且在弹层上滑动的时候，整个页面也不能随之滚动。</p>
-</blockquote>
-<p>经过前几步的练习，以下是我做的小demo。</p>
-<p>先贴图：</p>
-<p>图一<br><img src="http://oetrez9vl.bkt.clouddn.com/image/mobile-skills/%E6%A8%A1%E6%8B%9F%E6%BB%9A%E5%8A%A8%EF%BC%880%EF%BC%89.png" alt="模拟滚动（0）"></p>
-<p>图二</p>
-<p><img src="http://oetrez9vl.bkt.clouddn.com/image/mobile-skills/%E6%A8%A1%E6%8B%9F%E6%BB%9A%E5%8A%A8%EF%BC%881%EF%BC%89.png" alt="模拟滚动（1）"></p>
-<h6 id="html："><a href="#html：" class="headerlink" title="html："></a>html：</h6><pre><code>&lt;div class=&quot;father&quot;&gt;
-    &lt;!--页面内容、蒙层、蒙层中的内容互为兄弟节点，防止点击时页面穿透--&gt;
-    &lt;section class=&quot;content-body&quot;&gt;
-      &lt;ul&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;item&quot;&gt;
-          &lt;div class=&quot;left-container&quot;&gt;
-            &lt;p class=&quot;top-container&quot;&gt;
-              &lt;span class=&quot;top-word&quot;&gt;跟团游&lt;/span&gt;
-              &lt;span class=&quot;triangle&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;img class=&quot;pic&quot; src=&quot;img/scenic.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;p class=&quot;bottom-word&quot;&gt;
-              上海出发世纪东方卡就是看到雷锋
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/section&gt;
-    &lt;!--页面内容、蒙层、蒙层中的内容互为兄弟节点，防止点击时页面穿透--&gt;
-    &lt;section class=&quot;layout&quot; style=&quot;display:none;&quot;&gt;
-    &lt;/section&gt;
-    &lt;!--页面内容、蒙层、蒙层中的内容互为兄弟节点，防止点击时页面穿透--&gt;
-    &lt;section class=&quot;layout-body&quot; style=&quot;display:none;&quot;&gt;
-      &lt;ul class=&quot;area&quot;&gt;
-        &lt;li class=&quot;area-all&quot;&gt;
-          &lt;span&gt;全部&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;area-item&quot;&gt;
-          &lt;span&gt;北京&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;area-item&quot;&gt;
-          &lt;span&gt;上海&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;area-item&quot;&gt;
-          &lt;span&gt;广州&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;area-item&quot;&gt;
-          &lt;span&gt;深圳&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;area-item&quot;&gt;
-          &lt;span&gt;成都&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;area-item&quot;&gt;
-          &lt;span&gt;武汉&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;area-item&quot;&gt;
-          &lt;span&gt;四川&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;area-item&quot;&gt;
-          &lt;span&gt;江西&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;area-item&quot;&gt;
-          &lt;span&gt;河南&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;area-item&quot;&gt;
-          &lt;span&gt;贵州&lt;/span&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  &lt;/div&gt;
-</code></pre><h6 id="css："><a href="#css：" class="headerlink" title="css："></a>css：</h6><pre><code>body,
-  p,
-  ul,
-  li {
-    padding: 0;
-    margin: 0;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-  /*item的样式*/
-
-  .item {
-    padding: 0 10px;
-  }
-
-  .left-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 140px;
-  }
-
-  .item::after {
-    content: &apos;&apos;;
-    display: block;
-    margin-top: 5px;
-    width: 100%;
-    height: 0;
-    border-top: 1px solid #999;
-  }
-
-  .pic {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .top-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 999;
-    display: flex;
-    height: 20px;
-    /*font-size: 0;原本是为了解决间隙问题；因为有了display: flex;这个就不需要了；*/
-    overflow: hidden;
-  }
-
-  .top-word {
-    height: 20px;
-    line-height: 20px;
-    padding-left: 10px;
-    overflow: hidden;
-    background-color: #ff0;
-    font-size: 10px;
-    text-align: center;
-    -webkit-line-clamp: 1;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  .triangle {
-    display: inline-block;
-    /* 控制宽高为0，用border宽度撑出一个三角形 */
-    width: 0;
-    height: 0;
-    border-left: 8px solid #ff0;
-    border-top: 20px solid #ff0;
-    border-right: 8px solid transparent;
-    border-bottom: 20px solid transparent;
-  }
-
-  .bottom-word {
-    overflow: hidden;
-    width: 100%;
-    font-size: 10px;
-    background-color: #999;
-    padding: 10px 0;
-    text-align: center;
-    -webkit-line-clamp: 1;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  /*这次demo的重点，蒙层*/
-
-  .father {
-    width: 100%;
-    height: 100%;
-    /* 页面高度设置为屏幕高度，正常情况下超出滚动 */
-    overflow-y: scroll;
-  }
-
-  .content-body {
-    width: 100%;
-    height: 100%;
-    /* 内容高度设置为屏幕高度，正常情况下超出滚动 */
-    overflow-y: scroll;
-    /*一定要加下面的2个属性，否则蒙层出现，这个content-body还是能滚动*/
-    position: absolute;
-    z-index: 10;
-  }
-
-  .layout {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    overflow: hidden;
-    z-index: 1000000;
-  }
-
-  .layout-body {
-    height: 46%;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 1);
-    overflow: scroll;
-    z-index: 1000001;
-  }
-
-  .area-all {
-    font-size: 30px;
-    color: #f00;
-    text-align: center;
-  }
-
-  .area-item {
-    padding: 10px;
-    font-size: 26px;
-    line-height: 30px;
-    text-align: center;
-  }
-
-  .area-all:hover,
-  .area-item:hover {
-    background-color: #999;
-    color: #fff;
-  }
-</code></pre><p>&gt;<br>这个方法虽然实现了页面模拟滚动的效果，但是当蒙层弹出的时候设置了overflow:hidden会导致页面scrollTop变成0，页面相当于被滚到顶部了。如果UI或者PM不愿意，请与他们撕逼。</p>
-<p>这里最需要注意的，就是.content-body一定要让它脱离文档流。如果没有定位，是没有z-index的。这个问题我也不造怎么说，反正就是不加这两个属性，蒙层出来，.content-body还是能滚动，overflow: hidden;没起作用。希望大神赐教！</p>
-<pre><code>.content-body {
-    width: 100%;
-    height: 100%;
-    /* 内容高度设置为屏幕高度，正常情况下超出滚动 */
-    overflow-y: scroll;
-    /*一定要加下面的2个属性，否则蒙层出现，这个content-body还是能滚动*/
-    position: absolute;
-    z-index: 10;
-  }
-</code></pre><p>JavaScript：</p>
-<pre><code>&lt;script src=&quot;jquery-2.1.0.js&quot;&gt;&lt;/script&gt;
-  &lt;script&gt;
-  // 事件代理
-  /*$(document).on(&apos;click&apos;, &quot;.item&quot;, function(e) {
-      $(&quot;.layout&quot;).show();
-      $(&quot;.layout-body&quot;).show();
-    })*/
-  // 直接绑定
-  $(&quot;.item&quot;).on(&apos;click&apos;, function(e) {
-    $(&quot;.layout&quot;).show();
-    $(&quot;.layout-body&quot;).show();
-
-    $(&quot;.father&quot;).css(&quot;overflow-y&quot;, &quot;hidden&quot;);
-    $(&quot;.content-body&quot;).css(&quot;overflow-y&quot;, &quot;hidden&quot;);
-  });
-  $(&quot;.layout&quot;).on(&quot;click&quot;, function(e) {
-    $(this).hide();
-    $(&quot;.layout-body&quot;).hide();
-
-    $(&quot;.father&quot;).css(&quot;overflow-y&quot;, &quot;scroll&quot;);
-    $(&quot;.content-body&quot;).css(&quot;overflow-y&quot;, &quot;scroll&quot;);
-  });
-  $(&quot;.area-item&quot;).on(&quot;click&quot;, function(e) {
-    $(&quot;.layout&quot;).hide();
-    $(&quot;.layout-body&quot;).hide();
-  })
-  &lt;/script&gt;
-</code></pre>
           
+模拟滚动也是在项目中遇到的常见布局。布局要求弹层出来后，弹层中的内容可以滚动，弹层背后的列表不能随弹层滚动而滚动。并且在弹层上滑动的时候，整个页面也不能随之滚动。
+
+经过前几步的练习，以下是我做的小demo。
+先贴图：
+图一
+图二
+
+html：&lt;div class=&quot;father&
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/23/移动端样式小技巧（4）——模拟滚动/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3035,11 +1565,27 @@ if (isAndroid) {
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
         
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
 
         
       </div>
@@ -3101,6 +1647,13 @@ if (isAndroid) {
   
   
 
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
   
 
   
@@ -3130,6 +1683,10 @@ if (isAndroid) {
   </script>
 
   
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
     
   
 
