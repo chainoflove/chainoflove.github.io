@@ -84,15 +84,43 @@
 
 
 
-<meta name="description" content="网上引来颜如玉，键下筑起黄金屋。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="悟空家的萌猴子">
-<meta property="og:url" content="http://yoursite.com/tags/github/index.html">
+<meta name="description" content="/********************
+ * 日币转人民币,Jprice:日币;JP2CN:汇率
+ *******************/
+function formatJP2CN(Jprice, JP2CN) {
+    return Math.ceil(parseInt(Jprice) * JP2CN);
+}
+
+/********************
+ * 取窗口滚动条高度 
+ **">
+<meta property="og:type" content="article">
+<meta property="og:title" content="公共工具库commonUtil.js">
+<meta property="og:url" content="http://yoursite.com/2017/02/28/公共工具库commonUtil-js/index.html">
 <meta property="og:site_name" content="悟空家的萌猴子">
-<meta property="og:description" content="网上引来颜如玉，键下筑起黄金屋。">
+<meta property="og:description" content="/********************
+ * 日币转人民币,Jprice:日币;JP2CN:汇率
+ *******************/
+function formatJP2CN(Jprice, JP2CN) {
+    return Math.ceil(parseInt(Jprice) * JP2CN);
+}
+
+/********************
+ * 取窗口滚动条高度 
+ **">
+<meta property="og:updated_time" content="2017-02-28T06:15:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="悟空家的萌猴子">
-<meta name="twitter:description" content="网上引来颜如玉，键下筑起黄金屋。">
+<meta name="twitter:title" content="公共工具库commonUtil.js">
+<meta name="twitter:description" content="/********************
+ * 日币转人民币,Jprice:日币;JP2CN:汇率
+ *******************/
+function formatJP2CN(Jprice, JP2CN) {
+    return Math.ceil(parseInt(Jprice) * JP2CN);
+}
+
+/********************
+ * 取窗口滚动条高度 
+ **">
 
 
 
@@ -110,7 +138,7 @@
   };
 </script>
 
-  <title> 标签: github | 悟空家的萌猴子 </title>
+  <title> 公共工具库commonUtil.js | 悟空家的萌猴子 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -156,7 +184,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,53 +285,255 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        github
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                公共工具库commonUtil.js
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-28T14:14:03+08:00" content="2017-02-28">
+              2017-02-28
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/28/公共工具库commonUtil-js/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/28/公共工具库commonUtil-js/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/02/28/公共工具库commonUtil-js/" class="leancloud_visitors" data-flag-title="公共工具库commonUtil.js">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <pre><code>/********************
+ * 日币转人民币,Jprice:日币;JP2CN:汇率
+ *******************/
+function formatJP2CN(Jprice, JP2CN) {
+    return Math.ceil(parseInt(Jprice) * JP2CN);
+}
 
-      <h1 class="post-title">
+/********************
+ * 取窗口滚动条高度 
+ ******************/
+function getScrollTop() {
+    var scrollTop = 0;
+    if (document.documentElement &amp;&amp; document.documentElement.scrollTop) {
+        scrollTop = document.documentElement.scrollTop;
+    }
+    else if (document.body) {
+        scrollTop = document.body.scrollTop;
+    }
+    return scrollTop;
+}
+
+/********************
+ * 取窗口可视范围的高度 
+ *******************/
+function getClientHeight() {
+    var clientHeight = 0;
+    if (document.body.clientHeight &amp;&amp; document.documentElement.clientHeight) {
+        var clientHeight = (document.body.clientHeight &lt; document.documentElement.clientHeight) ? document.body.clientHeight : document.documentElement.clientHeight;
+    }
+    else {
+        var clientHeight = (document.body.clientHeight &gt; document.documentElement.clientHeight) ? document.body.clientHeight : document.documentElement.clientHeight;
+    }
+    return clientHeight;
+}
+
+/********************
+ * 取文档内容实际高度 
+ *******************/
+function getScrollHeight() {
+    return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+}
+
+/********************
+ * 取图片路径
+ *******************/
+function getPicURL(url, specs) {
+    return (url || &quot;&quot;).trim() + (specs || &quot;&quot;).trim();
+}
+
+/********************
+ * 取设备类型,ios返回true;android返回false.
+ *******************/
+function getUA() {
+    var ua = navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(ua)) {
+        return true;
+    } else if (/android/.test(ua)) {
+        return false;
+    }
+}
+</code></pre>
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/09/21/Hexo-Github托管：搭建自己的博客/" itemprop="url">
-              
-                <span itemprop="name">Hexo+Github托管：搭建自己的博客</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-21T22:13:48+08:00"
-              content="2016-09-21" >
-          09-21
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/28/回到顶部/" rel="next" title="回到顶部">
+                <i class="fa fa-chevron-left"></i> 回到顶部
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/28/ios点击后背景阴影/" rel="prev" title="ios点击后背景阴影">
+                ios点击后背景阴影 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/28/公共工具库commonUtil-js/"
+           data-title="公共工具库commonUtil.js" data-url="http://yoursite.com/2017/02/28/公共工具库commonUtil-js/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -323,8 +553,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpeg"
@@ -367,6 +606,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -486,6 +736,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

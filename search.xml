@@ -3,6 +3,34 @@
   
     
     <entry>
+      <title><![CDATA[ios点击后背景阴影]]></title>
+      <url>%2F2017%2F02%2F28%2Fios%E7%82%B9%E5%87%BB%E5%90%8E%E8%83%8C%E6%99%AF%E9%98%B4%E5%BD%B1%2F</url>
+      <content type="text"><![CDATA[解决ios点击后阴影，只要加上css样式 a, img, button, input, textarea, div { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[公共工具库commonUtil.js]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%85%AC%E5%85%B1%E5%B7%A5%E5%85%B7%E5%BA%93commonUtil-js%2F</url>
+      <content type="text"><![CDATA[/******************** * 日币转人民币,Jprice:日币;JP2CN:汇率 *******************/ function formatJP2CN(Jprice, JP2CN) { return Math.ceil(parseInt(Jprice) * JP2CN); } /******************** * 取窗口滚动条高度 ******************/ function getScrollTop() { var scrollTop = 0; if (document.documentElement &amp;&amp; document.documentElement.scrollTop) { scrollTop = document.documentElement.scrollTop; } else if (document.body) { scrollTop = document.body.scrollTop; } return scrollTop; } /******************** * 取窗口可视范围的高度 *******************/ function getClientHeight() { var clientHeight = 0; if (document.body.clientHeight &amp;&amp; document.documentElement.clientHeight) { var clientHeight = (document.body.clientHeight &lt; document.documentElement.clientHeight) ? document.body.clientHeight : document.documentElement.clientHeight; } else { var clientHeight = (document.body.clientHeight &gt; document.documentElement.clientHeight) ? document.body.clientHeight : document.documentElement.clientHeight; } return clientHeight; } /******************** * 取文档内容实际高度 *******************/ function getScrollHeight() { return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight); } /******************** * 取图片路径 *******************/ function getPicURL(url, specs) { return (url || &quot;&quot;).trim() + (specs || &quot;&quot;).trim(); } /******************** * 取设备类型,ios返回true;android返回false. *******************/ function getUA() { var ua = navigator.userAgent.toLowerCase(); if (/iphone|ipad|ipod/.test(ua)) { return true; } else if (/android/.test(ua)) { return false; } }]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[回到顶部]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8%2F</url>
+      <content type="text"><![CDATA[实现一个回到顶部的按钮： 第一屏不显示，从第二屏开始，从右下方向上逐步滚出； 回到第一屏，“回到顶部”按钮由上往下，逐步隐藏。 html: &lt;div class=&quot;backtotop&quot;&gt;&lt;img src=&quot;~/Images/回顶部@2x.png&quot; /&gt;&lt;/div&gt; CSS： .backtotop { position: fixed; z-index: 999; right: 0.4rem; bottom: -1.3333333rem; width: 1.3333333rem; height: 1.3333333rem; transition: all 0.4s ease-in-out; } .backtotop.show { bottom: 0.4rem; } js: backtotopBtnShow: function () { var that = this; var scrollTop = getScrollTop(); if (scrollTop &gt; window.innerHeight) { $(&apos;.backtotop&apos;).addClass(&apos;show&apos;); } else { $(&apos;.backtotop&apos;).removeClass(&apos;show&apos;); } }]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[vue获取后端数据应该在created还是mounted方法？]]></title>
+      <url>%2F2017%2F02%2F03%2Fvue%E8%8E%B7%E5%8F%96%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%BA%94%E8%AF%A5%E5%9C%A8created%E8%BF%98%E6%98%AFmounted%E6%96%B9%E6%B3%95%EF%BC%9F%2F</url>
+      <content type="text"><![CDATA[看情况了，一般放到created里面就可以了，这样可以及早发请求获取数据，如果有依赖dom必须存在的情况，就放到mounted(){this.$nextTick(() =&gt; { / code / })}里面]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[侧边栏信息展示效果]]></title>
       <url>%2F2017%2F01%2F27%2F%E4%BE%A7%E8%BE%B9%E6%A0%8F%E4%BF%A1%E6%81%AF%E5%B1%95%E7%A4%BA%E6%95%88%E6%9E%9C%2F</url>
       <content type="text"><![CDATA[功能实现TODO： 点击sidebar下方的关闭按钮（x），sidebar向左方滑出屏幕，关闭按钮向右方滑动，同时旋转为（+）。 点击加号（+），sidebar向右滑动，加号（+）向左滑动，并旋转为（x）。 点击sidebar上方的菜单栏，相应的内容栏（从左向右）滑动。 如果有已经打开的内容栏，则已打开的内容栏关闭，新点击的相应的内容栏从下往上滑动。 打开的内容栏的右上方有关闭按钮（&lt;），点击后内容栏从右向左滑动并关闭。 完整性约束。如果已经有打开的内容栏，点击sidebar下方的关闭按钮，则sidebar关闭，已经打开的内容栏也应该关闭。 案例实现步骤： 实现HTML文档结构 编写JavaScript代码，添加相应的事件、函数和逻辑 在每个事件函数中添加动画效果]]></content>
