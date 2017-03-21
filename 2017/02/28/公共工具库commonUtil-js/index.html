@@ -108,7 +108,7 @@ function formatJP2CN(Jprice, JP2CN) {
 /********************
  * 取窗口滚动条高度 
  **">
-<meta property="og:updated_time" content="2017-02-28T06:15:48.000Z">
+<meta property="og:updated_time" content="2017-03-07T05:35:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="公共工具库commonUtil.js">
 <meta name="twitter:description" content="/********************
@@ -427,6 +427,45 @@ function getUA() {
         return false;
     }
 }
+/********************
+ * 滚动顶部
+ *******************/
+function scrollToTop() {
+      $(&quot;html, body&quot;).animate({ scrollTop: 0 }, 120);
+}
+</code></pre><p>学会封装一个工具类：</p>
+<pre><code>var Util = (function() {
+    var prefix = &apos;html5_reader_&apos;;
+    var StorageGetter = function(key) {
+      return localStorage.getItem(key);
+    }
+    var StorageSetter = function(key, val) {
+      return localStorage.setItem(key, val);
+    }
+
+    var getBSONP = function(url, callback) {
+      return $.jsonp({
+        url: url,
+        cache: true,
+        callback: &quot;duokan_fiction_chapter&quot;,
+        success: function(result) {
+          console.log(result);
+          // debugger;
+          var data = $.base64.decode(result); //json
+          var json = decodeURIComponent(escape(data));
+          callback &amp;&amp; callback(json);
+        }
+      })
+    }
+
+
+    return {
+      StorageGetter: StorageGetter,
+      StorageSetter: StorageSetter,
+      getBSONP: getBSONP,
+      scrollToTop: scrollToTop
+    }
+  })();
 </code></pre>
       
     </div>
@@ -574,7 +613,7 @@ function getUA() {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">30</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

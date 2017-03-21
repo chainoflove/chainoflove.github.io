@@ -1,0 +1,1319 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;zh-cn&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;chrome=1&amp;quot;&amp;gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="export Table To CSV文件">
+<meta property="og:url" content="http://yoursite.com/2017/03/08/export-Table-To-CSV文件/index.html">
+<meta property="og:site_name" content="悟空家的萌猴子">
+<meta property="og:description" content="&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;zh-cn&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;chrome=1&amp;quot;&amp;gt;">
+<meta property="og:updated_time" content="2017-03-08T03:10:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="export Table To CSV文件">
+<meta name="twitter:description" content="&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;zh-cn&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;chrome=1&amp;quot;&amp;gt;">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Shen Jennie'
+    }
+  };
+</script>
+
+  <title> export Table To CSV文件 | 悟空家的萌猴子 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?d6dffcafa9a9d38727a3868adeedd529";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=60116887";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1261040212&web_id=1261040212" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">悟空家的萌猴子</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">半个苹果引起的真爱！</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                export Table To CSV文件
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-08T11:06:52+08:00" content="2017-03-08">
+              2017-03-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/08/export-Table-To-CSV文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/08/export-Table-To-CSV文件/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/08/export-Table-To-CSV文件/" class="leancloud_visitors" data-flag-title="export Table To CSV文件">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-cn&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;chrome=1&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;link href=&quot;~/assets/custom/css/table.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;~/assets/custom/css/table-responsive.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;~/Scripts/data-tables/DT_bootstrap.css&quot; /&gt;
+
+    &lt;!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!--[if lt IE 9]&gt;
+    &lt;script src=&quot;js/html5shiv.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/respond.min.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;../css/mobiscroll.custom-3.0.0-beta6.min.css
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;~/assets/custom/css/mobiscroll.custom-3.0.0-beta6.min.css&quot; /&gt;
+    &lt;title&gt;旅行社后台管理&lt;/title&gt;
+    @RenderSection(&quot;CssSection&quot;, required: false)
+    &lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!-- WARNING: Respond.js doesn&apos;t work if you view the page via file:// --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src=&quot;http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        a {
+            color: #65CEA7;
+        }
+
+        #btns-download {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            list-style: none;
+            float: right;
+        }
+
+        #btns-download li {
+            margin-right: 10px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+
+&lt;body class=&quot;sticky-header&quot;&gt;
+
+&lt;section&gt;
+    &lt;!-- main content start--&gt;
+    &lt;div class=&quot;main-content&quot;&gt;
+        &lt;!-- header section start--&gt;
+        &lt;div class=&quot;header-section&quot; style=&quot;background-color: #424f63;&quot;&gt;
+            &lt;!--notification menu start --&gt;
+            &lt;div class=&quot;menu-right&quot;&gt;
+                &lt;ul class=&quot;notification-menu&quot;&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;btn dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; style=&quot;background-color: #424f63;&quot;&gt;
+                            &lt;span id=&quot;userName&quot;&gt;admin&lt;/span&gt;
+                            &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                        &lt;/a&gt;
+                        &lt;ul class=&quot;dropdown-menu dropdown-menu-usermenu pull-right&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href=&quot;Login&quot;&gt;&lt;i class=&quot;fa fa-sign-out&quot;&gt;&lt;/i&gt; 退出&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;!--notification menu end --&gt;
+
+        &lt;/div&gt;
+        &lt;!-- header section end--&gt;
+        &lt;!-- page heading start--&gt;
+        &lt;div class=&quot;page-heading&quot;&gt;
+            &lt;h3 id=&quot;travelName&quot;&gt;
+                @ViewBag.TravelService.name
+            &lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;!-- page heading end--&gt;
+        &lt;!--body wrapper start--&gt;
+        &lt;div class=&quot;wrapper&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;section class=&quot;panel&quot;&gt;
+
+                        &lt;div class=&quot;panel-body&quot;&gt;
+                            &lt;form action=&quot;#&quot; class=&quot;form-horizontal &quot;&gt;
+
+                                &lt;div class=&quot;form-group&quot; style=&quot;display: -webkit-box;display: -ms-flexbox;display: flex;margin: 0;&quot;&gt;
+                                    &lt;label class=&quot;control-label&quot;&gt;选择月份:&lt;/label&gt;
+                                    &lt;div style=&quot;margin-left: 20px;&quot;&gt;
+                                        &lt;div class=&quot;input-group input-large custom-date-range&quot; data-date=&quot;13/07/2013&quot; data-date-format=&quot;mm/dd/yyyy&quot;&gt;
+                                            &lt;!--&lt;input id=&quot;startDate&quot; type=&quot;text&quot; placeholder=&quot;请选择日期 ...&quot; class=&quot;form-control dpd1&quot; name=&quot;from&quot; readonly/&gt;
+                                            &lt;span class=&quot;input-group-addon&quot;&gt;到&lt;/span&gt;
+                                            &lt;input id=&quot;endDate&quot; type=&quot;text&quot; placeholder=&quot;请选择日期 ...&quot; class=&quot;form-control dpd2&quot; name=&quot;to&quot; readonly/&gt;--&gt;
+                                            &lt;input id=&quot;txtMonth&quot; type=&quot;text&quot; placeholder=&quot;请选择月份&quot; /&gt;
+                                        &lt;/div&gt;
+                                        &lt;!--&lt;span class=&quot;help-block&quot;&gt;请选择日期&lt;/span&gt;--&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                            &lt;/form&gt;
+                            &lt;!--&lt;div id=&quot;demo&quot;&gt;&lt;/div&gt;--&gt;
+                        &lt;/div&gt;
+                    &lt;/section&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-sm-12&quot;&gt;
+                    &lt;section class=&quot;panel&quot;&gt;
+                        &lt;header class=&quot;panel-heading&quot;&gt;
+                            所选月份的数据
+                            &lt;!-- 选择打印方式  start--&gt;
+
+                            &lt;ul id=&quot;btns-download&quot; role=&quot;menu&quot;&gt;
+                                &lt;li&gt;
+                                    &lt;a class=&quot;export&quot; href=&quot;#&quot;&gt; &lt;img src=&apos;~/assets/custom/img/TripManagement/csv.png&apos; width=&apos;24px&apos;&gt; CSV&lt;/a&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+
+                            &lt;!-- 选择打印方式 end --&gt;
+                        &lt;/header&gt;
+                        &lt;div class=&quot;panel-body&quot;&gt;
+                            &lt;div class=&quot;adv-table-container&quot;&gt;
+                                &lt;div id=&quot;table-container&quot; class=&quot;adv-table table-responsive&quot;&gt;
+
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+                    &lt;/section&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;!-- main content end--&gt;
+&lt;/section&gt;
+
+&lt;!-- Placed js at the end of the document so the pages load faster --&gt;
+&lt;!-- jQuery文件。务必在bootstrap.min.js 之前引入 --&gt;
+&lt;script src=&quot;http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- 最新的 Bootstrap 核心 JavaScript 文件 --&gt;
+&lt;script src=&quot;http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;~/Scripts/mobiscroll.custom-3.0.0-beta6.min.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;~/Scripts/modernizr-2.6.2.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;~/Scripts/jquery.nicescroll.js&quot;&gt;&lt;/script&gt;
+
+&lt;!--common scripts for all pages--&gt;
+&lt;script src=&quot;~/Scripts/my-nicescroll.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;~/Scripts/Table.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $(function () {
+        $(&quot;#userName&quot;).html(sessionStorage.userName);
+        //$(&quot;#travelName&quot;).html(sessionStorage.travelName);
+        /* 日期选择   */
+        var now = new Date(),
+            start = new Date(now.getFullYear(), now.getMonth() - 12);
+
+        $(&apos;#txtMonth&apos;).mobiscroll().date({
+            theme: &apos;mobiscroll&apos;,
+            lang: &apos;zh&apos;,
+            display: &apos;bottom&apos;,
+            dateWheels: &apos;yy MM&apos;,
+            dateFormat: &apos;yy - mm&apos;,
+            /*min: start,
+            minWidth: 100,*/
+            max: now
+        });
+        $(&quot;#txtMonth&quot;).on(&quot;change&quot;, function () {
+            var dateStr = $(this).val().replace(/\s/g, &apos;&apos;).split(&quot;-&quot;).join(&quot;&quot;) + &quot;01&quot;;
+            console.log(dateStr);
+            /*    获取table数据    */
+            $.ajax({
+                url: &quot;/api/IOrder/GetOrderDataForTravel&quot;,
+                type: &quot;GET&quot;,
+                data: {
+                    &quot;triptoken&quot;: &apos;@ViewBag.TravelService.triptoken&apos;,
+                    &quot;id&quot;: &apos;@ViewBag.TravelService.id&apos;,
+                    &quot;ymd&quot;: dateStr
+                },
+                dataType: &quot;json&quot;,
+                success: function (res) {
+                    /*    初始化表格    */
+                    Table().init({
+                        id: &apos;table-container&apos;,
+                        header: [&apos;手机号码&apos;, &apos;订单总金额&apos;, &apos;注册时间&apos;, &apos;佣金率（%）&apos;, &apos;佣金总额&apos;],
+                        data: res
+                    });
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    // 通常 textStatus 和 errorThrown 之中
+                    // 只有一个会包含信息
+                    this; // 调用本次AJAX请求时传递的options参数
+                }
+            });
+        })
+
+        /*  导出CSV文件      */
+        function exportTableToCSV($table, filename) {
+
+            var $rows = $table.find(&apos;tr:has(td)&apos;),
+
+                // Temporary delimiter characters unlikely to be typed by keyboard
+                // This is to avoid accidentally splitting the actual contents
+                tmpColDelim = String.fromCharCode(11), // vertical tab character
+                tmpRowDelim = String.fromCharCode(0), // null character
+
+                // actual delimiter characters for CSV format
+                colDelim = &apos;&quot;,&quot;&apos;,
+                rowDelim = &apos;&quot;\r\n&quot;&apos;,
+
+                // Grab text from table into CSV formatted string
+                csv = &apos;&quot;&apos; + $rows.map(function (i, row) {
+                    var $row = $(row),
+                        $cols = $row.find(&apos;td&apos;);
+
+                    return $cols.map(function (j, col) {
+                        var $col = $(col),
+                            text = $col.text();
+
+                        return text.replace(&apos;&quot;&apos;, &apos;&quot;&quot;&apos;); // escape double quotes
+
+                    }).get().join(tmpColDelim);
+
+                }).get().join(tmpRowDelim)
+                .split(tmpRowDelim).join(rowDelim)
+                .split(tmpColDelim).join(colDelim) + &apos;&quot;&apos;,
+
+                // Data URI
+                csvData = &apos;data:application/csv;charset=utf-8,&apos; + encodeURIComponent(csv);
+
+            $(this)
+                .attr({
+                    &apos;download&apos;: filename,
+                    &apos;href&apos;: csvData,
+                    &apos;target&apos;: &apos;_blank&apos;
+                });
+        }
+
+        // This must be a hyperlink
+        $(&quot;.export&quot;).on(&apos;click&apos;, function (event) {
+            // CSV
+            exportTableToCSV.apply(this, [$(&apos;#customers&apos;), Math.random().toString(36).substr(2) + &apos;.csv&apos;]);
+
+            // IF CSV, don&apos;t do event.preventDefault() or return false
+            // We actually need this to be a typical hyperlink
+        });
+    });
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>渲染表格：</p>
+<pre><code>function Table() {
+    var TClass = {}; //操作数据（table数据的的对象）
+    var Tool = {}; //创建table各个节点的总对象
+    var DataStore = {}; //保存获取到的json数据再报这些数据转化成所需要的table数据对象
+    var Option = {}; //参数选项
+    Tool.createHeader = function(htmls, data) { //创建表头
+        htmls.push(&apos;&lt;thead&gt;&lt;tr&gt;&apos;);
+        for(var i in data) {
+            htmls.push(&apos;&lt;th&gt;&apos; + data[i] + &apos;&lt;/th&gt;&apos;);
+        }
+        htmls.push(&apos;&lt;/tr&gt;&lt;/thead&gt;&apos;);
+    };
+    Tool.createFooter = function(htmls, data) { //创建表尾
+        htmls.push(&apos;&lt;tfoot&gt;&lt;tr&gt;&apos;);
+        for(var i in data) {
+            htmls.push(&apos;&lt;th&gt;&apos; + data[i] + &apos;&lt;/th&gt;&apos;);
+        }
+        htmls.push(&apos;&lt;/tr&gt;&lt;/tfoot&gt;&apos;);
+    };
+    Tool.createRow = function (htmls, data) {                                                                //创建一行
+        htmls.push(&apos;&lt;tr&gt;&apos;);
+        var index = 0;
+        for (var i in data) {
+            if (index != 1) {
+                if (i.indexOf(&apos;registertime&apos;) != -1) {
+                    htmls.push(&apos;&lt;td&gt;&apos; + data[i].replace(&apos;T&apos;,&apos; &apos;) + &apos;&lt;/td&gt;&apos;);
+                } else {
+                    htmls.push(&apos;&lt;td&gt;&apos; + data[i] + &apos;&lt;/td&gt;&apos;);
+                }
+            }
+            index++;
+        }
+        htmls.push(&apos;&lt;/tr&gt;&apos;);
+    };
+    Tool.render = function(id, tag) { //渲染页面
+        var htmls = [];
+        var option = Option[id];
+        if(DataStore[id][&apos;data&apos;].length == 0) {
+            htmls.push(&quot;&lt;div&gt;没有相关数据！&lt;/div&gt;&quot;);
+        } else {
+        htmls.push(&apos;&lt;table id=&quot;customers&quot; class=&quot;table table-bordered table-striped table-condensed&quot;&gt;&apos;);
+
+            Tool.createHeader(htmls, DataStore[id][&apos;header&apos;]);
+            for(var i in DataStore[id][&apos;data&apos;]) {
+                Tool.createRow(htmls, DataStore[id][&apos;data&apos;][i]);
+            }
+            Tool.createFooter(htmls, DataStore[id][&apos;header&apos;]);
+            htmls.push(&apos;&lt;/table&gt;&apos;);
+        }
+
+
+        tag.empty().append(htmls.join(&apos;&apos;));
+    };
+    Tool.getValue = function(value, defalutValue) {
+        if(typeof value == &apos;undefined&apos;) {
+            return defalutValue;
+        } else {
+            return value;
+        }
+    };
+    TClass.init = function(option) {
+        var id = option[&apos;id&apos;];
+        var tag = $(&apos;#&apos; + id); //获取table的节点
+        var header = option[&apos;header&apos;]; //获取头部title数组的数据
+        var data = option[&apos;data&apos;]; //获取表格正文数据
+        DataStore[id] = { //初始化DataStore的id为这个，的对象，里面有两个属性信息header和data
+            header: header,
+            data: data
+        };
+        Tool.render(id, tag);
+    };
+    TClass.getValue = function(id, row, column) {
+        return DataStore[id][&apos;data&apos;][row - 1][column - 1];
+    };
+    TClass.setValue = function(id, row, column, value) {
+        DataStore[id][&apos;data&apos;][row - 1][column - 1] = value;
+    };
+    TClass.getValues = function(id) {
+        return DataStore[id][&apos;data&apos;];
+    };
+    TClass.addRow = function(id, data) {
+        DataStore[id][&apos;data&apos;].push(data);
+    };
+    TClass.deleteRow = function(id, row) {
+        DataStore[id][&apos;data&apos;].splice(row - 1, 1);
+    };
+    TClass.getRowCount = function(id) {
+        return DataStore[id][&apos;data&apos;].length;
+    };
+    TClass.render = function(id) {
+        Tool.render(id, $(&apos;#&apos; + id));
+    };
+    return TClass;
+}
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/06/wandou/" rel="next" title="wandou">
+                <i class="fa fa-chevron-left"></i> wandou
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/15/版本号比较/" rel="prev" title="版本号比较">
+                版本号比较 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/08/export-Table-To-CSV文件/"
+           data-title="export Table To CSV文件" data-url="http://yoursite.com/2017/03/08/export-Table-To-CSV文件/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpeg"
+               alt="Shen Jennie" />
+          <p class="site-author-name" itemprop="name">Shen Jennie</p>
+          <p class="site-description motion-element" itemprop="description">网上引来颜如玉，键下筑起黄金屋。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shen Jennie</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"cutemonkeyfamily"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("N9nVVJPUPOX5fKHTmRp2guvz-gzGzoHsz", "qCsfl15AFPvmwqX58aEeUeE7");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+</body>
+</html>
