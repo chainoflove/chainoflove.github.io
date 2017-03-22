@@ -84,49 +84,49 @@
 
 
 
-<meta name="description" content="html:
-&amp;lt;button onclick=&amp;quot;Test()&amp;quot;&amp;gt;test&amp;lt;/button&amp;gt;
-css:
-&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
-  * {
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-  }
-
-  .ul {
-    list-style: n">
+<meta name="description" content="/**
+    swiper 上下滑动划不动
+*/
+html, body {//这里不一定是html, body;但是.swiper-container外面套的一层div样式一定要加上下面这两个属性
+    position: relative;
+    height: 100%;
+}
+#swipe-wrapper {
+    width: 100%;
+    height: 100%;
+}
+#s">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript中alert()方法重写">
-<meta property="og:url" content="http://yoursite.com/2017/03/01/JavaScript中alert-方法重写/index.html">
+<meta property="og:title" content="swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug">
+<meta property="og:url" content="http://yoursite.com/2017/03/21/swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug/index.html">
 <meta property="og:site_name" content="悟空家的萌猴子">
-<meta property="og:description" content="html:
-&amp;lt;button onclick=&amp;quot;Test()&amp;quot;&amp;gt;test&amp;lt;/button&amp;gt;
-css:
-&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
-  * {
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-  }
-
-  .ul {
-    list-style: n">
-<meta property="og:updated_time" content="2017-03-01T06:12:56.000Z">
+<meta property="og:description" content="/**
+    swiper 上下滑动划不动
+*/
+html, body {//这里不一定是html, body;但是.swiper-container外面套的一层div样式一定要加上下面这两个属性
+    position: relative;
+    height: 100%;
+}
+#swipe-wrapper {
+    width: 100%;
+    height: 100%;
+}
+#s">
+<meta property="og:updated_time" content="2017-03-21T10:31:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript中alert()方法重写">
-<meta name="twitter:description" content="html:
-&amp;lt;button onclick=&amp;quot;Test()&amp;quot;&amp;gt;test&amp;lt;/button&amp;gt;
-css:
-&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
-  * {
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-  }
-
-  .ul {
-    list-style: n">
+<meta name="twitter:title" content="swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug">
+<meta name="twitter:description" content="/**
+    swiper 上下滑动划不动
+*/
+html, body {//这里不一定是html, body;但是.swiper-container外面套的一层div样式一定要加上下面这两个属性
+    position: relative;
+    height: 100%;
+}
+#swipe-wrapper {
+    width: 100%;
+    height: 100%;
+}
+#s">
 
 
 
@@ -144,7 +144,7 @@ css:
   };
 </script>
 
-  <title> JavaScript中alert()方法重写 | 悟空家的萌猴子 </title>
+  <title> swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug | 悟空家的萌猴子 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -312,7 +312,7 @@ css:
             
             
               
-                JavaScript中alert()方法重写
+                swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug
               
             
           </h1>
@@ -324,8 +324,8 @@ css:
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-01T14:09:56+08:00" content="2017-03-01">
-              2017-03-01
+            <time itemprop="dateCreated" datetime="2017-03-21T18:27:18+08:00" content="2017-03-21">
+              2017-03-21
             </time>
           </span>
 
@@ -335,8 +335,8 @@ css:
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/03/01/JavaScript中alert-方法重写/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/01/JavaScript中alert-方法重写/" itemprop="commentsCount"></span>
+                <a href="/2017/03/21/swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/21/swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -346,7 +346,7 @@ css:
 
           
           
-             <span id="/2017/03/01/JavaScript中alert-方法重写/" class="leancloud_visitors" data-flag-title="JavaScript中alert()方法重写">
+             <span id="/2017/03/21/swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug/" class="leancloud_visitors" data-flag-title="swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -373,111 +373,20 @@ css:
       
 
       
-        <p>html:</p>
-<pre><code>&lt;button onclick=&quot;Test()&quot;&gt;test&lt;/button&gt;
-</code></pre><p>css:</p>
-<pre><code>&lt;style type=&quot;text/css&quot;&gt;
-  * {
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-  }
-
-  .ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    width: 100%
-  }
-
-  .title {
-    background: #F2F2F2;
-    text-align: left;
-    padding-left: 20px;
-    line-height: 60px;
-    border: 1px solid #999;
-  }
-
-  .content {
-    background: #D1E0F1;
-    text-align: center;
-    height: 95px;
-    line-height: 95px;
-    border-left: 1px solid #999;
-    border-right: 1px solid #999;
-    color: #F0F;
-  }
-
-  .btn-wrap {
-    background: #F2F2F2;
-    text-align: center;
-    height: 60px;
-    line-height: 25px;
-    border: 1px solid #999;
-  }
-
-  .btn {
-    width: 80px;
-    height: 40px;
-    background: #999;
-    margin-top: 10px;
-    border: 1px solid #FFF;
-    cursor: pointer;
-    color: #333;
-  }
-
-  .btn:hover {
-    color: #666;
-  }
-  &lt;/style&gt;
-</code></pre><p>javascript: </p>
-<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
-  window.alert = function(str) {
-    var shield = document.createElement(&quot;DIV&quot;);
-    shield.id = &quot;shield&quot;;
-    shield.style.position = &quot;absolute&quot;;
-    shield.style.left = &quot;50%&quot;;
-    shield.style.top = &quot;50%&quot;;
-    shield.style.width = &quot;300px&quot;;
-    shield.style.height = &quot;300px&quot;;
-    shield.style.marginLeft = &quot;-150px&quot;;
-    shield.style.marginTop = &quot;-150px&quot;;
-    shield.style.zIndex = &quot;25&quot;;
-    var alertFram = document.createElement(&quot;DIV&quot;);
-    alertFram.id = &quot;alertFram&quot;;
-    alertFram.style.position = &quot;absolute&quot;;
-    alertFram.style.width = &quot;300px&quot;;
-    alertFram.style.height = &quot;200px&quot;;
-    alertFram.style.left = &quot;50%&quot;;
-    alertFram.style.top = &quot;0&quot;;
-    alertFram.style.marginLeft = &quot;-140px&quot;;
-    alertFram.style.marginTop = &quot;120px&quot;;
-    alertFram.style.textAlign = &quot;center&quot;;
-    alertFram.style.lineHeight = &quot;150px&quot;;
-    alertFram.style.zIndex = &quot;300&quot;;
-    strHtml = &apos;&lt;ul class=&quot;ul&quot;&gt;&apos;;
-    strHtml += &apos;&lt;li class=&quot;title&quot;&gt;myalert&lt;/li&gt;&apos;;
-    strHtml += &apos;&lt;li class=&quot;content&quot;&gt;&apos; + str + &apos;&lt;/li&gt;&apos;;
-    strHtml += &apos;&lt;li class=&quot;btn-wrap&quot;&gt;&lt;input type=&quot;button&quot; value=&quot;确 定&quot; onclick=&quot;doOk()&quot; class=&quot;btn&quot;/&gt;&lt;/li&gt;&apos;;
-    strHtml += &apos;&lt;/ul&gt;&apos;;
-    alertFram.innerHTML = strHtml;
-    document.body.appendChild(alertFram);
-    document.body.appendChild(shield);
-    this.doOk = function() {
-      alertFram.style.display = &quot;none&quot;;
-      shield.style.display = &quot;none&quot;;
-    }
-    alertFram.focus();
-    document.body.onselectstart = function() {
-      return false;
-    };
-  }
-
-  function Test(argument) {
-    /* body... */
-    alert(&apos;这是自定义的ALERT&apos;);
-  }
-  &lt;/script&gt;
+        <pre><code>/**
+    swiper 上下滑动划不动
+*/
+html, body {//这里不一定是html, body;但是.swiper-container外面套的一层div样式一定要加上下面这两个属性
+    position: relative;
+    height: 100%;
+}
+#swipe-wrapper {
+    width: 100%;
+    height: 100%;
+}
+#swipe-wrapper .swiper-slide {
+    height: auto;
+}
 </code></pre>
       
     </div>
@@ -502,17 +411,13 @@ css:
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/28/ios点击后背景阴影/" rel="next" title="ios点击后背景阴影">
-                <i class="fa fa-chevron-left"></i> ios点击后背景阴影
+              <a href="/2017/03/15/版本号比较/" rel="next" title="版本号比较">
+                <i class="fa fa-chevron-left"></i> 版本号比较
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/02/写一个网页进度-loading/" rel="prev" title="写一个网页进度 loading">
-                写一个网页进度 loading <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -579,8 +484,8 @@ css:
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/01/JavaScript中alert-方法重写/"
-           data-title="JavaScript中alert()方法重写" data-url="http://yoursite.com/2017/03/01/JavaScript中alert-方法重写/">
+      <div class="ds-thread" data-thread-key="2017/03/21/swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug/"
+           data-title="swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug" data-url="http://yoursite.com/2017/03/21/swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug/">
       </div>
     
   </div>
