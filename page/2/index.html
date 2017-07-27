@@ -281,8 +281,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/02/28/公共工具库commonUtil-js/" itemprop="url">
-                  公共工具库commonUtil.js
+                <a class="post-title-link" href="/2017/04/20/js重写alert-confirm弹框/" itemprop="url">
+                  js重写alert confirm弹框
                 </a>
               
             
@@ -295,8 +295,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-28T14:14:03+08:00" content="2017-02-28">
-              2017-02-28
+            <time itemprop="dateCreated" datetime="2017-04-20T15:16:23+08:00" content="2017-04-20">
+              2017-04-20
             </time>
           </span>
 
@@ -306,8 +306,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/28/公共工具库commonUtil-js/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/28/公共工具库commonUtil-js/" itemprop="commentsCount"></span>
+                <a href="/2017/04/20/js重写alert-confirm弹框/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/20/js重写alert-confirm弹框/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -317,7 +317,7 @@
 
           
           
-             <span id="/2017/02/28/公共工具库commonUtil-js/" class="leancloud_visitors" data-flag-title="公共工具库commonUtil.js">
+             <span id="/2017/04/20/js重写alert-confirm弹框/" class="leancloud_visitors" data-flag-title="js重写alert confirm弹框">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -341,15 +341,14 @@
       
         
           
-          /********************
- * 日币转人民币,Jprice:日币;JP2CN:汇率
- *******************/
-function formatJP2CN(Jprice, JP2CN) {
-    return Math.ceil(parseInt(Jprice) *
+          function initConfirmAlert() {
+    var ua = navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(ua)) {
+        window.confirm = function
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/02/28/公共工具库commonUtil-js/#more" rel="contents">
+            <a class="btn" href="/2017/04/20/js重写alert-confirm弹框/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -400,8 +399,8 @@ function formatJP2CN(Jprice, JP2CN) {
             
               
                 
-                <a class="post-title-link" href="/2017/02/28/回到顶部/" itemprop="url">
-                  回到顶部
+                <a class="post-title-link" href="/2017/03/21/swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug/" itemprop="url">
+                  swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug
                 </a>
               
             
@@ -414,8 +413,8 @@ function formatJP2CN(Jprice, JP2CN) {
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-28T13:50:44+08:00" content="2017-02-28">
-              2017-02-28
+            <time itemprop="dateCreated" datetime="2017-03-21T18:27:18+08:00" content="2017-03-21">
+              2017-03-21
             </time>
           </span>
 
@@ -425,8 +424,8 @@ function formatJP2CN(Jprice, JP2CN) {
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/28/回到顶部/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/28/回到顶部/" itemprop="commentsCount"></span>
+                <a href="/2017/03/21/swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/21/swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -436,7 +435,7 @@ function formatJP2CN(Jprice, JP2CN) {
 
           
           
-             <span id="/2017/02/28/回到顶部/" class="leancloud_visitors" data-flag-title="回到顶部">
+             <span id="/2017/03/21/swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug/" class="leancloud_visitors" data-flag-title="swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -460,15 +459,18 @@ function formatJP2CN(Jprice, JP2CN) {
       
         
           
-          实现一个回到顶部的按钮：
-第一屏不显示，从第二屏开始，从右下方向上逐步滚出；
-回到第一屏，“回到顶部”按钮由上往下，逐步隐藏。
-html:
-&lt;div class=&quot;backtotop&quot;&gt;&lt;img src=&quot;~/Images/回顶部@2x.png&quo
+          /**
+    swiper 上下滑动划不动
+*/
+html, body {//这里不一定是html, body;但是.swiper-container外面套的一层div样式一定要加上下面这两个属性
+    position: relative;
+    height: 100%;
+}
+#swipe
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/02/28/回到顶部/#more" rel="contents">
+            <a class="btn" href="/2017/03/21/swiper3内容滚动嵌套swiper轮播，无法上下滑动的bug/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -519,8 +521,8 @@ html:
             
               
                 
-                <a class="post-title-link" href="/2017/02/03/vue获取后端数据应该在created还是mounted方法？/" itemprop="url">
-                  vue获取后端数据应该在created还是mounted方法？
+                <a class="post-title-link" href="/2017/03/15/版本号比较/" itemprop="url">
+                  版本号比较
                 </a>
               
             
@@ -533,8 +535,8 @@ html:
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-03T17:13:02+08:00" content="2017-02-03">
-              2017-02-03
+            <time itemprop="dateCreated" datetime="2017-03-15T17:05:27+08:00" content="2017-03-15">
+              2017-03-15
             </time>
           </span>
 
@@ -544,8 +546,8 @@ html:
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/03/vue获取后端数据应该在created还是mounted方法？/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/03/vue获取后端数据应该在created还是mounted方法？/" itemprop="commentsCount"></span>
+                <a href="/2017/03/15/版本号比较/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/15/版本号比较/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -555,7 +557,7 @@ html:
 
           
           
-             <span id="/2017/02/03/vue获取后端数据应该在created还是mounted方法？/" class="leancloud_visitors" data-flag-title="vue获取后端数据应该在created还是mounted方法？">
+             <span id="/2017/03/15/版本号比较/" class="leancloud_visitors" data-flag-title="版本号比较">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -579,132 +581,15 @@ html:
       
         
           
-          看情况了，一般放到created里面就可以了，这样可以及早发请求获取数据，如果有依赖dom必须存在的情况，就放到mounted(){this.$nextTick(() =&gt; { / code / })}里面
+          注释这段是请教了百度写的方法：
+/*var version1 = &quot;2.0.3&quot;,
+          version2 = &quot;3.0.5&quot;;
 
-          
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/02/03/vue获取后端数据应该在created还是mounted方法？/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/27/侧边栏信息展示效果/" itemprop="url">
-                  侧边栏信息展示效果
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-27T10:29:56+08:00" content="2017-01-27">
-              2017-01-27
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/01/27/侧边栏信息展示效果/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/27/侧边栏信息展示效果/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/01/27/侧边栏信息展示效果/" class="leancloud_visitors" data-flag-title="侧边栏信息展示效果">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          功能实现TODO：
-
-点击sidebar下方的关闭按钮（x），sidebar向左方滑出屏幕，关闭按钮向右方滑动，同时旋转为（+）。
-点击加号（+），sidebar向右滑动，加号（+）向左滑动，并旋转为（x）。
-点击sidebar上方的菜单栏，相应的内容栏（从左向右）滑动。
-如果有已经打开的内容栏，则
+          version1 = version1.replace(/\./g,&apos;&apos;)
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/27/侧边栏信息展示效果/#more" rel="contents">
+            <a class="btn" href="/2017/03/15/版本号比较/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -755,8 +640,8 @@ html:
             
               
                 
-                <a class="post-title-link" href="/2017/01/25/TypeScript入门/" itemprop="url">
-                  TypeScript入门
+                <a class="post-title-link" href="/2017/03/08/export-Table-To-CSV文件/" itemprop="url">
+                  export Table To CSV文件
                 </a>
               
             
@@ -769,8 +654,8 @@ html:
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-25T15:04:01+08:00" content="2017-01-25">
-              2017-01-25
+            <time itemprop="dateCreated" datetime="2017-03-08T11:06:52+08:00" content="2017-03-08">
+              2017-03-08
             </time>
           </span>
 
@@ -780,8 +665,8 @@ html:
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/01/25/TypeScript入门/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/25/TypeScript入门/" itemprop="commentsCount"></span>
+                <a href="/2017/03/08/export-Table-To-CSV文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/08/export-Table-To-CSV文件/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -791,250 +676,7 @@ html:
 
           
           
-             <span id="/2017/01/25/TypeScript入门/" class="leancloud_visitors" data-flag-title="TypeScript入门">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          关键词：
-
-微软开发
-JavaScript的超集
-遵循ES6
-
-angular2框架（谷歌开发）是由TypeScript编写的。
-所以，TypeScript有这两家公司所支持，有可能成为前端脚本语言发展主流方向。
-安装TypeScript开发环境
-几个sublime text3 开发TypeScri
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/25/TypeScript入门/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/24/侧栏工具条开发/" itemprop="url">
-                  侧栏工具条开发
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-24T11:03:08+08:00" content="2017-01-24">
-              2017-01-24
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/01/24/侧栏工具条开发/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/24/侧栏工具条开发/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/01/24/侧栏工具条开发/" class="leancloud_visitors" data-flag-title="侧栏工具条开发">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          课前准备sass的基础知识Koala软件：http://koala-app.com/index-zh.html
-输出方式：expanded展开
-考拉编译时遇到中文报错：
-在安装目录下
-D:\Program Files (x86)\Koala\rubygems\gems\sass-3.4.9\lib\
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/24/侧栏工具条开发/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/18/怎样使用jQuery触发Select，Radio的change-onchange事件/" itemprop="url">
-                  怎样使用jQuery触发Select，Radio的change/onchange事件
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-18T13:02:14+08:00" content="2017-01-18">
-              2017-01-18
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/01/18/怎样使用jQuery触发Select，Radio的change-onchange事件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/18/怎样使用jQuery触发Select，Radio的change-onchange事件/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/01/18/怎样使用jQuery触发Select，Radio的change-onchange事件/" class="leancloud_visitors" data-flag-title="怎样使用jQuery触发Select，Radio的change/onchange事件">
+             <span id="/2017/03/08/export-Table-To-CSV文件/" class="leancloud_visitors" data-flag-title="export Table To CSV文件">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1059,14 +701,14 @@ D:\Program Files (x86)\Koala\rubygems\gems\sass-3.4.9\lib\
         
           
           &lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head runat=&quot;server&quot;&gt;
-        &lt;title&gt;test&lt;/title&gt;
-        &lt;script src=&quot;jque
+&lt;html lang=&quot;zh-cn&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-C
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/18/怎样使用jQuery触发Select，Radio的change-onchange事件/#more" rel="contents">
+            <a class="btn" href="/2017/03/08/export-Table-To-CSV文件/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1117,8 +759,8 @@ D:\Program Files (x86)\Koala\rubygems\gems\sass-3.4.9\lib\
             
               
                 
-                <a class="post-title-link" href="/2017/01/18/flex属性的继承问题/" itemprop="url">
-                  flex属性的继承问题
+                <a class="post-title-link" href="/2017/03/06/wandou/" itemprop="url">
+                  wandou
                 </a>
               
             
@@ -1131,8 +773,8 @@ D:\Program Files (x86)\Koala\rubygems\gems\sass-3.4.9\lib\
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-18T12:59:41+08:00" content="2017-01-18">
-              2017-01-18
+            <time itemprop="dateCreated" datetime="2017-03-06T18:06:34+08:00" content="2017-03-06">
+              2017-03-06
             </time>
           </span>
 
@@ -1142,8 +784,8 @@ D:\Program Files (x86)\Koala\rubygems\gems\sass-3.4.9\lib\
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/01/18/flex属性的继承问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/18/flex属性的继承问题/" itemprop="commentsCount"></span>
+                <a href="/2017/03/06/wandou/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/06/wandou/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1153,7 +795,7 @@ D:\Program Files (x86)\Koala\rubygems\gems\sass-3.4.9\lib\
 
           
           
-             <span id="/2017/01/18/flex属性的继承问题/" class="leancloud_visitors" data-flag-title="flex属性的继承问题">
+             <span id="/2017/03/06/wandou/" class="leancloud_visitors" data-flag-title="wandou">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1177,15 +819,23 @@ D:\Program Files (x86)\Koala\rubygems\gems\sass-3.4.9\lib\
       
         
           
-          /*-webkit-box-align: center;
--ms-flex-align: center;
--webkit-align-items: center;
-align-items: center;*/
-这个属性会让他孩子的div里面的justify-content排版出现问题，这个属性让它的
+          css:
+*{
+    margin:0;
+    padding:0;
+}
+a, html {
+    -webkit-tap-highlight-color: transparent;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+img
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/18/flex属性的继承问题/#more" rel="contents">
+            <a class="btn" href="/2017/03/06/wandou/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1236,8 +886,8 @@ align-items: center;*/
             
               
                 
-                <a class="post-title-link" href="/2017/01/18/关于select-option选中/" itemprop="url">
-                  关于select,option选中
+                <a class="post-title-link" href="/2017/03/06/app微信分享/" itemprop="url">
+                  app微信分享
                 </a>
               
             
@@ -1250,8 +900,8 @@ align-items: center;*/
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-18T12:54:39+08:00" content="2017-01-18">
-              2017-01-18
+            <time itemprop="dateCreated" datetime="2017-03-06T10:25:23+08:00" content="2017-03-06">
+              2017-03-06
             </time>
           </span>
 
@@ -1261,8 +911,8 @@ align-items: center;*/
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/01/18/关于select-option选中/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/18/关于select-option选中/" itemprop="commentsCount"></span>
+                <a href="/2017/03/06/app微信分享/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/06/app微信分享/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1272,7 +922,7 @@ align-items: center;*/
 
           
           
-             <span id="/2017/01/18/关于select-option选中/" class="leancloud_visitors" data-flag-title="关于select,option选中">
+             <span id="/2017/03/06/app微信分享/" class="leancloud_visitors" data-flag-title="app微信分享">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1296,12 +946,12 @@ align-items: center;*/
       
         
           
-          默认要将东京选中（不能在option标签中加selected的方法）
-&lt;a href=&quot;#&quot; class=&quot;item-link smart-select&quot; data-searchbar=&quot;false&quot; data-searchbar-p
+          这个某app分享微信好友的url:
+https://m.wandougongzhu.cn/index/?page_id=2914&amp;wct=share%3Au_1123182%3Ap_2914&amp;ch_ffrom=wechat_friend&amp;from=singlemessage&
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/18/关于select-option选中/#more" rel="contents">
+            <a class="btn" href="/2017/03/06/app微信分享/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1352,8 +1002,8 @@ align-items: center;*/
             
               
                 
-                <a class="post-title-link" href="/2017/01/10/得到URL中的query参数/" itemprop="url">
-                  得到 URL 中的path 和 query 参数
+                <a class="post-title-link" href="/2017/03/02/css小技巧/" itemprop="url">
+                  css小技巧
                 </a>
               
             
@@ -1366,8 +1016,8 @@ align-items: center;*/
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-10T14:17:13+08:00" content="2017-01-10">
-              2017-01-10
+            <time itemprop="dateCreated" datetime="2017-03-02T16:06:02+08:00" content="2017-03-02">
+              2017-03-02
             </time>
           </span>
 
@@ -1377,8 +1027,8 @@ align-items: center;*/
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/01/10/得到URL中的query参数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/10/得到URL中的query参数/" itemprop="commentsCount"></span>
+                <a href="/2017/03/02/css小技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/02/css小技巧/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1388,7 +1038,7 @@ align-items: center;*/
 
           
           
-             <span id="/2017/01/10/得到URL中的query参数/" class="leancloud_visitors" data-flag-title="得到 URL 中的path 和 query 参数">
+             <span id="/2017/03/02/css小技巧/" class="leancloud_visitors" data-flag-title="css小技巧">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1413,15 +1063,376 @@ align-items: center;*/
         
           
           
-得到 URL 中的 query 参数
-function getArguments(){  
-    var args={};  
-    var query=window.location.search.substring(1);  
-    var pairs=query.split(&quot
+使用:not()去除导航上不需要的边框
+.nav li:not(:last-child) {
+     border-right: 1px solid #666;
+}
+
+
+
+为body添加行高
+ 你不需要分别为每一个\&lt;\p&gt;,  等元素添加行高，而是为body添加:
+body {
+ 
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/10/得到URL中的query参数/#more" rel="contents">
+            <a class="btn" href="/2017/03/02/css小技巧/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/02/browser-sync命令/" itemprop="url">
+                  browser-sync命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-02T14:45:22+08:00" content="2017-03-02">
+              2017-03-02
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/02/browser-sync命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/02/browser-sync命令/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/02/browser-sync命令/" class="leancloud_visitors" data-flag-title="browser-sync命令">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          browser-sync start --server --files &quot;**&quot;
+
+          
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/02/browser-sync命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/02/写一个网页进度-loading/" itemprop="url">
+                  写一个网页进度 loading
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-02T11:24:07+08:00" content="2017-03-02">
+              2017-03-02
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/02/写一个网页进度-loading/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/02/写一个网页进度-loading/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/02/写一个网页进度-loading/" class="leancloud_visitors" data-flag-title="写一个网页进度 loading">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+loading随处可见，比如一个app经常会有下拉刷新，上拉加载的功能，在刷新和加载的过程中为了让用户感知到 load 的过程，我们会使用一些过渡动画来表达。最常见的比如“转圈圈”，“省略号”等等。
+网页loading有很多用处，比如页面的加载进度，数据的加载过程等等，数据的加载loading很好
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/02/写一个网页进度-loading/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/01/JavaScript中alert-方法重写/" itemprop="url">
+                  JavaScript中alert()方法重写
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-01T14:09:56+08:00" content="2017-03-01">
+              2017-03-01
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/01/JavaScript中alert-方法重写/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/01/JavaScript中alert-方法重写/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/01/JavaScript中alert-方法重写/" class="leancloud_visitors" data-flag-title="JavaScript中alert()方法重写">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          html:
+&lt;button onclick=&quot;Test()&quot;&gt;test&lt;/button&gt;
+css:
+&lt;style type=&quot;text/css&quot;&gt;
+  * {
+    margin: 0;
+    padding: 0;
+ 
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/01/JavaScript中alert-方法重写/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1455,7 +1466,7 @@ function getArguments(){
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1496,7 +1507,7 @@ function getArguments(){
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">42</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
