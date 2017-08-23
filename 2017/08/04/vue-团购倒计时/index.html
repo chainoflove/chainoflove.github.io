@@ -1,0 +1,1191 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="countDown.vue
+&amp;lt;template&amp;gt;
+  &amp;lt;p class=&amp;quot;count-down&amp;quot;&amp;gt;
+    {{content}}
+  &amp;lt;/p&amp;gt;
+&amp;lt;/template&amp;gt;
+&amp;lt;script&amp;gt;
+export default {
+  components: {},
+  props: {
+    startTime: {">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue 团购倒计时">
+<meta property="og:url" content="http://www.cutemonkeys.cn/myself/2017/08/04/vue-团购倒计时/index.html">
+<meta property="og:site_name" content="悟空家的萌猴子">
+<meta property="og:description" content="countDown.vue
+&amp;lt;template&amp;gt;
+  &amp;lt;p class=&amp;quot;count-down&amp;quot;&amp;gt;
+    {{content}}
+  &amp;lt;/p&amp;gt;
+&amp;lt;/template&amp;gt;
+&amp;lt;script&amp;gt;
+export default {
+  components: {},
+  props: {
+    startTime: {">
+<meta property="og:updated_time" content="2017-08-04T03:55:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue 团购倒计时">
+<meta name="twitter:description" content="countDown.vue
+&amp;lt;template&amp;gt;
+  &amp;lt;p class=&amp;quot;count-down&amp;quot;&amp;gt;
+    {{content}}
+  &amp;lt;/p&amp;gt;
+&amp;lt;/template&amp;gt;
+&amp;lt;script&amp;gt;
+export default {
+  components: {},
+  props: {
+    startTime: {">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Shen Jennie'
+    }
+  };
+</script>
+
+  <title> vue 团购倒计时 | 悟空家的萌猴子 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?d6dffcafa9a9d38727a3868adeedd529";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=60116887";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1261040212&web_id=1261040212" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">悟空家的萌猴子</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">只要路对，就不怕远！</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                vue 团购倒计时
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-08-04T11:46:08+08:00" content="2017-08-04">
+              2017-08-04
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/08/04/vue-团购倒计时/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/08/04/vue-团购倒计时/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/08/04/vue-团购倒计时/" class="leancloud_visitors" data-flag-title="vue 团购倒计时">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>countDown.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;p class=&quot;count-down&quot;&gt;
+    {{content}}
+  &lt;/p&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  components: {},
+  props: {
+    startTime: {
+      type: String,
+      default: &apos;&apos;
+    },
+    endTime: {
+      type: String,
+      default: &apos;&apos;
+    },
+    serverDate: {
+      type: String,
+      default: &apos;&apos;
+    },
+    endText: {
+      type: String,
+      default: &apos;已结束&apos;
+    }
+  },
+  mounted() {
+    this.$nextTick(() =&gt; {
+      // this.countdownStart(this.startTime)
+      this.t1 = new Date(this.startTime).getTime() - new Date(this.serverDate).getTime()
+      this.t2 = new Date(this.endTime).getTime() - new Date(this.serverDate).getTime()
+      this.countdown1()
+    })
+  },
+  computed: {},
+  watch: {},
+  data() {
+    return {
+      content: &apos;&apos;,
+      t1: 0,
+      t2: 0
+    }
+  },
+  methods: {
+    countdown1(timestamp) {
+      let self = this;
+      let timer1 = setInterval(() =&gt; {
+        this.t1 = this.t1 - 1000;
+        if (this.t1 &gt; 0) {
+          self.content = &apos;距开始：&apos; + self._timeFormat1(this.t1);
+          self.$emit(&apos;callbackNOTStart&apos;)
+        } else {
+          clearInterval(timer1);
+          self.countdowm2(self.endTime)
+          self.$emit(&apos;callbackStart&apos;)
+        }
+      }, 1000);
+    },
+    countdowm2(timestamp) {
+      let self = this;
+      let timer2 = setInterval(() =&gt; {
+        if (this.t2 &gt; 0) {
+          this.t2 = this.t2 - 1000;
+          self.content = &apos;距结束：&apos; + self._timeFormat2(this.t2);
+        } else {
+          clearInterval(timer2);
+          self.content = self.endText;
+          self.$emit(&apos;callback&apos;)
+        }
+      }, 1000);
+    },
+    _timeFormat1(t) {
+      let day = Math.floor(t / 86400000);
+      let hour = Math.floor((t / 3600000) % 24);
+      let min = Math.floor((t / 60000) % 60);
+      let sec = Math.floor((t / 1000) % 60);
+      hour = hour &lt; 10 ? &apos;0&apos; + hour : hour;
+      min = min &lt; 10 ? &apos;0&apos; + min : min;
+      sec = sec &lt; 10 ? &apos;0&apos; + sec : sec;
+      let format = &apos;&apos;;
+      if (day &gt; 0) {
+        format = `${day}天${hour}时${min}分${sec}秒`;
+      }
+      if (day &lt;= 0 &amp;&amp; hour &gt; 0) {
+        format = `${hour}时${min}分${sec}秒`;
+      }
+      if (day &lt;= 0 &amp;&amp; hour &lt;= 0) {
+        format = `${min}分${sec}秒`;
+      }
+      return format
+    },
+    _timeFormat2(t) {
+      let day = Math.floor(t / 86400000);
+      let hour = Math.floor((t / 3600000) % 24);
+      let min = Math.floor((t / 60000) % 60);
+      let sec = Math.floor((t / 1000) % 60);
+      hour = hour &lt; 10 ? &apos;0&apos; + hour : hour;
+      min = min &lt; 10 ? &apos;0&apos; + min : min;
+      sec = sec &lt; 10 ? &apos;0&apos; + sec : sec;
+      let format = &apos;&apos;;
+      if (day &gt; 0) {
+        format = `${day}天${hour}时${min}分${sec}秒`;
+      }
+      if (day &lt;= 0 &amp;&amp; hour &gt; 0) {
+        format = `${hour}时${min}分${sec}秒`;
+      }
+      if (day &lt;= 0 &amp;&amp; hour &lt;= 0) {
+        format = `${min}分${sec}秒`;
+      }
+      return format
+    },
+    countdownStart(timestamp) {
+      let self = this;
+      let timer1 = setInterval(() =&gt; {
+        let nowTime1 = new Date();
+        let startTime1 = new Date(timestamp);
+        let t1 = startTime1.getTime() - nowTime1.getTime();
+        if (t1 &gt; 0) {
+          self.content = &apos;距开始：&apos; + self._time(t1);
+          self.$emit(&apos;callbackNOTStart&apos;)
+        } else {
+          clearInterval(timer1);
+          self.countdowm(self.endTime)
+          self.$emit(&apos;callbackStart&apos;)
+        }
+      }, 1000);
+    },
+    countdowm(timestamp) {
+      let self = this;
+      let timer =
+        setInterval(() =&gt; {
+          let nowTime = new Date();
+          let endTime = new Date(timestamp);
+          let t = endTime.getTime() - nowTime.getTime();
+          if (t &gt; 0) {
+            self.content = &apos;距结束：&apos; + self._time(t);
+          } else {
+            clearInterval(timer);
+            self.content = self.endText;
+            self.$emit(&apos;callback&apos;)
+          }
+        }, 1000);
+    },
+    _time(t) {
+      let day = Math.floor(t / 86400000);
+      let hour = Math.floor((t / 3600000) % 24);
+      let min = Math.floor((t / 60000) % 60);
+      let sec = Math.floor((t / 1000) % 60);
+      hour = hour &lt; 10 ? &apos;0&apos; + hour : hour;
+      min = min &lt; 10 ? &apos;0&apos; + min : min;
+      sec = sec &lt; 10 ? &apos;0&apos; + sec : sec;
+      let format = &apos;&apos;;
+      if (day &gt; 0) {
+        format = `${day}天${hour}时${min}分${sec}秒`;
+      }
+      if (day &lt;= 0 &amp;&amp; hour &gt; 0) {
+        format = `${hour}时${min}分${sec}秒`;
+      }
+      if (day &lt;= 0 &amp;&amp; hour &lt;= 0) {
+        format = `${min}分${sec}秒`;
+      }
+      return format
+    }
+  }
+}
+
+&lt;/script&gt;
+&lt;style lang=&quot;scss&quot;&gt;
+.count-down {
+  height: 1.3rem;
+}
+
+&lt;/style&gt;
+</code></pre><p>父组件调用countDown：</p>
+<pre><code>&lt;countDown :startTime=&quot;item.startDate&quot; :endTime=&quot;item.endDate&quot; :serverDate=&quot;item.serverDate&quot; @callbackNOTStart=&quot;callbackNOTStart&quot; @callbackStart=&quot;callbackStart&quot; @callback=&quot;callback&quot;&gt;
+  &lt;/countDown&gt;
+
+methods: {
+    ......
+    callbackNOTStart() {
+      this.maskerShow = true
+      this.maskerText = &apos;未开始&apos;
+    },
+    callbackStart() {
+      this.maskerShow = false
+      this._sellOut()
+    },
+    callback() {
+      this.maskerShow = true
+      this.maskerText = &apos;已结束&apos;
+    },
+    _sellOut() {
+      // 抢光 true
+      if (this.item.gStock === 0) {
+        this.maskerShow = true
+        this.maskerText = &apos;已抢完&apos;
+      }
+    },
+    // 处理后台传来的时间格式
+    _timeFormat(timeStr) {
+      return new Date(timeStr);
+    },
+    ......
+}
+</code></pre><p>团购不能拿手机时间，所以三个时间都是后台传来的，前台vue通过计算，将时间逐秒递减，“未开始~开始倒计时~已结束”，另外，还有一种“已售完”状态</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/04/JavaScript-字符串中提取数字/" rel="next" title="JavaScript 字符串中提取数字">
+                <i class="fa fa-chevron-left"></i> JavaScript 字符串中提取数字
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/09/web网页input框设置，点击input框弹出键盘，再收回键盘，焦点框会随页面滚动/" rel="prev" title="web网页input框设置，点击input框弹出键盘，再收回键盘，焦点框会随页面滚动">
+                web网页input框设置，点击input框弹出键盘，再收回键盘，焦点框会随页面滚动 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/08/04/vue-团购倒计时/"
+           data-title="vue 团购倒计时" data-url="http://www.cutemonkeys.cn/myself/2017/08/04/vue-团购倒计时/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpeg"
+               alt="Shen Jennie" />
+          <p class="site-author-name" itemprop="name">Shen Jennie</p>
+          <p class="site-description motion-element" itemprop="description">网上引来颜如玉，键下筑起黄金屋。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">53</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shen Jennie</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"cutemonkeyfamily"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("N9nVVJPUPOX5fKHTmRp2guvz-gzGzoHsz", "qCsfl15AFPvmwqX58aEeUeE7");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+</body>
+</html>
